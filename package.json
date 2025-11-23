@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "build:icons": "tsx generate-icon-fonts.ts"
   },
   "dependencies": {
     "nuxt": "^4.2.1",
@@ -16,7 +17,13 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.10.0",
+    "@nuxtjs/i18n": "^10.2.1",
+    "@vueuse/core": "^14.0.0",
     "eslint": "^9.39.1",
-    "sass": "^1.94.0"
-  }
+    "fantasticon": "^3.0.0",
+    "sass": "^1.94.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "packageManager": "yarn@4.11.0"
 }

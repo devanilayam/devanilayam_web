@@ -1,0 +1,86 @@
+{
+   "devanilayam": "Devanilayam",
+   "home": {
+      "hero": {
+         "title": "Devanilayam",
+         "subtitle": "Bringing Divinity Closer — Every Day, Everywhere",
+         "description": "Immerse yourself in the timeless wisdom of Vedic mantras and devotional slokas. Experience sacred chants with accurate Devanagari script."
+      },
+      "cta": {
+         "exploreMantras": "Explore Mantras",
+         "joinWhatsappChannel": "Join WhatsApp Channel"
+      },
+      "sections": {
+         "mantras": {
+            "title": "Explore Mantras",
+            "subtitle": "Discover mantras organized by deity, purpose, and tradition",
+            "viewAll": "View All Mantras"
+         },
+         "features": {
+            "title": "Features",
+            "subtitle": "Explore powerful features that enhance your mantra practice."
+         },
+         "socials": {
+            "title": "Socials",
+            "subtitle": "Connect with us and join our vibrant community online."
+         }
+      },
+      "features": {
+         "list": {
+            "adFree": {
+               "title": "Ad-Free",
+               "description": "No advertisements, no trackers. Just pure devotional experience."
+            },
+            "multiScript": {
+               "title": "Multi-Script",
+               "description": "Read mantras in Devanagari, IAST, and 8+ regional scripts."
+            },
+            "audioPlayback": {
+               "title": "Audio Playback",
+               "description": "High-quality audio with speed control and loop options."
+            }
+         }
+      }
+   },
+   "mantras": {
+      "title": "All Mantras",
+      "subtitle": "Explore our complete collection of sacred mantras, hymns, and devotional chants organized by deity, purpose, and tradition",
+      "searchPlaceholder": "Type to search...",
+      "noResults": "No mantras found matching your search.",
+      "stayTuned": "More mantras coming soon. Stay tuned for updates...!!!"
+   },
+   "header": {
+      "links": {
+         "about": "About",
+         "mantras": "Mantras"
+      }
+   },
+   "footer": {
+      "tagline": "Bringing Divinity Closer — Every Day, Everywhere.",
+      "sections": {
+         "about": {
+            "title": "About",
+            "links": {
+               "mission": "Our Mission",
+               "team": "Team",
+               "contribute": "Contribute"
+            }
+         },
+         "legal": {
+            "title": "Legal",
+            "links": {
+               "privacy": "Privacy Policy",
+               "terms": "Terms of Service",
+               "contact": "Contact"
+            }
+         },
+         "follow": {
+            "title": "Follow Us"
+         }
+      },
+      "bottom": {
+         "copyright": "© {year} Devanilayam. All features copyleft-reserved. All sacred texts remain in the public domain.",
+         "credits": "Built with love for the spiritual community"
+      }
+   }
+}
