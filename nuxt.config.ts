@@ -5,14 +5,19 @@ const languages: Locale[] = Locale.ALL;
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
    compatibilityDate: "2025-07-15",
-   modules: ["@nuxt/eslint", "@nuxtjs/i18n"],
+   modules: ["@nuxt/eslint", "@nuxtjs/i18n", "@nuxt/content"],
    ssr: false,
    devtools: { enabled: false },
 
    i18n: {
       defaultLocale: "en",
-      detectBrowserLanguage: false,
-      strategy: "no_prefix",
+      detectBrowserLanguage: {
+         fallbackLocale: "en",
+         useCookie: true,
+         cookieKey: "i18n_redirected",
+         redirectOn: "root",
+      },
+      strategy: "prefix_and_default",
       langDir: "../app/locales",
       locales: languages,
    },

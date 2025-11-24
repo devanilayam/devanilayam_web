@@ -24,11 +24,17 @@ export class Locale implements LocaleObject<string> {
 
    static English = new Locale({ code: "en", name: "English", language: "en-US" }, "English");
 
+   static Hindi = new Locale({ code: "hi", name: "Hindi", language: "hi-IN" }, "हिन्दी");
+
    static Telugu = new Locale({ code: "te", name: "Telugu", language: "te-IN" }, "తెలుగు");
+
+   static Tamil = new Locale({ code: "ta", name: "Tamil", language: "ta-IN" }, "தமிழ்");
 
    static readonly ALL = [
       this.English,
       this.Telugu,
+      // this.Hindi,
+      // this.Tamil,
    ];
 
    static getByCode = (code: string): Locale | undefined => this.ALL.find(locale => locale.code === code);

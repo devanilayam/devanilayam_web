@@ -1,6 +1,5 @@
+import type { Lord } from "~/composables/useSlokas";
+
 export interface CategoryCardProps {
-   title: string;
-   description?: string;
-   image: string;
-   id: string;
+   lord: Lord;
 }

@@ -29,10 +29,12 @@ body {
    flex-direction: column;
    gap: px-to-rem(24);
    width: 100%;
+   padding: px-to-rem(32);
 
    margin-top: px-to-rem(73);
 
    @include mobile {
+      padding: px-to-rem(12);
       margin-top: px-to-rem(49);
    }
 }
@@ -44,4 +46,16 @@ body {
    max-width: px-to-rem(996);
    margin-right: auto;
    margin-left: auto;
+}
+
+h1 {
+   font-size: px-to-rem(28);
+   font-weight: 700;
+   margin-bottom: px-to-rem(8);
+
+   @include web-screen {
+      font-size: px-to-rem(32);
+      font-weight: 700;
+      margin-bottom: px-to-rem(12);
+   }
 }

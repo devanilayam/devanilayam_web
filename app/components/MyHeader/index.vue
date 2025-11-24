@@ -4,7 +4,7 @@
 
       <div class="nav-links">
          <nuxt-link to="/">{{ $t('header.links.about') }}</nuxt-link>
-         <nuxt-link to="/mantras">{{ $t('header.links.mantras') }}</nuxt-link>
+         <nuxt-link :to="`/${locale}/lords`">{{ $t('header.links.slokas') }}</nuxt-link>
          <my-dropdown ref="languageDropdownRef" placement="bottom-end">
             <template #trigger>
                <p>

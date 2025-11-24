@@ -61,20 +61,20 @@ export interface MantraCard {
    imgPath: string;
 }
 
-export const HOME_PAGE_MANTRAS: MantraCard[] = [
+export const HOME_PAGE_SLOKAS: MantraCard[] = [
    {
       name: "Shiva",
       id: "shiva",
-      imgPath: "/images/mantras/shiva.png"
+      imgPath: "/images/slokas/shiva.png"
    },
    {
       name: "Hanuman",
       id: "hanuman",
-      imgPath: "/images/mantras/hanuman.png"
+      imgPath: "/images/slokas/hanuman.png"
    },
    {
       name: "Rama",
       id: "rama",
-      imgPath: "/images/mantras/rama.png"
+      imgPath: "/images/slokas/rama.png"
    }
 ];

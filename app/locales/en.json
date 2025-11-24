@@ -1,24 +1,25 @@
 {
    "devanilayam": "Devanilayam",
+   "slokas": "Slokas",
    "home": {
       "hero": {
          "title": "Devanilayam",
          "subtitle": "Bringing Divinity Closer — Every Day, Everywhere",
-         "description": "Immerse yourself in the timeless wisdom of Vedic mantras and devotional slokas. Experience sacred chants with accurate Devanagari script."
+         "description": "Immerse yourself in the timeless wisdom of devotional slokas. Experience sacred chants with accurate Devanagari script."
       },
       "cta": {
-         "exploreMantras": "Explore Mantras",
+         "exploreSlokas": "Explore Slokas",
          "joinWhatsappChannel": "Join WhatsApp Channel"
       },
       "sections": {
-         "mantras": {
-            "title": "Explore Mantras",
-            "subtitle": "Discover mantras organized by deity, purpose, and tradition",
-            "viewAll": "View All Mantras"
+         "slokasList": {
+            "title": "Explore Slokas",
+            "subtitle": "Discover slokas organized by deity, purpose, and tradition",
+            "viewAll": "View All Slokas"
          },
          "features": {
             "title": "Features",
-            "subtitle": "Explore powerful features that enhance your mantra practice."
+            "subtitle": "Explore powerful features that enhance your sloka practice."
          },
          "socials": {
             "title": "Socials",
@@ -33,7 +34,7 @@
             },
             "multiScript": {
                "title": "Multi-Script",
-               "description": "Read mantras in Devanagari, IAST, and 8+ regional scripts."
+               "description": "Read slokas in Devanagari, IAST, and 8+ regional scripts."
             },
             "audioPlayback": {
                "title": "Audio Playback",
@@ -42,17 +43,17 @@
          }
       }
    },
-   "mantras": {
-      "title": "All Mantras",
-      "subtitle": "Explore our complete collection of sacred mantras, hymns, and devotional chants organized by deity, purpose, and tradition",
+   "slokasList": {
+      "title": "All Slokas",
+      "subtitle": "Explore our complete collection of sacred slokas, hymns, and devotional chants organized by deity, purpose, and tradition",
       "searchPlaceholder": "Type to search...",
-      "noResults": "No mantras found matching your search.",
-      "stayTuned": "More mantras coming soon. Stay tuned for updates...!!!"
+      "noResults": "No slokas found matching your search.",
+      "stayTuned": "More slokas coming soon. Stay tuned for updates...!!!"
    },
    "header": {
       "links": {
          "about": "About",
-         "mantras": "Mantras"
+         "slokas": "Slokas"
       }
    },
    "footer": {

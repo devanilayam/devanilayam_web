@@ -1,24 +1,23 @@
 <template>
-   <main class="page page-mantras">
-      <home-section :title="$t('mantras.title')"
-         :subtitle="$t('mantras.subtitle')">
+   <main class="page page-slokas">
+      <home-section :title="$t('slokasList.title')" :subtitle="$t('slokasList.subtitle')">
 
-         <input id="mantra-search" v-model.trim="searchQuery" type="text" :placeholder="$t('mantras.searchPlaceholder')"
-            class="page-mantras__search-input">
+         <input id="mantra-search" v-model.trim="searchQuery" type="text"
+            :placeholder="$t('slokasList.searchPlaceholder')" class="page-slokas__search-input">
 
-         <template v-if="filteredMantras.length > 0">
-            <HomeCategoryCard v-for="mantra in filteredMantras" :id="mantra.id" :key="mantra.id" :title="mantra.name"
-               :image="mantra.imgPath" />
+         <template v-if="filteredDeities.length > 0">
+            <HomeCategoryCard v-for="lord in filteredDeities" :key="lord.lord_id" :lord="lord" />
          </template>
 
-         <div v-else class="not-found">
-            <icon name="search-lg" :size="48" color="#EB730C" />
-            <p>{{ $t('mantras.noResults') }}</p>
-         </div>
+         <template v-else>
+            <div class="not-found">
+               <p>{{ $t('slokasList.noResults') }}</p>
+            </div>
+         </template>
       </home-section>
 
-      <div class="page-mantras__stay-tuned-text">
-         <p>{{ $t('mantras.stayTuned') }}</p>
+      <div class="page-slokas__stay-tuned-text">
+         <p>{{ $t('slokasList.stayTuned') }}</p>
          <nuxt-link class="my-button my-button--outlined" :to="WHATSAPP_CHANNEL_LINK" external target="_blank">
             {{ $t('home.cta.joinWhatsappChannel') }}
          </nuxt-link>
@@ -29,27 +28,40 @@
 </template>
 
 <script setup lang="ts">
-import { HOME_PAGE_MANTRAS, WHATSAPP_CHANNEL_LINK } from "~/configs";
+import { WHATSAPP_CHANNEL_LINK } from "~/configs";
 
 const searchQuery = ref("");
 
-const filteredMantras = computed(() => {
+const { listOfLords, getListOfLords } = useSlokas();
+
+const filteredDeities = computed(() => {
 
    const query = searchQuery.value.toLowerCase();
 
    if (!query) {
 
-      return HOME_PAGE_MANTRAS;
+      return listOfLords.value;
 
    }
 
-   return HOME_PAGE_MANTRAS.filter((mantra) => mantra.name.toLowerCase().includes(query));
+   return listOfLords.value.filter(
+      (lord) =>
+         lord.name.toLowerCase().includes(query) ||
+         lord.lord_id.toLowerCase().includes(query)
+   );
 
 });
+
+onMounted(async () => {
+
+   await getListOfLords();
+
+});
+
 </script>
 
 <style lang="scss">
-.page-mantras {
+.page-slokas {
 
    &__navigation {
       width: 100%;

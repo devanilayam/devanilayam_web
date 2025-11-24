@@ -6,7 +6,9 @@
             <p class="hero__subtitle">{{ $t('home.hero.subtitle') }}</p>
             <p class="hero__description">{{ $t('home.hero.description') }}</p>
             <div class="hero__actions">
-               <nuxt-link class="my-button" :to="{ path: '/mantras' }">{{ $t('home.cta.exploreMantras') }}</nuxt-link>
+               <nuxt-link class="my-button" :to="{ path: `/${locale}/lords` }">
+                  {{ $t('home.cta.exploreSlokas') }}
+               </nuxt-link>
                <nuxt-link class="my-button my-button--outlined" :to="WHATSAPP_CHANNEL_LINK" external target="_blank">
                   {{ $t('home.cta.joinWhatsappChannel') }}
                </nuxt-link>
@@ -17,15 +19,7 @@
          </div>
       </section>
 
-      <HomeSection :title="$t('home.sections.mantras.title')" :subtitle="$t('home.sections.mantras.subtitle')">
-         <!-- <HomeCategoryCard id="example-category" title="Example Category" image="/images/sample-category.jpg" /> -->
-         <HomeCategoryCard v-for="mantra in HOME_PAGE_MANTRAS" :id="mantra.id" :key="mantra.id" :title="mantra.name"
-            :image="mantra.imgPath" />
-
-         <template #footer>
-            <nuxt-link class="my-button" to="/mantras">{{ $t('home.sections.mantras.viewAll') }}</nuxt-link>
-         </template>
-      </HomeSection>
+      <ListOfLords />
 
       <HomeSection :title="$t('home.sections.features.title')" :subtitle="$t('home.sections.features.subtitle')"
          content-class="features-grid">
@@ -38,7 +32,9 @@
 </template>
 
 <script lang="ts" setup>
-import { HOME_PAGE_FEATURES, HOME_PAGE_MANTRAS, WHATSAPP_CHANNEL_LINK } from "~/configs";
+import { HOME_PAGE_FEATURES, WHATSAPP_CHANNEL_LINK } from "~/configs";
+
+const { locale } = useLocale();
 
 </script>
 

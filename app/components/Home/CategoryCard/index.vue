@@ -1,7 +1,7 @@
 <template>
-   <NuxtLink :to="`/mantras/${id}`" class="category-card">
+   <NuxtLink :to="`/${locale}/lords/${props.lord.lord_id}`" class="category-card">
       <div class="category-card__overlay">
-         <p class="category-card__title">{{ props.title }}</p>
+         <p class="category-card__title">{{ props.lord.name }}</p>
       </div>
    </NuxtLink>
 </template>
@@ -12,6 +12,8 @@ import type { CategoryCardProps } from "./types";
 defineOptions({ name: "CategoryCard" });
 
 const props = defineProps<CategoryCardProps>();
+
+const { locale } = useLocale();
 
 </script>
 
