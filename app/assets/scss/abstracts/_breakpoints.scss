@@ -1,0 +1,91 @@
+/*
+*   This file contains all the breakpoints that we use in this project.
+*   The undefined breakpoints are either automatically taken care or it is not required as per the target users.
+*
+*   ---------------
+*   !! IMPORTANT !!
+*   ---------------
+*   NOTE: Same BREAKPOINTS are used in `composables/useScreenWidth.ts`.
+*   Any changes here should be reflected there.
+*/
+
+////
+/// This file contains all the breakpoints that we use in this project.
+///
+/// @group BreakPoints
+////
+
+/// Applies a set of styles for devices having screen width of **less than 768px**.
+/// @content
+///
+/// @example
+/// .example-class {
+///     @include mobile-screen {
+///         // Styles to apply for tablet screens
+///     }
+/// }
+@mixin mobile {
+   @media (max-width: '768px') {
+      @content;
+   }
+}
+
+/// Applies a set of styles for devices having screen width of **more than 768px**.
+/// @content
+///
+/// @example
+/// .example-class {
+///     @include tab-screen {
+///         // Styles to apply for tab screens
+///     }
+/// }
+@mixin tab-screen {
+   @media (min-width: 768px) and (max-width: 1024px) {
+      @content;
+   }
+}
+
+/// Applies a set of styles for devices having screen width of **more than 1025px**.
+/// @content
+///
+/// @example
+/// .example-class {
+///     @include web-screen {
+///         // Styles to apply for web screens
+///     }
+/// }
+@mixin web-screen {
+   @media (min-width: 1025px) {
+      @content;
+   }
+}
+
+/// Applies a set of styles for devices having screen width of **more than 1440**.
+/// @content
+///
+/// @example
+/// .example-class {
+///     @include large-screen {
+///         // Styles to apply for web screens
+///     }
+/// }
+@mixin large-screen {
+   @media (min-width: '1440px') {
+      @content;
+   }
+}
+
+/// Applies a set of styles for devices having screen width of **more than 2560**.
+/// @content
+///
+/// @example
+/// .example-class {
+///     @extra-large-screen {
+///         // Styles to apply for web screens
+///     }
+/// }
+@mixin extra-large-screen {
+   @media (min-width: '2560') {
+      @content;
+   }
+}
