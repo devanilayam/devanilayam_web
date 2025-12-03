@@ -33,7 +33,7 @@ export class Locale implements LocaleObject<string> {
    static readonly ALL = [
       this.English,
       this.Telugu,
-      // this.Hindi,
+      this.Hindi,
       // this.Tamil,
    ];
 
