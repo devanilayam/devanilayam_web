@@ -1,6 +1,6 @@
 <template>
    <main class="page">
-      <ContentRenderer v-if="sloka" :value="sloka" class="sloka-area" :excerpt="true" />
+      <ContentRenderer v-if="sloka" :value="sloka" class="sloka-area" />
    </main>
 </template>
 
