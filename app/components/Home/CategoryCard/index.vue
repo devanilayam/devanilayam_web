@@ -16,7 +16,7 @@ const props = defineProps<CategoryCardProps>();
 
 const images = import.meta.glob("@/assets/images/**", { eager: true, import: "default" });
 
-const computedImgUrl = computed(() => images[`/assets/images/lord/${props.lord.name.toLowerCase()}.webp`]);
+const computedImgUrl = computed(() => images[`/assets/images/lord/${props.lord.lord_id.toLowerCase()}.webp`]);
 
 const { locale } = useLocale();
 
