@@ -8,30 +8,30 @@
 
          <!-- About -->
          <div class="my-footer__column">
-            <h4 class="my-footer__heading">{{ $t('footer.sections.about.title') }}</h4>
-            <ul class="my-footer__list">
+            <div class="my-footer__heading">{{ $t('footer.sections.about.title') }}</div>
+            <div class="my-footer__list">
                <a href="#" class="my-footer__link">{{ $t('footer.sections.about.links.mission') }}</a>
                <a href="#" class="my-footer__link">{{ $t('footer.sections.about.links.team') }}</a>
                <a href="#" class="my-footer__link">{{ $t('footer.sections.about.links.contribute') }}</a>
-            </ul>
+            </div>
          </div>
 
          <!-- Legal -->
          <div class="my-footer__column">
-            <h4 class="my-footer__heading">{{ $t('footer.sections.legal.title') }}</h4>
-            <ul class="my-footer__list">
+            <div class="my-footer__heading">{{ $t('footer.sections.legal.title') }}</div>
+            <div class="my-footer__list">
                <a :href="`/${locale}/policies/privacy-policy`" class="my-footer__link">{{
                   $t('footer.sections.legal.links.privacy') }}</a>
                <a :href="`/${locale}/policies/terms-of-service`" class="my-footer__link">{{
                   $t('footer.sections.legal.links.terms') }}</a>
                <a href="#" class="my-footer__link">{{ $t('footer.sections.legal.links.contact') }}</a>
-            </ul>
+            </div>
          </div>
 
          <!-- Follow Us -->
          <div class="my-footer__column">
-            <h4 class="my-footer__heading">{{ $t('footer.sections.follow.title') }}</h4>
-            <ul class="my-footer__list">
+            <div class="my-footer__heading">{{ $t('footer.sections.follow.title') }}</div>
+            <div class="my-footer__list">
 
                <nuxt-link v-for="social in HOME_PAGE_SOCIAL_LINKS.slice(0, 3)" :key="social.icon" :to="social.link"
                   target="_blank">
@@ -39,7 +39,7 @@
                   {{ social.label }}
                </nuxt-link>
 
-            </ul>
+            </div>
          </div>
 
       </div>
@@ -129,7 +129,6 @@ const currentYear = new Date().getFullYear();
    }
 
    &__list {
-      list-style: none;
       padding: 0;
       margin: 0;
       display: flex;

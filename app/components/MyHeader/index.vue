@@ -1,6 +1,6 @@
 <template>
    <header class="my-header">
-      <nuxt-link to="/" class="logo-link">
+      <nuxt-link to="/" class="logo-link" aria-label="Devanilayam - Home">
          <logo />
       </nuxt-link>
 

@@ -1,7 +1,7 @@
 <template>
    <HomeSection :title="$t('home.sections.socials.title')" :subtitle="$t('home.sections.socials.subtitle')">
       <nuxt-link v-for="social in HOME_PAGE_SOCIAL_LINKS" :key="social.icon" class="social-tile" :to="social.link"
-         target="_blank">
+         target="_blank" :aria-label="`Follow us on ${social.label}`">
          <icon :name="social.icon" :size="48" />
       </nuxt-link>
    </HomeSection>
