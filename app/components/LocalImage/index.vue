@@ -1,5 +1,6 @@
 <template>
-    <img class="local-image" :src="`${computedUrl}`" loading="lazy" @error="handleImageError">
+    <img class="local-image" :src="`${computedUrl}`" :alt="props.alt ?? 'Local Image'" loading="lazy"
+        @error="handleImageError">
 </template>
 
 <script lang="ts" setup>

@@ -5,11 +5,21 @@
 </template>
 
 <script lang="ts" setup>
+
 const { getSloka } = useSlokas();
 
 const route = useRoute();
 
 const sloka = ref();
+
+useSeoMeta({
+   title: computed(() => (sloka.value?.title || "Sloka") + " | Devanilayam"),
+   description: computed(() => sloka.value?.excerpt || "Discover devotional slokas and their meanings at Devanilayam."),
+   ogTitle: computed(() => sloka.value?.title || "Sloka | Devanilayam"),
+   ogDescription: computed(() => sloka.value?.excerpt || "Discover devotional slokas and their meanings at Devanilayam."),
+   twitterTitle: computed(() => sloka.value?.title || "Sloka | Devanilayam"),
+   twitterDescription: computed(() => sloka.value?.excerpt || "Discover devotional slokas and their meanings at Devanilayam."),
+});
 
 onMounted(async () => {
 

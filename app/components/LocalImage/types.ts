@@ -11,4 +11,9 @@ export interface LocalImage {
      * The file name of the image.
      */
     file: string;
+
+    /**
+     * The alt text for the image.
+     */
+    alt?: string;
 }

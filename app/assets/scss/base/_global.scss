@@ -59,3 +59,22 @@ h1 {
       margin-bottom: px-to-rem(12);
    }
 }
+
+
+
+h2 {
+   font-size: px-to-rem(24);
+   font-weight: 600;
+   margin-bottom: px-to-rem(8);
+
+   @include web-screen {
+      font-size: px-to-rem(28);
+      font-weight: 600;
+      margin-bottom: px-to-rem(12);
+   }
+}
+
+li {
+   list-style: disc;
+   margin-left: px-to-rem(16);
+}

@@ -49,8 +49,6 @@ export const useSlokas = (): IUseSlokasReturn => {
          .where("sloka_id", "=", sloka_id)
          .first();
 
-      console.log("sloka", sloka);
-
       return sloka;
 
    };

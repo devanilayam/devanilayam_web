@@ -18,5 +18,14 @@ export default defineContentConfig({
             excerpt: z.object().optional(),
          }),
       }),
+      policies: defineCollection({
+         type: "page",
+         source: "policies/**/*.md",
+         schema: z.object({
+            title: z.string(),
+            date: z.string(),
+            lang: z.string(),
+         }),
+      }),
    },
 });

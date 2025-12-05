@@ -1,6 +1,8 @@
 <template>
    <header class="my-header">
-      <logo />
+      <nuxt-link to="/" class="logo-link">
+         <logo />
+      </nuxt-link>
 
       <div class="nav-links">
          <nuxt-link to="/">{{ $t('header.links.about') }}</nuxt-link>
@@ -98,7 +100,7 @@ const selectLanguage = (lang: string): void => {
    border-bottom: 1px solid rgba(45, 42, 35, 0.09);
    background: rgba(250, 248, 243, 0.80);
 
-   .logo {
+   .logo-link {
       margin-right: auto;
    }
 

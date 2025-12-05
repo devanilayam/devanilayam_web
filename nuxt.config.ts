@@ -41,6 +41,7 @@ export default defineNuxtConfig({
 
    app: {
       head: {
+         title: "Devanilayam",
          htmlAttrs: {
             lang: "en",
          },
@@ -48,6 +49,10 @@ export default defineNuxtConfig({
             {
                name: "author",
                content: "Mouli Bheemaneti"
+            },
+            {
+               name: "description",
+               content: "Devanilayam is a platform for learning and practicing devotional slokas."
             },
             {
                name: "viewport",

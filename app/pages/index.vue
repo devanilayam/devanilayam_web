@@ -15,7 +15,7 @@
             </div>
          </div>
          <div>
-            <img src="~/assets/images/guruji.webp">
+            <LocalImage file="guruji.webp" alt="Guruji Illustration in Devanilayam website" />
          </div>
       </section>
 
