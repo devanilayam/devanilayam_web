@@ -7,7 +7,7 @@
                   <icon name="x" color="#854D0E" />
                </button>
                <nuxt-link to="/" class="side-menu__link" @click="close">{{ $t('header.links.about') }}</nuxt-link>
-               <nuxt-link :to="`/${locale}/lords`" class="side-menu__link" @click="close">
+               <nuxt-link :to="`/lords`" class="side-menu__link" @click="close">
                   {{ $t('header.links.slokas') }}
                </nuxt-link>
             </div>
@@ -18,8 +18,6 @@
 
 <script setup lang="ts">
 import { useSideMenu } from "~/composables/useSideMenu";
-
-const { locale } = useLocale();
 
 const { isOpen, close } = useSideMenu();
 </script>

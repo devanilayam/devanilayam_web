@@ -3,7 +3,7 @@
       <HomeCategoryCard v-for="lord in slicedListOfLords" :key="lord.lord_id" :lord="lord" />
 
       <template #footer>
-         <nuxt-link class="my-button" :to="`/${locale}/lords`">
+         <nuxt-link class="my-button" :to="`/lords`">
             {{ $t('home.sections.slokasList.viewAll') }}
          </nuxt-link>
       </template>
@@ -12,8 +12,6 @@
 
 <script lang="ts" setup>
 const { listOfLords, getListOfLords } = useSlokas();
-
-const { locale } = useLocale();
 
 const route = useRoute();
 

@@ -20,9 +20,9 @@
          <div class="my-footer__column">
             <div class="my-footer__heading">{{ $t('footer.sections.legal.title') }}</div>
             <div class="my-footer__list">
-               <a :href="`/${locale}/policies/privacy-policy`" class="my-footer__link">{{
+               <a :href="`/policies/privacy-policy`" class="my-footer__link">{{
                   $t('footer.sections.legal.links.privacy') }}</a>
-               <a :href="`/${locale}/policies/terms-of-service`" class="my-footer__link">{{
+               <a :href="`/policies/terms-of-service`" class="my-footer__link">{{
                   $t('footer.sections.legal.links.terms') }}</a>
                <a href="#" class="my-footer__link">{{ $t('footer.sections.legal.links.contact') }}</a>
             </div>
@@ -55,8 +55,6 @@
 
 <script setup lang="ts">
 import { HOME_PAGE_SOCIAL_LINKS } from "~/configs";
-
-const { locale } = useLocale();
 
 const currentYear = new Date().getFullYear();
 

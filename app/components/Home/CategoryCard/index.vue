@@ -1,5 +1,5 @@
 <template>
-   <NuxtLink :to="`/${locale}/lords/${props.lord.lord_id}`" class="category-card"
+   <NuxtLink :to="`/lords/${props.lord.lord_id}`" class="category-card"
       :style="{ backgroundImage: `url(${computedImgUrl})` }">
       <div class="category-card__overlay">
          <p class="category-card__title">{{ props.lord.name }}</p>
@@ -17,8 +17,6 @@ const props = defineProps<CategoryCardProps>();
 const images = import.meta.glob("@/assets/images/**", { eager: true, import: "default" });
 
 const computedImgUrl = computed(() => images[`/assets/images/lord/${props.lord.lord_id.toLowerCase()}.webp`]);
-
-const { locale } = useLocale();
 
 </script>
 

@@ -25,7 +25,20 @@ export const useLocale = (): IUseLocaleReturn => {
 
       locallyStoredLocale.value = _locale;
 
-      i18n.setLocale(_locale);
+      await i18n.setLocale(_locale);
+
+      // Navigate to the equivalent route in the new locale
+      const route = useRoute();
+
+      const switchLocalePath = useSwitchLocalePath();
+
+      const newPath = switchLocalePath(_locale);
+
+      if (newPath && route.path !== newPath) {
+
+         await navigateTo(newPath);
+
+      }
 
    };
 

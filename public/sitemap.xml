@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home pages for each locale -->
+  <url>
+    <loc>https://devanilayam.com/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/"/>
+  </url>
+
+  <url>
+    <loc>https://devanilayam.com/en/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/"/>
+  </url>
+
+  <url>
+    <loc>https://devanilayam.com/hi/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/"/>
+  </url>
+
+  <url>
+    <loc>https://devanilayam.com/te/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/"/>
+  </url>
+
+  <!-- Lords list pages -->
+  <url>
+    <loc>https://devanilayam.com/en/lords</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/lords"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/lords"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/lords"/>
+  </url>
+
+  <url>
+    <loc>https://devanilayam.com/hi/lords</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/lords"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/lords"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/lords"/>
+  </url>
+
+  <url>
+    <loc>https://devanilayam.com/te/lords</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/lords"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/lords"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/lords"/>
+  </url>
+
+  <!-- Lord-specific slokas list pages - Rama -->
+  <url>
+    <loc>https://devanilayam.com/en/lords/rama</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/lords/rama"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/lords/rama"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/lords/rama"/>
+  </url>
+
+  <url>
+    <loc>https://devanilayam.com/hi/lords/rama</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/lords/rama"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/lords/rama"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/lords/rama"/>
+  </url>
+
+  <url>
+    <loc>https://devanilayam.com/te/lords/rama</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/lords/rama"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/lords/rama"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/lords/rama"/>
+  </url>
+
+  <!-- Lord-specific slokas list pages - Shiva -->
+  <url>
+    <loc>https://devanilayam.com/en/lords/shiva</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/lords/shiva"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/lords/shiva"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/lords/shiva"/>
+  </url>
+
+  <url>
+    <loc>https://devanilayam.com/hi/lords/shiva</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/lords/shiva"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/lords/shiva"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/lords/shiva"/>
+  </url>
+
+  <url>
+    <loc>https://devanilayam.com/te/lords/shiva</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/lords/shiva"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/lords/shiva"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/lords/shiva"/>
+  </url>
+
+  <!-- Individual sloka pages - Ramchandra Keerthana -->
+  <url>
+    <loc>https://devanilayam.com/en/lords/rama/ramchandra-keerthana</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/lords/rama/ramchandra-keerthana"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/lords/rama/ramchandra-keerthana"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/lords/rama/ramchandra-keerthana"/>
+  </url>
+
+  <url>
+    <loc>https://devanilayam.com/hi/lords/rama/ramchandra-keerthana</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/lords/rama/ramchandra-keerthana"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/lords/rama/ramchandra-keerthana"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/lords/rama/ramchandra-keerthana"/>
+  </url>
+
+  <url>
+    <loc>https://devanilayam.com/te/lords/rama/ramchandra-keerthana</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/lords/rama/ramchandra-keerthana"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/lords/rama/ramchandra-keerthana"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/lords/rama/ramchandra-keerthana"/>
+  </url>
+
+  <!-- Individual sloka pages - Lingashtakam -->
+  <url>
+    <loc>https://devanilayam.com/en/lords/shiva/lingashtakam</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/lords/shiva/lingashtakam"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/lords/shiva/lingashtakam"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/lords/shiva/lingashtakam"/>
+  </url>
+
+  <url>
+    <loc>https://devanilayam.com/hi/lords/shiva/lingashtakam</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/lords/shiva/lingashtakam"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/lords/shiva/lingashtakam"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/lords/shiva/lingashtakam"/>
+  </url>
+
+  <url>
+    <loc>https://devanilayam.com/te/lords/shiva/lingashtakam</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/lords/shiva/lingashtakam"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/lords/shiva/lingashtakam"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/lords/shiva/lingashtakam"/>
+  </url>
+
+  <!-- Policy pages - Privacy Policy -->
+  <url>
+    <loc>https://devanilayam.com/en/policies/privacy-policy</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/policies/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/policies/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/policies/privacy-policy"/>
+  </url>
+
+  <url>
+    <loc>https://devanilayam.com/hi/policies/privacy-policy</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/policies/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/policies/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/policies/privacy-policy"/>
+  </url>
+
+  <url>
+    <loc>https://devanilayam.com/te/policies/privacy-policy</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/policies/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/policies/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/policies/privacy-policy"/>
+  </url>
+
+  <!-- Policy pages - Terms of Service -->
+  <url>
+    <loc>https://devanilayam.com/en/policies/terms-of-service</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/policies/terms-of-service"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/policies/terms-of-service"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/policies/terms-of-service"/>
+  </url>
+
+  <url>
+    <loc>https://devanilayam.com/hi/policies/terms-of-service</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/policies/terms-of-service"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/policies/terms-of-service"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/policies/terms-of-service"/>
+  </url>
+
+  <url>
+    <loc>https://devanilayam.com/te/policies/terms-of-service</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://devanilayam.com/en/policies/terms-of-service"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://devanilayam.com/hi/policies/terms-of-service"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://devanilayam.com/te/policies/terms-of-service"/>
+  </url>
+
+</urlset>
