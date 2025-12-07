@@ -83,5 +83,8 @@
          "copyright": "© {year} Devanilayam. All features copyleft-reserved. All sacred texts remain in the public domain.",
          "credits": "Built with love for the spiritual community"
       }
+   },
+   "sloka-page": {
+      "fontSize": "Font Size"
    }
 }

@@ -15,7 +15,8 @@
             </div>
          </div>
          <div>
-            <LocalImage file="guruji.webp" alt="Guruji Illustration in Devanilayam website" />
+            <LocalImage file="guruji.webp" alt="Guruji Illustration in Devanilayam website" width="400px"
+               height="400px" />
          </div>
       </section>
 
