@@ -52,6 +52,11 @@ export const HOME_PAGE_SOCIAL_LINKS: SocialTile[] = [
       icon: "x-twitter",
       label: "Twitter",
       link: "https://twitter.com/devanilayam"
+   },
+   {
+      icon: "linkedin",
+      label: "LinkedIn",
+      link: "https://www.linkedin.com/company/devanilayam"
    }
 ];
 

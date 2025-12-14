@@ -59,6 +59,9 @@ export default defineNuxtConfig({
                name: "viewport",
                content: "width=device-width, initial-scale=1.0, minimum-scale=1.0",
             },
+            { name: "twitter:card", content: "Devanilayam is a platform for learning and practicing devotional slokas." },
+            { name: "twitter:site", content: "@devanilayam" },
+            { name: "twitter:creator", content: "@devanilayam" },
          ],
          link: [
             { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
