@@ -15,6 +15,22 @@
 /// @group BreakPoints
 ////
 
+/// Mixin for small mobile devices (screens less than or equal to 480px)
+/// @content
+///
+/// @example
+/// .example-class {
+///     @include small-mobile {
+///         // Styles to apply for small mobile screens
+///     }
+/// }
+@mixin small-mobile {
+   @media (max-width: 480px) {
+      @content;
+   }
+}
+
+
 /// Applies a set of styles for devices having screen width of **less than 768px**.
 /// @content
 ///
