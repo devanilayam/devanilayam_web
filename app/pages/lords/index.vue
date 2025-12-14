@@ -6,7 +6,9 @@
             :placeholder="$t('slokasList.searchPlaceholder')" class="page-slokas__search-input">
 
          <template v-if="filteredDeities.length > 0">
-            <HomeCategoryCard v-for="lord in filteredDeities" :key="lord.lord_id" :lord="lord" />
+            <div class="page-slokas__lords-list">
+               <HomeCategoryCard v-for="lord in filteredDeities" :key="lord.lord_id" :lord="lord" />
+            </div>
          </template>
 
          <template v-else>
@@ -69,6 +71,21 @@ onMounted(async () => {
 
       .my-button {
          margin-right: auto;
+      }
+   }
+
+   &__lords-list {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(px-to-rem(240), 1fr));
+      gap: px-to-rem(8);
+
+      @include mobile {
+         grid-template-columns: repeat(auto-fill, minmax(px-to-rem(150), 1fr));
+      }
+
+      @include small-mobile {
+         grid-template-columns: repeat(auto-fill, minmax(px-to-rem(140), 1fr));
       }
    }
 

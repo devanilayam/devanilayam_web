@@ -1,6 +1,8 @@
 <template>
    <HomeSection :title="$t('home.sections.slokasList.title')" :subtitle="$t('home.sections.slokasList.subtitle')">
-      <HomeCategoryCard v-for="lord in slicedListOfLords" :key="lord.lord_id" :lord="lord" />
+      <div class="list-of-lords__lords-list">
+         <HomeCategoryCard v-for="lord in slicedListOfLords" :key="lord.lord_id" :lord="lord" />
+      </div>
 
       <template #footer>
          <nuxt-link class="my-button" :to="`/lords`">
@@ -34,3 +36,14 @@ onMounted(async () => {
 
 });
 </script>
+
+<style lang="scss">
+.list-of-lords {
+   &__lords-list {
+      display: flex;
+      flex-wrap: wrap;
+      // justify-content: space-between;
+      gap: px-to-rem(8);
+   }
+}
+</style>

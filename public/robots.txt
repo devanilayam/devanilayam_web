@@ -1,5 +1,0 @@
-User-Agent: *
-Allow: /
-
-# Sitemap
-Sitemap: https://devanilayam.com/sitemap.xml

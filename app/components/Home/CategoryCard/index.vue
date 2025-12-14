@@ -64,5 +64,23 @@ const computedImgUrl = computed(() => images[`/assets/images/lord/${props.lord.l
          line-height: px-to-rem(20);
       }
    }
+
+   @include small-mobile {
+      min-width: px-to-rem(140);
+      min-height: px-to-rem(160);
+      border-radius: px-to-rem(12);
+
+      &__title {
+         font-size: px-to-rem(14);
+         line-height: px-to-rem(18);
+      }
+   }
+
+   @include web-screen {
+      &:hover {
+         transform: scale(1.01);
+         transition: transform 0.3s ease;
+      }
+   }
 }
 </style>

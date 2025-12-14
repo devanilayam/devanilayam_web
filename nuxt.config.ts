@@ -5,9 +5,36 @@ const languages: Locale[] = Locale.ALL;
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
    compatibilityDate: "2025-07-15",
-   modules: ["@nuxt/eslint", "@nuxtjs/i18n", "@nuxt/content"],
+   modules: ["@nuxt/eslint", "nuxt-link-checker", "@nuxtjs/sitemap", "@nuxtjs/i18n", "@nuxt/content", "@nuxtjs/seo"],
    ssr: false,
-   devtools: { enabled: false },
+   devtools: { enabled: true },
+
+   // SEO
+
+   robots: {
+      blockNonSeoBots: true
+   },
+
+   site: {
+      url: "https://devanilayam.com",
+      name: "Devanilayam"
+   },
+
+   sitemap: {},
+
+   ogImage: { enabled: false },
+
+   linkChecker: {
+      report: {
+         // pick and choose which reports you want to generate
+         html: true,
+         markdown: true,
+         json: true,
+         publish: true,
+      }
+   },
+
+   // End of SEO
 
    i18n: {
       defaultLocale: "en",
@@ -59,8 +86,12 @@ export default defineNuxtConfig({
                name: "viewport",
                content: "width=device-width, initial-scale=1.0, minimum-scale=1.0",
             },
+            { name: "twitter:card", content: "Devanilayam is a platform for learning and practicing devotional slokas." },
+            { name: "twitter:site", content: "@devanilayam" },
+            { name: "twitter:creator", content: "@devanilayam" },
          ],
          link: [
+            { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
             { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
             { rel: "icon", href: "/favicon-dark.ico", type: "image/x-icon", media: "(prefers-color-scheme: dark)" },
             { rel: "preconnect", href: "https://fonts.googleapis.com" },
