@@ -124,7 +124,14 @@
    $color-map: $color-map-with-shades;
 
    // Normalize $color to string for key lookup
-   $color-key: if(meta.type-of($color)=='string', $color, $color + '');
+   // $color-key: if(meta.type-of($color)=='string', $color, $color + '');
+   @if (meta.type-of($color)=='string') {
+      $color-key: $color;
+   }
+
+   @else {
+      $color-key: $color + '';
+   }
 
    // Check if the color exists in the map
    @if not map.has-key($color-map, $color-key) {
@@ -180,7 +187,14 @@
 
    // Try both string and number forms of the shade key
    $shade-str: $shade + "";
-   $shade-num: if(meta.type-of($shade)=='string', str-to-number($shade), $shade);
+
+   @if (meta.type-of($shade)=='string') {
+      $shade-num: str-to-number($shade);
+   }
+
+   @else {
+      $shade-num: $shade;
+   }
 
    $has-str-key: map.has-key($color-entry, $shade-str);
    $has-num-key: map.has-key($color-entry, $shade-num);
