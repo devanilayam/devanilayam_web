@@ -14,7 +14,7 @@ export const useSlokas = (): IUseSlokasReturn => {
 
       listOfLords.value = lords?.map((l) => ({
          lord_id: l.lord_id,
-         name: l.name,
+         name: l.lord,
          image: l.image,
       }));
 
@@ -34,7 +34,7 @@ export const useSlokas = (): IUseSlokasReturn => {
          title: s.title,
          body: s.body,
          excerpt: s.excerpt,
-         lord: s.name,
+         lord: s.lord,
       }));
 
       return output;

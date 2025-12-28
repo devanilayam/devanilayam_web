@@ -1,9 +1,7 @@
 ---
 lord_id: shani
-sloka_id: shani-stotram
-name: Shani
-title: Shani Stotram
 lord: Shani
+title: Shani Stotram
 description: Shani Stotram is a powerful hymn dedicated to Lord Shani (Shaneeswara), the deity representing the planet Saturn. It is chanted to seek his blessings, mitigate adverse effects, and receive justice and protection.
 lang: en
 image: lord/shani.webp

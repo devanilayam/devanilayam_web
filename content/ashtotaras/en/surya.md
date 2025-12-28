@@ -1,9 +1,7 @@
 ---
 lord_id: surya
-sloka_id: aditya-hrudayam
-name: Surya
-title: Aditya Hrudayam
 lord: Surya
+title: Aditya Hrudayam
 description: Aditya Hrudayam is a powerful hymn dedicated to Lord Surya (Sun God), found in the Ramayana. It is said to have been revealed to Lord Rama by Sage Agastya during the battle with Ravana.
 lang: en
 tags: [Aditya Hrudayam, Surya, Sun God, Ramayana, Agastya]

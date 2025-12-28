@@ -1,9 +1,8 @@
 ---
 lord_id: hanuman
-sloka_id: hanuman-chalisa
-name: Hanuman
-title: Hanuman Chalisa
 lord: Hanuman
+sloka_id: hanuman-chalisa
+title: Hanuman Chalisa
 description: Hanuman Chalisa is a devotional hymn dedicated to Lord Hanuman, composed by Tulsidas. It consists of 40 verses praising the virtues and powers of Hanuman.
 lang: en
 tags: [Hanuman Chalisa, Hanuman, Tulsidas, Chalisa]

@@ -1,9 +1,7 @@
 ---
 lord_id: shiva
-sloka_id: lingashtakam
-name: Shiva
-title: Lingashtakam
 lord: Shiva
+title: Lingashtakam
 description: Lingashtakam is an endless hymn extolling the glory and sanctity of Lord Shiva.
 lang: en
 tags: [Lingashtakam, Shiva, Shiva Stotram]

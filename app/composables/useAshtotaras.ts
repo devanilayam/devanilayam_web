@@ -16,7 +16,7 @@ export const useAshtotaras = (): IUseAshtotarasReturn => {
       console.log("lords", lords);
       listOfLords.value = lords?.map((l) => ({
          lord_id: l.lord_id,
-         name: l.name,
+         name: l.lord,
          image: l.image,
       }));
 
@@ -32,10 +32,9 @@ export const useAshtotaras = (): IUseAshtotarasReturn => {
          .all();
 
       const output = ashtotaras?.map((a) => ({
-         ashtotara_id: a.id,
          title: a.title,
          body: a.body,
-         lord: a.name,
+         lord: a.lord,
       }));
 
       return output;
@@ -71,7 +70,6 @@ export interface IUseAshtotarasReturn {
 
 export interface Ashtotara {
    title: string;
-   ashtotara_id: string;
    body: MarkdownRoot;
    lord: string;
    excerpt?: any;
