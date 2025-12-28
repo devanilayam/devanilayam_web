@@ -62,6 +62,10 @@
       "noResults": "No ashtotaras found matching your search.",
       "stayTuned": "More ashtotaras coming soon. Stay tuned for updates...!!!"
    },
+   "blogs": {
+      "pageTitle": "Blogs",
+      "by": "by {author}"
+   },
    "header": {
       "links": {
          "about": "About",

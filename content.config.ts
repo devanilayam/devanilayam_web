@@ -45,12 +45,13 @@ export default defineContentConfig({
          type: "page",
          source: "blogs/**/*.md",
          schema: z.object({
+            blog_id: z.string(),
             title: z.string(),
-            date: z.string(),
             lang: z.string(),
             author: z.string().optional(),
             tags: z.array(z.string()).optional(),
-            excerpt: z.string().optional(),
+            excerpt: z.object().optional(),
+            date: z.string(),
          }),
       }),
 
