@@ -5,7 +5,7 @@
       </div>
 
       <template #footer>
-         <nuxt-link class="my-button" :to="`/lords`">
+         <nuxt-link class="my-button" :to="`/slokas`">
             {{ $t('home.sections.slokasList.viewAll') }}
          </nuxt-link>
       </template>

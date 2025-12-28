@@ -1,5 +1,5 @@
 <template>
-   <NuxtLink :to="`/lords/${props.lord.lord_id}`" class="category-card"
+   <NuxtLink :to="`/slokas/${props.lord.lord_id}`" class="category-card"
       :style="{ backgroundImage: `url(${computedImgUrl})` }">
       <div class="category-card__overlay">
          <p class="category-card__title">{{ props.lord.name }}</p>

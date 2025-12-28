@@ -6,7 +6,7 @@
             <p class="hero__subtitle">{{ $t('home.hero.subtitle') }}</p>
             <p class="hero__description">{{ $t('home.hero.description') }}</p>
             <div class="hero__actions">
-               <nuxt-link class="my-button" :to="{ path: `/lords` }">
+               <nuxt-link class="my-button" :to="{ path: `/slokas` }">
                   {{ $t('home.cta.exploreSlokas') }}
                </nuxt-link>
                <nuxt-link class="my-button my-button--outlined" :to="WHATSAPP_CHANNEL_LINK" external target="_blank">

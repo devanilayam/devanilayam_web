@@ -4,7 +4,7 @@
       <h1>{{ listOfSlokas[0]?.lord }} {{ $t('slokas') }}</h1>
 
       <nuxt-link v-for="sloka in listOfSlokas" :key="sloka.sloka_id"
-         :to="`/lords/${$route.params.lord as string}/${sloka.sloka_id}`">
+         :to="`/slokas/${$route.params.lord as string}/${sloka.sloka_id}`">
          <ContentRenderer v-if="sloka" class="sloka-preview" :value="sloka" :excerpt="true" />
       </nuxt-link>
 

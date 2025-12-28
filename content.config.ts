@@ -27,5 +27,34 @@ export default defineContentConfig({
             lang: z.string(),
          }),
       }),
+      ashtotaras: defineCollection({
+         type: "page",
+         source: "ashtotaras/**/*.md",
+         schema: z.object({
+            lord_id: z.string(),
+            sloka_id: z.string(),
+            name: z.string(),
+            title: z.string(),
+            lord: z.string(),
+            description: z.string(),
+            lang: z.string(),
+            tags: z.array(z.string()),
+            date: z.string(),
+            image: z.string().optional(),
+         }),
+      }),
+      blogs: defineCollection({
+         type: "page",
+         source: "blogs/**/*.md",
+         schema: z.object({
+            title: z.string(),
+            date: z.string(),
+            lang: z.string(),
+            author: z.string().optional(),
+            tags: z.array(z.string()).optional(),
+            excerpt: z.string().optional(),
+         }),
+      }),
+
    },
 });
