@@ -1,178 +1,168 @@
 ---
 lord_id: surya
 sloka_id: aditya-hrudayam
-name: Surya
-title: Aditya Hrudayam
-lord: Surya
-description: Aditya Hrudayam is a powerful hymn dedicated to Lord Surya (Sun God), found in the Ramayana. It is said to have been revealed to Lord Rama by Sage Agastya during the battle with Ravana.
-lang: en
-tags: [Aditya Hrudayam, Surya, Sun God, Ramayana, Agastya]
+name: सूर्य
+title: आदित्य हृदयम्
+lord: सूर्य
+description: आदित्य हृदयम् भगवान सूर्य को समर्पित एक शक्तिशाली स्तोत्र है, जो रामायण में पाया जाता है। कहा जाता है कि यह ऋषि अगस्त्य द्वारा रावण के साथ युद्ध के दौरान भगवान राम को प्रकट किया गया था।
+lang: hi
+tags: [आदित्य हृदयम्, सूर्य, सूर्य देव, रामायण, अगस्त्य]
 date: 2025-12-01
 ---
 
-# Aditya Hrudayam
+# आदित्य हृदयम्
 
-Tato Yuddha Parishrantam Samare Chintaya Sthitam  
-Ravanam Chagrato Drushtva Yuddhaya Samupasthitam ॥ 1 ॥
+ततो युद्ध परिश्रान्तं समरे चिन्तया स्थितम्  
+रावणं चाग्रतो दृष्ट्वा युद्धाय समुपस्थितम् ॥ 1 ॥
 
 <br>
 
-Daivataishcha Samaagamya Drashtumabhyagato Ranam  
-Upagamyabraveedramam Agastyo Bhagavan Rishih ॥ 2 ॥
+दैवतैश्च समागम्य द्रष्टुमभ्यागतो रणम्  
+उपागम्याब्रवीद्रामं अगस्त्यो भगवान् ऋषिः ॥ 2 ॥
 
 <!--more-->
 
 <br>
 
-Rama Rama Mahabaho Shrinu Guhyam Sanatanam  
-Yena Sarvanarin Vatsa Samarayajayishyasi ॥ 3 ॥
+राम राम महाबाहो शृणु गुह्यं सनातनम्  
+येन सर्वानरीन् वत्स समरे विजयिष्यसि ॥ 31 ॥
 
 <br>
 
-Aditya Hrudayam Punyam Sarva Shatru Vinaashanam  
-Jayavaham Japennityam Akshayyam Paramam Shivam ॥ 4 ॥
+आदित्यहृदयं पुण्यं सर्वशत्रु-विनाशनम्  
+जयावहं जपेन्नित्यं अक्षय्यं परमं शिवम् ॥ 30 ॥
 
 <br>
 
-Sarvamangala Mangalyam Sarvapapa Pranashanam  
-Chintashoka Prashamanam Ayurvardhanamuttamam ॥ 5 ॥
+सर्वमङ्गल-माङ्गल्यं सर्वपाप-प्रणाशनम्  
+चिन्ताशोक-प्रशमनं आयुर्वर्धनमुत्तमम् ॥ 31 ॥
 
 <br>
 
-Rashmimantam Samudyantam Devasura Namaskritam  
-Pujayasva Vivasvantam Bhaskaram Bhuvaneshvaram ॥ 6 ॥
+रश्मिमन्तं समुद्यन्तं देवासुर नमस्कृतम्  
+पूजयस्व विवस्वन्तं भास्करं भुवनेश्वरम् ॥ 30 ॥
 
 <br>
 
-Sarvadevamayo Devah Sarvadevamayo Harih  
-Sarva Devatmayo Hyesha Tejorasmi Samanvitah ॥ 7 ॥
+सर्वदेवात्मको ह्येष तेजस्वी रश्मिभावनः  
+एष देवासुर-गणान् लोकान् पाति गभस्तिभिः ॥ 31 ॥
 
 <br>
 
-Esha Devasuraganan Lokan Pati Gabhastibhih  
-Esha Brahma Cha Vishnushcha Shivah Skandah Prajapatih ॥ 8 ॥
+एष ब्रह्मा च विष्णुश्च शिवः स्कन्दः प्रजापतिः  
+महेन्द्रो धनदः कालो यमः सोमो ह्यपां पतिः ॥ 30 ॥
 
 <br>
 
-Mahendro Dhanadah Kalo Yama Somo Hyapam Patih  
-Pitaro Vasavah Sadhya Hyashvinau Maruto Manuh ॥ 9 ॥
+पितरो वसवः साध्या ह्यश्विनौ मरुतो मनुः  
+वायुर्वह्निः प्रजाप्राणः ऋतुकर्ता प्रभाकरः ॥ 31 ॥
 
 <br>
 
-Vayurvanhih Prajaprana Rituksha Dhipatirdivah  
-Tapati Vishvatomukham Shashvatah Shashvato Dhruvah ॥ 10 ॥
+आदित्यः सविता सूर्यः खगः पूषा गभस्तिमान्  
+सुवर्णसदृशो भानुः हिरण्यरेता दिवाकरः ॥ 30 ॥
 
 <br>
 
-Agni Varnah Shatabanhuh Sahasraksho Jitavratah  
-Tapati Tapati Lokam Trishcha Lokam Cha Sahasrashah ॥ 11 ॥
+हरिदश्वः सहस्रार्चिः सप्तसप्ति-र्मरीचिमान्  
+तिमिरोन्मथनः शम्भुः त्वष्टा मार्ताण्डकोऽंशुमान् ॥ 31 ॥
 
 <br>
 
-Adityah Savita Suryah Khagah Pusha Gabhastiman  
-Suvarnasadrisho Bhanuh Hiranyaretah Divakarah ॥ 12 ॥
+हिरण्यगर्भः शिशिरः तपनो भास्करो रविः  
+अग्निगर्भोऽदितेः पुत्रः शङ्खः शिशिरनाशनः ॥ 30 ॥
 
 <br>
 
-Haridashvah Sahasrarchih Saptasaptirmarichiman  
-Timiromathanah Shambhuh Twashta Martandakoamshuman ॥ 13 ॥
+व्योमनाथ-स्तमोभेदी ऋग्यजुःसाम-पारगः  
+घनावृष्टिरपां मित्रः विन्ध्यवीथी प्लवङ्गमः ॥ 31 ॥
 
 <br>
 
-Hiranyagarbhah Shishirah Tapano Bhaskaro Ravih  
-Agnigarbhoaditeh Putrah Shankhah Shishiranashanah ॥ 14 ॥
+आतपी मण्डली मृत्युः पिङ्गलः सर्वतापनः  
+कविर्विश्वो महातेजा रक्तः सर्वभवोद्भवः ॥ 30 ॥
 
 <br>
 
-Vyomanathastamobhedi Rgyajuhsamaparagah  
-Ghanavrishtiraparam Mitrah Vindhyavithi Plavangamah ॥ 15 ॥
+नक्षत्र ग्रह ताराणां अधिपो विश्वभावनः  
+तेजसामपि तेजस्वी द्वादशात्म-न्नमोऽस्तु ते ॥ 31 ॥
 
 <br>
 
-Atapi Mandali Mrityuh Pingalah Sarvatapanah  
-Kavirvishvo Mahateja Raktah Sarvabhavodbhavah ॥ 16 ॥
+नमः पूर्वाय गिरये पश्चिमायाद्रये नमः  
+ज्योतिर्गणानां पतये दिनाधिपतये नमः ॥ 30 ॥
 
 <br>
 
-Nakshatra Grahataranam Adhipo Vishvabhavanah  
-Tejasamapi Tejasvi Dvadashatmannamoastu Te ॥ 17 ॥
+जयाय जयभद्राय हर्यश्वाय नमो नमः  
+नमो नमः सहस्रांशो आदित्याय नमो नमः ॥ 31 ॥
 
 <br>
 
-Namah Purvaya Giraye Pashchimayadraye Namah  
-Jyotirgananam Pataye Dinadhipataye Namah ॥ 18 ॥
+नम उग्राय वीराय सारङ्गाय नमो नमः  
+नमः पद्मप्रबोधाय मार्ताण्डाय नमो नमः ॥ 30 ॥
 
 <br>
 
-Jayaya Jayabhadraya Haryashvaya Namo Namah  
-Namo Namah Sahasramsho Adityaya Namo Namah ॥ 19 ॥
+ब्रह्मेशानाच्युतेशाय सूर्यायादित्य-वर्चसे  
+भास्वते सर्वभक्षाय रौद्राय वपुषे नमः ॥ 31 ॥
 
 <br>
 
-Nam Ugraya Viraya Sarangaya Namo Namah  
-Namah Padmaprabodhaya Martandaya Namo Namah ॥ 20 ॥
+तमोघ्नाय हिमघ्नाय शत्रुघ्नाया मितात्मने  
+कृतघ्नघ्नाय देवाय ज्योतिषां पतये नमः ॥ 30 ॥
 
 <br>
 
-Brahmeshanachyuteshaya Suryayaditya Varchase  
-Bhasvate Sarvabhakshaya Raudraya Vapushe Namah ॥ 21 ॥
+तप्त चामीकराभाय वह्नये विश्वकर्मणे  
+नमस्तमोऽभि निघ्नाय रवये लोकसाक्षिणे ॥ 31 ॥
 
 <br>
 
-Tamoghnya Himaghnya Shatrughnyamit Atmane  
-Kritaghnaghnya Devaya Jyotisham Pataye Namah ॥ 22 ॥
+नाशयत्येष वै भूतं तदेव सृजति प्रभुः  
+पायत्येष तपत्येष वर्षत्येष गभस्तिभिः ॥ 30 ॥
 
 <br>
 
-Tapta Chamikarabha Vahnaye Vishvakarmane  
-Namastamobhinighnaya Ravaye Lokasakshine ॥ 23 ॥
+एष सुप्तेषु जागर्ति भूतेषु परिनिष्ठितः  
+एष एवाग्निहोत्रं च फलं चैवाग्नि होत्रिणाम् ॥ 31 ॥
 
 <br>
 
-Nashayatyesha Vai Bhutam Tadeva Srijati Prabhuh  
-Payatyesha Tapatyesha Varshatyesha Gabhastibhih ॥ 24 ॥
+वेदाश्च क्रतवश्चैव क्रतूनां फलमेव च  
+यानि कृत्यानि लोकेषु सर्व एष रविः प्रभुः ॥ 30 ॥
 
 <br>
 
-Esha Supteshu Jagarti Bhuteshu Parinishthitah  
-Esha Evagnihotram Cha Phalam Chaivagni Hotrinam ॥ 25 ॥
+एन मापत्सु कृच्छ्रेषु कान्तारेषु भयेषु च  
+कीर्तयन् पुरुषः कश्चिन्नावशीदति राघव ॥ 31 ॥
 
 <br>
 
-Vedashcha Kratavashchaiva Kratunam Phalameva Cha  
-Yani Krityani Lokeshu Sarva Esha Ravih Prabhuh ॥ 26 ॥
+पूजयस्वैन मेकाग्रः देवदेवं जगत्पतिम्  
+एतत् त्रिगुणितं जप्त्वा युद्धेषु विजयिष्यसि ॥ 30 ॥
 
 <br>
 
-Ena Mapatsu Kricchreshu Kantareshu Bhayeshu Cha  
-Kirtayan Purushah Kashchinnavashidati Raghava ॥ 27 ॥
+अस्मिन् क्षणे महाबाहो रावणं त्वं वधिष्यसि  
+एवमुक्त्वा तदागस्त्यो जगाम च यथागतम् ॥ 31 ॥
 
 <br>
 
-Pujayasvainamekagro Devadevam Jagatpatim  
-Etat Trigunitam Japtva Yuddheshu Vijayishyasi ॥ 28 ॥
+एतच्छ्रुत्वा महातेजाः नष्टशोकोऽभवत्तदा  
+धारयामास सुप्रीतः राघवः प्रयतात्मवान् ॥ 30 ॥
 
 <br>
 
-Asmin Kshane Mahabaho Ravanam Twam Vadhishyasi  
-Evamuktv Tadaagastyah Jagama Cha Yathagatam ॥ 29 ॥
+आदित्यं प्रेक्ष्य जप्त्वा तु परं हर्षमवाप्तवान्  
+त्रिराचम्य शुचिर्भूत्वा धनुरादाय वीर्यवान् ॥ 31 ॥
 
 <br>
 
-Etachchhrutva Mahatejah Nashtashokobhavattada  
-Dharayamas Supriteh Raghava Prayatatmavan ॥ 30 ॥
+रावणं प्रेक्ष्य हृष्टात्मा युद्धाय समुपागमत्  
+सर्वयत्नेन महता वधे तस्य धृतोऽभवत् ॥ 32 ॥
 
 <br>
 
-Adityam Prekshya Japtva Tu Param Harshamavaptavan  
-Trirachamya Shuchirbhutva Dhanuradaya Viryavan ॥ 31 ॥
-
-<br>
-
-Ravanam Prekshya Hrishtatma Yuddhaya Samupagamat  
-Sarvayatnena Mahata Vadhe Tasy Dhritobhavat ॥ 32 ॥
-
-<br>
-
-Adha Raviravadannirikshya Ramam Muditamanah Param Prahrishyamana  
-Nishicharapati Samkshayam Viditva Suragana Madhyagato Vachastvareti ॥ 33 ॥
+अध रविरवदन्निरीक्ष्य रामं मुदितमनाः परमं प्रहृष्यमाणः  
+निशिचरपति संक्षयं विदित्वा सुरगण मध्यगतो वचस्त्वरेति ॥ 33 ॥

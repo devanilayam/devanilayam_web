@@ -32,15 +32,13 @@ export default defineContentConfig({
          source: "ashtotaras/**/*.md",
          schema: z.object({
             lord_id: z.string(),
-            sloka_id: z.string(),
+            ashtotara_id: z.string(),
+            image: z.string(),
             name: z.string(),
-            title: z.string(),
             lord: z.string(),
-            description: z.string(),
             lang: z.string(),
             tags: z.array(z.string()),
             date: z.string(),
-            image: z.string().optional(),
          }),
       }),
       blogs: defineCollection({

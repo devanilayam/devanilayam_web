@@ -1,223 +1,223 @@
 ---
 lord_id: hanuman
 sloka_id: hanuman-chalisa
-name: Hanuman
-title: Hanuman Chalisa
-lord: Hanuman
-description: Hanuman Chalisa is a devotional hymn dedicated to Lord Hanuman, composed by Tulsidas. It consists of 40 verses praising the virtues and powers of Hanuman.
-lang: en
-tags: [Hanuman Chalisa, Hanuman, Tulsidas, Chalisa]
+name: हनुमान
+title: हनुमान चालीसा
+lord: हनुमान
+description: हनुमान चालीसा तुलसीदास द्वारा रचित भगवान हनुमान को समर्पित एक भक्ति गीत है। इसमें हनुमान की गुणों और शक्तियों की प्रशंसा करने वाले 40 छंद हैं।
+lang: hi
+tags: [हनुमान चालीसा, हनुमान, तुलसीदास, चालीसा]
 date: 2025-12-01
 ---
 
-# Hanuman Chalisa
+# हनुमान चालीसा
 
-Shri Guru Charan Saroj Raj, Nij Man Mukur Sudhari  
-Barnau Raghubar Bimal Jasu, Jo Dayaku Phal Chari ॥
+श्री गुरु चरन सरोज रज, निज मन मुकुर सुधारि  
+बरनौं रघुबर बिमल जसु, जो दायकु फल चारि ॥
 
 <br>
 
-Budhi Heen Tanu Janike, Sumirau Pavan Kumar  
-Bal Buddhi Vidya Dehu Mohi, Harahu Kalesh Vikar ॥
+बुद्धिहीन तनु जानिके, सुमिरौं पवन कुमार  
+बल बुद्धि विद्या देहु मोहि, हरहु कलेश विकार ॥
 
 <!--more-->
 
 <br>
 
-Jai Hanuman Gyan Gun Sagar  
-Jai Kapis Tihun Lok Ujagar ॥ 1 ॥
+जय हनुमान ज्ञान गुन सागर  
+जय कपीस तिहुँ लोक उजागर ॥ 1 ॥
 
 <br>
 
-Ram Doot Atulit Bal Dhama  
-Anjani Putra Pavan Sut Nama ॥ 2 ॥
+राम दूत अतुलित बल धामा  
+अंजनि पुत्र पवन सुत नामा ॥ 2 ॥
 
 <br>
 
-Mahabir Bikram Bajrangi  
-Kumati Nivar Sumati Ke Sangi ॥ 3 ॥
+महाबीर बिक्रम बजरंगी  
+कुमति निवार सुमति के संगी ॥ 3 ॥
 
 <br>
 
-Kanchan Baran Biraj Subesa  
-Kanan Kundal Kunchit Kesa ॥ 4 ॥
+कंचन बरन बिराज सुबेसा  
+कानन कुंडल कुंचित केसा ॥ 4 ॥
 
 <br>
 
-Hath Bajra Aur Dhvaja Biraje  
-Kandhe Moonj Janeu Saje ॥ 5 ॥
+हाथ बज्र और ध्वजा बिराजै  
+काँधे मूँज जनेऊ साजै ॥ 5 ॥
 
 <br>
 
-Shankar Suvan Kesari Nandan  
-Tej Pratap Maha Jag Vandan ॥ 6 ॥
+शंकर सुवन केसरी नंदन  
+तेज प्रताप महा जग वंदन ॥ 6 ॥
 
 <br>
 
-Vidyavan Guni Ati Chatur  
-Ram Kaj Karibe Ko Atur ॥ 7 ॥
+विद्यावान गुनी अति चातुर  
+राम काज करिबे को आतुर ॥ 7 ॥
 
 <br>
 
-Prabhu Charitra Sunibe Ko Rasiya  
-Ram Lakhan Sita Man Basiya ॥ 8 ॥
+प्रभु चरित्र सुनिबे को रसिया  
+राम लखन सीता मन बसिया ॥ 8 ॥
 
 <br>
 
-Sukshma Roop Dhari Siyahin Dikhava  
-Vikat Roop Dhari Lank Jarava ॥ 9 ॥
+सूक्ष्म रूप धरि सियहिं दिखावा  
+विकट रूप धरि लंक जरावा ॥ 9 ॥
 
 <br>
 
-Bhima Roop Dhari Asur Sanhare  
-Ramachandra Ke Kaj Sanvare ॥ 10 ॥
+भीम रूप धरि असुर संहारे  
+रामचंद्र के काज संवारे ॥ 10 ॥
 
 <br>
 
-Laye Sanjivan Lakhan Jiyaye  
-Shri Raghuvir Harashi Ur Laye ॥ 11 ॥
+लाय संजीवन लखन जियाये  
+श्री रघुवीर हरषि उर लाये ॥ 11 ॥
 
 <br>
 
-Raghupati Kinhi Bahut Badai  
-Tum Mama Priya Bharat Sam Bhai ॥ 12 ॥
+रघुपति कीन्ही बहुत बड़ाई  
+तुम मम प्रिय भरत सम भाई ॥ 12 ॥
 
 <br>
 
-Sahas Badan Tumharo Yash Gave  
-As Kahi Shripati Kanth Lagave ॥ 13 ॥
+सहस बदन तुम्हरो यश गावैं  
+अस कहि श्रीपति कंठ लगावैं ॥ 13 ॥
 
 <br>
 
-Sankadik Brahmadi Muneesa  
-Narad Sarad Sahit Aheesa ॥ 14 ॥
+सनकादिक ब्रह्मादि मुनीसा  
+नारद सारद सहित अहीसा ॥ 14 ॥
 
 <br>
 
-Yam Kuber Digpal Jahan Te  
-Kavi Kovid Kahi Sake Kahan Te ॥ 15 ॥
+यम कुबेर दिगपाल जहाँ ते  
+कवि कोविद कहि सके कहाँ ते ॥ 15 ॥
 
 <br>
 
-Tum Upkar Sugreevahin Keenha  
-Ram Milaaye Rajpad Deenha ॥ 16 ॥
+तुम उपकार सुग्रीवहिं कीन्हा  
+राम मिलाये राज पद दीन्हा ॥ 16 ॥
 
 <br>
 
-Tumharo Mantra Vibhishan Maana  
-Lankeshwar Bhaye Sab Jag Jana ॥ 17 ॥
+तुम्हरो मंत्र विभीषण माना  
+लंकेश्वर भए सब जग जाना ॥ 17 ॥
 
 <br>
 
-Yug Sahasra Yojan Par Bhanu  
-Lilyo Tahi Madhur Phal Janu ॥ 18 ॥
+युग सहस्र योजन पर भानू  
+लिल्यो ताहि मधुर फल जानू ॥ 18 ॥
 
 <br>
 
-Prabhu Mudrika Meli Mukh Maahi  
-Jaladhi Langhi Gaye Achraj Nahin ॥ 19 ॥
+प्रभु मुद्रिका मेलि मुख माहीं  
+जलधि लाँघि गये अचरज नाहीं ॥ 19 ॥
 
 <br>
 
-Durgam Kaj Jagat Ke Jete  
-Sugam Anugraha Tumhre Tete ॥ 20 ॥
+दुर्गम काज जगत के जेते  
+सुगम अनुग्रह तुम्हरे तेते ॥ 20 ॥
 
 <br>
 
-Ram Duware Tum Rakhvare  
-Hoat Na Aagya Binu Paisare ॥ 21 ॥
+राम दुआरे तुम रखवारे  
+होत न आज्ञा बिनु पैसारे ॥ 21 ॥
 
 <br>
 
-Sab Sukh Lahai Tumhari Sarna  
-Tum Rakshak Kahu Ko Darna ॥ 22 ॥
+सब सुख लहै तुम्हारी सरना  
+तुम रक्षक काहू को डर ना ॥ 22 ॥
 
 <br>
 
-Aapan Tej Samharo Aapai  
-Teenhon Lok Hank Te Kanpai ॥ 23 ॥
+आपन तेज सम्हारो आपै  
+तीनों लोक हाँक ते काँपै ॥ 23 ॥
 
 <br>
 
-Bhoot Pisaach Nikat Nahin Aavai  
-Mahavir Jab Naam Sunavai ॥ 24 ॥
+भूत पिसाच निकट नहिं आवै  
+महावीर जब नाम सुनावै ॥ 24 ॥
 
 <br>
 
-Nase Rog Hare Sab Peera  
-Japat Nirantar Hanumat Beera ॥ 25 ॥
+नासै रोग हरै सब पीरा  
+जपत निरंतर हनुमत बीरा ॥ 25 ॥
 
 <br>
 
-Sankat Te Hanuman Chhudavai  
-Man Kram Vachan Dhyan Jo Lavai ॥ 26 ॥
+संकट ते हनुमान छुड़ावै  
+मन क्रम वचन ध्यान जो लावै ॥ 26 ॥
 
 <br>
 
-Sab Par Ram Tapasvee Raja  
-Tin Ke Kaj Sakal Tum Saja ॥ 27 ॥
+सब पर राम तपस्वी राजा  
+तिन के काज सकल तुम साजा ॥ 27 ॥
 
 <br>
 
-Aur Manorath Jo Koi Lavai  
-Soi Amit Jivan Phal Pavai ॥ 28 ॥
+और मनोरथ जो कोई लावै  
+सोइ अमित जीवन फल पावै ॥ 28 ॥
 
 <br>
 
-Charon Jug Partap Tumhara  
-Hai Parsiddh Jagat Ujiyara ॥ 29 ॥
+चारों युग परताप तुम्हारा  
+है परसिद्ध जगत उजियारा ॥ 29 ॥
 
 <br>
 
-Sadhu Sant Ke Tum Rakhware  
-Asur Nikandan Ram Dulare ॥ 30 ॥
+साधु संत के तुम रखवारे  
+असुर निकंदन राम दुलारे ॥ 30 ॥
 
 <br>
 
-Ashta Siddhi Nav Nidhi Ke Data  
-As Var Deen Janki Mata ॥ 31 ॥
+अष्ट सिद्धि नौ निधि के दाता  
+अस वर दीन जानकी माता ॥ 31 ॥
 
 <br>
 
-Ram Rasayan Tumhare Pasa  
-Sada Raho Raghupati Ke Dasa ॥ 32 ॥
+राम रसायन तुम्हरे पासा  
+सदा रहो रघुपति के दासा ॥ 32 ॥
 
 <br>
 
-Tumhare Bhajan Ram Ko Pavai  
-Janam Janam Ke Dukh Bisravai ॥ 33 ॥
+तुम्हरे भजन राम को पावै  
+जनम जनम के दुख बिसरावै ॥ 33 ॥
 
 <br>
 
-Ant Kaal Raghubar Pur Jayi  
-Jahan Janma Hari Bhakt Kahayi ॥ 34 ॥
+अंत काल रघुबर पुर जाई  
+जहाँ जन्म हरि भक्त कहाई ॥ 34 ॥
 
 <br>
 
-Aur Devta Chitt Na Dharai  
-Hanumat Sei Sarv Sukh Karai ॥ 35 ॥
+और देवता चित्त न धरई  
+हनुमत सेइ सर्व सुख करई ॥ 35 ॥
 
 <br>
 
-Sankat Kate Mite Sab Peera  
-Jo Sumire Hanumat Balbeera ॥ 36 ॥
+संकट कटै मिटै सब पीरा  
+जो सुमिरै हनुमत बलबीरा ॥ 36 ॥
 
 <br>
 
-Jai Jai Jai Hanuman Gosai  
-Kripa Karahu Gurudev Ki Naee ॥ 37 ॥
+जय जय जय हनुमान गोसाई  
+कृपा करहु गुरुदेव की नाई ॥ 37 ॥
 
 <br>
 
-Jo Sat Bar Path Kar Koi  
-Chhutahi Bandi Maha Sukh Hoi ॥ 38 ॥
+जो सत बार पाठ कर कोई  
+छूटहि बंदि महा सुख होई ॥ 38 ॥
 
 <br>
 
-Jo Yah Padhe Hanuman Chalisa  
-Hoye Siddhi Sakhi Gaurisa ॥ 40 ॥
+जो यह पढ़ै हनुमान चालीसा  
+होय सिद्धि साखी गौरीसा ॥ 40 ॥
 
 <br>
 
-Tulsidas Sada Hari Chera  
-Keejai Nath Hriday Mah Dera ॥
+तुलसीदास सदा हरी चेरा  
+कीजै नाथ हृदय महँ डेरा ॥

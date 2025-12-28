@@ -17,6 +17,11 @@
             "subtitle": "Discover slokas organized by deity, purpose, and tradition",
             "viewAll": "View All Slokas"
          },
+         "ashtotarasList": {
+            "title": "Explore Ashtotaras",
+            "subtitle": "Discover ashtotaras (108 names) organized by deity and occasion",
+            "viewAll": "View All Ashtotaras"
+         },
          "features": {
             "title": "Features",
             "subtitle": "Explore powerful features that enhance your sloka practice."
@@ -50,10 +55,19 @@
       "noResults": "No slokas found matching your search.",
       "stayTuned": "More slokas coming soon. Stay tuned for updates...!!!"
    },
+   "ashtotarasList": {
+      "title": "All Ashtotaras",
+      "subtitle": "Explore our complete collection of divine ashtotaras (108 names) performed for various deities and occasions.",
+      "searchPlaceholder": "Type to search ashtotaras...",
+      "noResults": "No ashtotaras found matching your search.",
+      "stayTuned": "More ashtotaras coming soon. Stay tuned for updates...!!!"
+   },
    "header": {
       "links": {
          "about": "About",
-         "slokas": "Slokas"
+         "slokas": "Slokas",
+         "ashtotaras": "Ashtotaras",
+         "blogs": "Blogs"
       }
    },
    "footer": {

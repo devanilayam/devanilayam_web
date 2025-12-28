@@ -1,223 +1,223 @@
 ---
 lord_id: hanuman
 sloka_id: hanuman-chalisa
-name: Hanuman
-title: Hanuman Chalisa
-lord: Hanuman
-description: Hanuman Chalisa is a devotional hymn dedicated to Lord Hanuman, composed by Tulsidas. It consists of 40 verses praising the virtues and powers of Hanuman.
-lang: en
-tags: [Hanuman Chalisa, Hanuman, Tulsidas, Chalisa]
+name: హనుమాన్
+title: హనుమాన్ చాలీసా
+lord: హనుమాన్
+description: హనుమాన్ చాలీసా తులసీదాస్ రచించిన భగవాన్ హనుమాన్‌కు అంకితం చేయబడిన భక్తి గీతం. ఇది హనుమాన్‌యొక్క గుణాలు మరియు శక్తులను కీర్తించే 40 శ్లోకాలను కలిగి ఉంది.
+lang: te
+tags: [హనుమాన్ చాలీసా, హనుమాన్, తులసీదాస్, చాలీసా]
 date: 2025-12-01
 ---
 
-# Hanuman Chalisa
+# హనుమాన్ చాలీసా
 
-Shri Guru Charan Saroj Raj, Nij Man Mukur Sudhari  
-Barnau Raghubar Bimal Jasu, Jo Dayaku Phal Chari ॥
+శ్రీ గురు చరణ సరోజ రజ, నిజ మన ముకుర సుధారి  
+బరనౌ రఘుబర బిమల జసు, జో దాయకు ఫల చారి ॥
 
 <br>
 
-Budhi Heen Tanu Janike, Sumirau Pavan Kumar  
-Bal Buddhi Vidya Dehu Mohi, Harahu Kalesh Vikar ॥
+బుద్ధిహీన తను జానికే, సుమిరౌ పవన కుమార  
+బల బుద్ధి విద్య దేహు మోహి, హరహు కలేశ వికార ॥
 
 <!--more-->
 
 <br>
 
-Jai Hanuman Gyan Gun Sagar  
-Jai Kapis Tihun Lok Ujagar ॥ 1 ॥
+జయ హనుమాన్ జ్ఞాన గుణ సాగర  
+జయ కపీశ తిహుఁ లోక ఉజాగర ॥ 1 ॥
 
 <br>
 
-Ram Doot Atulit Bal Dhama  
-Anjani Putra Pavan Sut Nama ॥ 2 ॥
+రామ దూత అతులిత బల ధామా  
+అంజని పుత్ర పవన సుత నామా ॥ 2 ॥
 
 <br>
 
-Mahabir Bikram Bajrangi  
-Kumati Nivar Sumati Ke Sangi ॥ 3 ॥
+మహాబీర్ బిక్రమ బజరంగీ  
+కుమతి నివార్ సుమతి కే సంగీ ॥ 3 ॥
 
 <br>
 
-Kanchan Baran Biraj Subesa  
-Kanan Kundal Kunchit Kesa ॥ 4 ॥
+కంచన బరన్ బిరాజ్ సుబేసా  
+కానన్ కుండల్ కుంచిత్ కేసా ॥ 4 ॥
 
 <br>
 
-Hath Bajra Aur Dhvaja Biraje  
-Kandhe Moonj Janeu Saje ॥ 5 ॥
+హాథ్ బజ్ర ఔర్ ధ్వజా బిరాజై  
+కాఁధే మూఁజ్ జనేఊ సాజై ॥ 5 ॥
 
 <br>
 
-Shankar Suvan Kesari Nandan  
-Tej Pratap Maha Jag Vandan ॥ 6 ॥
+శంకర్ సువన్ కేసరీ నందన్  
+తేజ్ ప్రతాప్ మహా జగ్ వందన్ ॥ 6 ॥
 
 <br>
 
-Vidyavan Guni Ati Chatur  
-Ram Kaj Karibe Ko Atur ॥ 7 ॥
+విద్యావాన్ గునీ అతి చాతుర్  
+రామ్ కాజ్ కరిబే కో ఆతుర్ ॥ 7 ॥
 
 <br>
 
-Prabhu Charitra Sunibe Ko Rasiya  
-Ram Lakhan Sita Man Basiya ॥ 8 ॥
+ప్రభు చరిత్ర సునిబే కో రసియా  
+రామ్ లఖన్ సీతా మన్ బసియా ॥ 8 ॥
 
 <br>
 
-Sukshma Roop Dhari Siyahin Dikhava  
-Vikat Roop Dhari Lank Jarava ॥ 9 ॥
+సూక్ష్మ రూప్ ధరి సియహిఁ దిఖావా  
+వికట్ రూప్ ధరి లంక్ జరావా ॥ 9 ॥
 
 <br>
 
-Bhima Roop Dhari Asur Sanhare  
-Ramachandra Ke Kaj Sanvare ॥ 10 ॥
+భీమ్ రూప్ ధరి అసుర్ సంహారే  
+రామచంద్ర కే కాజ్ సంవారే ॥ 10 ॥
 
 <br>
 
-Laye Sanjivan Lakhan Jiyaye  
-Shri Raghuvir Harashi Ur Laye ॥ 11 ॥
+లాయే సంజీవన్ లఖన్ జియాయే  
+శ్రీ రఘువీర్ హరషి ఉర్ లాయే ॥ 11 ॥
 
 <br>
 
-Raghupati Kinhi Bahut Badai  
-Tum Mama Priya Bharat Sam Bhai ॥ 12 ॥
+రఘుపతి కీన్హీ బహుత్ బడై  
+తుమ్ మమ ప్రియ భరత్ సమ్ భై ॥ 12 ॥
 
 <br>
 
-Sahas Badan Tumharo Yash Gave  
-As Kahi Shripati Kanth Lagave ॥ 13 ॥
+సహస్ బదన్ తుమ్హరో యశ్ గావైఁ  
+అస్ కహి శ్రీపతి కంఠ్ లగావైఁ ॥ 13 ॥
 
 <br>
 
-Sankadik Brahmadi Muneesa  
-Narad Sarad Sahit Aheesa ॥ 14 ॥
+సనకాదిక్ బ్రహ్మాది మునీసా  
+నారద్ సారద్ సహిత్ అహీసా ॥ 14 ॥
 
 <br>
 
-Yam Kuber Digpal Jahan Te  
-Kavi Kovid Kahi Sake Kahan Te ॥ 15 ॥
+యమ్ కుబేర్ దిగపాల్ జహాఁ తే  
+కవి కోవిద్ కహి సకే కహాఁ తే ॥ 15 ॥
 
 <br>
 
-Tum Upkar Sugreevahin Keenha  
-Ram Milaaye Rajpad Deenha ॥ 16 ॥
+తుమ్ ఉపకార్ సుగ్రీవహిఁ కీన్హా  
+రామ్ మిలాయే రాజ్ పద్ దీన్హా ॥ 16 ॥
 
 <br>
 
-Tumharo Mantra Vibhishan Maana  
-Lankeshwar Bhaye Sab Jag Jana ॥ 17 ॥
+తుమ్హరో మంత్ర విభీషణ్ మానా  
+లంకేశ్వర్ భఏ సబ్ జగ్ జానా ॥ 17 ॥
 
 <br>
 
-Yug Sahasra Yojan Par Bhanu  
-Lilyo Tahi Madhur Phal Janu ॥ 18 ॥
+యుగ్ సహస్ర యోజన్ పర్ భానూ  
+లిల్యో తాహి మధుర్ ఫల్ జానూ ॥ 18 ॥
 
 <br>
 
-Prabhu Mudrika Meli Mukh Maahi  
-Jaladhi Langhi Gaye Achraj Nahin ॥ 19 ॥
+ప్రభు ముద్రికా మేలి ముఖ్ మాహీ  
+జలధి లాఁఘి గయే అచరజ్ నాహీ ॥ 19 ॥
 
 <br>
 
-Durgam Kaj Jagat Ke Jete  
-Sugam Anugraha Tumhre Tete ॥ 20 ॥
+దుర్గమ్ కాజ్ జగత్ కే జేతే  
+సుగమ్ అనుగ్రహ్ తుమ్హరే తేతే ॥ 20 ॥
 
 <br>
 
-Ram Duware Tum Rakhvare  
-Hoat Na Aagya Binu Paisare ॥ 21 ॥
+రామ్ దువారే తుమ్ రఖవారే  
+హోత్ న ఆజ్ఞా బిను పైసారే ॥ 21 ॥
 
 <br>
 
-Sab Sukh Lahai Tumhari Sarna  
-Tum Rakshak Kahu Ko Darna ॥ 22 ॥
+సబ్ సుఖ్ లహై తుమ్హారీ సరనా  
+తుమ్ రక్షక్ కాహూ కో డర్ నా ॥ 22 ॥
 
 <br>
 
-Aapan Tej Samharo Aapai  
-Teenhon Lok Hank Te Kanpai ॥ 23 ॥
+ఆపన్ తేజ్ సమ్హారో ఆపై  
+తీనోఁ లోక్ హాఁక్ తే కాఁపై ॥ 23 ॥
 
 <br>
 
-Bhoot Pisaach Nikat Nahin Aavai  
-Mahavir Jab Naam Sunavai ॥ 24 ॥
+భూత్ పిసాచ్ నికట్ నహిఁ ఆవై  
+మహావీర్ జబ్ నామ్ సునావై ॥ 24 ॥
 
 <br>
 
-Nase Rog Hare Sab Peera  
-Japat Nirantar Hanumat Beera ॥ 25 ॥
+నాసై రోగ్ హరై సబ్ పీరా  
+జపత్ నిరంతర్ హనుమత్ బీరా ॥ 25 ॥
 
 <br>
 
-Sankat Te Hanuman Chhudavai  
-Man Kram Vachan Dhyan Jo Lavai ॥ 26 ॥
+సంకట్ తే హనుమాన్ ఛుడావై  
+మన్ క్రమ్ వచన్ ధ్యాన్ జో లావై ॥ 26 ॥
 
 <br>
 
-Sab Par Ram Tapasvee Raja  
-Tin Ke Kaj Sakal Tum Saja ॥ 27 ॥
+సబ్ పర్ రామ్ తపస్వీ రాజా  
+తిన్ కే కాజ్ సకల్ తుమ్ సాజా ॥ 27 ॥
 
 <br>
 
-Aur Manorath Jo Koi Lavai  
-Soi Amit Jivan Phal Pavai ॥ 28 ॥
+ఔర్ మనోరథ్ జో కోఈ లావై  
+సోఇ అమిత్ జీవన్ ఫల్ పావై ॥ 28 ॥
 
 <br>
 
-Charon Jug Partap Tumhara  
-Hai Parsiddh Jagat Ujiyara ॥ 29 ॥
+చారోఁ యుగ్ పరతాప్ తుమ్హారా  
+హై పరసిద్ధ్ జగత్ ఉజియారా ॥ 29 ॥
 
 <br>
 
-Sadhu Sant Ke Tum Rakhware  
-Asur Nikandan Ram Dulare ॥ 30 ॥
+సాధు సంత్ కే తుమ్ రఖవారే  
+అసుర్ నికందన్ రామ్ దులారే ॥ 30 ॥
 
 <br>
 
-Ashta Siddhi Nav Nidhi Ke Data  
-As Var Deen Janki Mata ॥ 31 ॥
+అష్ట్ సిద్ధి నౌ నిధి కే దాతా  
+అస్ వర్ దీన్ జానకీ మాతా ॥ 31 ॥
 
 <br>
 
-Ram Rasayan Tumhare Pasa  
-Sada Raho Raghupati Ke Dasa ॥ 32 ॥
+రామ్ రసాయన్ తుమ్హరే పాసా  
+సదా రహో రఘుపతి కే దాసా ॥ 32 ॥
 
 <br>
 
-Tumhare Bhajan Ram Ko Pavai  
-Janam Janam Ke Dukh Bisravai ॥ 33 ॥
+తుమ్హరే భజన్ రామ్ కో పావై  
+జనమ్ జనమ్ కే దుఖ్ బిసరావై ॥ 33 ॥
 
 <br>
 
-Ant Kaal Raghubar Pur Jayi  
-Jahan Janma Hari Bhakt Kahayi ॥ 34 ॥
+అంత్ కాల్ రఘుబర్ పుర్ జాయి  
+జహాఁ జన్మ హరి భక్త్ కహాయి ॥ 34 ॥
 
 <br>
 
-Aur Devta Chitt Na Dharai  
-Hanumat Sei Sarv Sukh Karai ॥ 35 ॥
+ఔర్ దేవతా చిత్త్ న ధరఈ  
+హనుమత్ సేఇ సర్వ్ సుఖ్ కరఈ ॥ 35 ॥
 
 <br>
 
-Sankat Kate Mite Sab Peera  
-Jo Sumire Hanumat Balbeera ॥ 36 ॥
+సంకట్ కటై మిటై సబ్ పీరా  
+జో సుమిరై హనుమత్ బలబీరా ॥ 36 ॥
 
 <br>
 
-Jai Jai Jai Hanuman Gosai  
-Kripa Karahu Gurudev Ki Naee ॥ 37 ॥
+జయ్ జయ్ జయ్ హనుమాన్ గోసై  
+కృపా కరహు గురుదేవ్ కీ నై ॥ 37 ॥
 
 <br>
 
-Jo Sat Bar Path Kar Koi  
-Chhutahi Bandi Maha Sukh Hoi ॥ 38 ॥
+జో సత్ బార్ పాఠ్ కర్ కోఈ  
+ఛూటహి బంది మహా సుఖ్ హోఈ ॥ 38 ॥
 
 <br>
 
-Jo Yah Padhe Hanuman Chalisa  
-Hoye Siddhi Sakhi Gaurisa ॥ 40 ॥
+జో యహ్ పఢై హనుమాన్ చాలీసా  
+హోయ్ సిద్ధి సాఖీ గౌరీసా ॥ 40 ॥
 
 <br>
 
-Tulsidas Sada Hari Chera  
-Keejai Nath Hriday Mah Dera ॥
+తులసీదాస్ సదా హరీ చేరా  
+కీజై నాథ్ హృదయ్ మహఁ డేరా ॥

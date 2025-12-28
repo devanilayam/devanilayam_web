@@ -1,28 +1,28 @@
 ---
 lord_id: shani
 sloka_id: shani-stotram
-name: Shani
-title: Shani Stotram
-lord: Shani
-description: Shani Stotram is a powerful hymn dedicated to Lord Shani (Shaneeswara), the deity representing the planet Saturn. It is chanted to seek his blessings, mitigate adverse effects, and receive justice and protection.
-lang: en
+name: शनि
+title: शनि स्तोत्र
+lord: शनि
+description: शनि स्तोत्र भगवान शनि (शनैश्वर) को समर्पित एक शक्तिशाली स्तोत्र है, जो शनि ग्रह के देवता का प्रतिनिधित्व करते हैं। यह उनका आशीर्वाद प्राप्त करने, प्रतिकूल प्रभावों को कम करने और न्याय एवं सुरक्षा प्राप्त करने के लिए पढ़ा जाता है।
+lang: hi
 image: lord/shani.webp
-tags: [Shani Stotram, Shani, Shaneeswara, Saturn, Shaneshchara]
+tags: [शनि स्तोत्र, शनि, शनैश्वर, शनि ग्रह, शनैश्चर]
 date: 2025-12-01
 ---
 
-# Shani Stotram
+# शनि स्तोत्र
 
-Konastha Pingalo Babhruh Krishno Roudrontako Yamah  
-Sauri Shaneshcharo Mandah Pippaladennamostute ॥
+कोणस्थ पिङ्गलो बभ्रुः कृष्णो रौद्रान्तको यमः  
+सौरि शनैश्चरो मन्दः पिप्पलादेन्नमोस्तुते ॥
 
 <!--more-->
 
 <br>
 
-Nilanjana Samabhasam Raviputram Yamagrajam  
-Chaya Martanda Sambhutam Tam Namami Shaishcharam ॥
+नीलाञ्जन समाभासं रविपुत्रं यमाग्रजं  
+छाया मार्तण्ड सम्भूतं तं नमामि शैश्चरं ॥
 
 <br>
 
-Om Sham Shanaishcharaya Namah ॥
+ॐ शं शनैश्चराय नमः ॥

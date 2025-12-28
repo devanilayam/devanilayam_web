@@ -1,52 +1,53 @@
 ---
 lord_id: rama
 sloka_id: rama-keerthana
-name: Ramachandraya
-title: Ramachandraya Keerthana
-lord: Rama
-description: Ramachandraya is a famous keerthana that sings of Lord Rama’s valor and humility.
-lang: en
-tags: [Ramachandraya, Rama, Ramachandraya Keerthana]
+name: रामचन्द्राय
+title: रामचन्द्राय कीर्तन
+lord: राम
+description: रामचन्द्राय एक प्रसिद्ध कीर्तन है जो भगवान राम की वीरता और विनम्रता का गान करता है।
+lang: hi
+tags: [रामचन्द्राय, राम, रामचन्द्राय कीर्तन]
 date: 2025-12-01
 ---
 
-# Ramachandraya Keerthana
+# रामचन्द्राय कीर्तन
 
-Ramachandraya Janakarajaja Manoharaya  
-Mamakabheeshtadaya Mahita Mangalam ||
+रामचन्द्राय जनकराजजा मनोहराय  
+मामकाभीष्टदाय महित मङ्गलं ||
 
 <!--more-->
 <br>
 
-Kosaleshaya Mandahaasa Dasaposhanaaya  
-Vasavaadi Vinuta Sadvarada Mangalam || 1 ||
+कोसलेशाय मन्दहास दासपोषणाय  
+वासवादि विनुत सद्वरद मङ्गलं || 1 ||
 
 <br>
 
-Charu Kunkumopeta Chandanaadi Charchitaaya  
-Haara Kataka Shobhitaya Bhuri Mangalam || 2 ||
+चारु कुङ्कुमोपेत चन्दनादि चर्चिताय  
+हार कटक शोभिताय भूरि मङ्गलं || 2 ||
 
 <br>
 
-Lalita Ratnakundalaaya Tulasi Vanamaalikaya  
-Jalada Sadrusha Dehaaya Charu Mangalam || 3 ||
+ललित रत्नकुण्डलाय तुलसी वनमालिकाय  
+जलद सद्रुश देहाय चारु मङ्गलं || 3 ||
 
 <br>
 
-Devakeeputraaya Deva Devottamaaya  
-Chapa Jaata Guru Varaaya Bhavya Mangalam || 4 ||
+देवकीपुत्राय देव देवोत्तमाय  
+चाप जात गुरु वराय भव्य मङ्गलं || 4 ||
 
 <br>
 
-Pundareekakshaaya Poorna Chandrananaaya  
-Andajata Vaahanaaya Atula Mangalam || 5 ||
+पुण्डरीकाक्षाय पूर्णचन्द्राननाय  
+अण्डजातवाहनाय अतुल मङ्गलं || 5 ||
 
 <br>
 
-Vimala Roopaaya Vivida Vedanta Vedyaya  
-Sujana Chitta Kaamitaaya Shubhanga Mangalam || 6 ||
+विमलरूपाय विविध वेदान्तवेद्याय  
+सुजन चित्त कामिताय शुभङ्ग मङ्गलं || 6 ||
 
 <br>
 
-Ramadasa Mridula Hrudaya Taamarasa Nivaasaaya  
-Swami Bhadragirivaraaya Sarva Mangalam || 7 ||
+रामदास मृदुल हृदय तामरस निवासाय  
+स्वामि भद्रगिरिवराय सर्व मङ्गलं || 7 ||
+

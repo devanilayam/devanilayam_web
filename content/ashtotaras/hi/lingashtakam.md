@@ -1,73 +1,74 @@
 ---
 lord_id: shiva
 sloka_id: lingashtakam
-name: Shiva
-title: Lingashtakam
-lord: Shiva
-description: Lingashtakam is an endless hymn extolling the glory and sanctity of Lord Shiva.
-lang: en
-tags: [Lingashtakam, Shiva, Shiva Stotram]
+name: शिव
+title: लिङ्गाष्टकम्
+lord: शिव
+description: लिङ्गाष्टकम् एक अंतहीन स्तोत्र है जो भगवान शिव की महिमा और पवित्रता का गुणगान करता है।
+lang: hi
+tags: [लिङ्गाष्टकम्, शिव, शिव स्तोत्रम्]
 date: 2025-12-01
 ---
 
-# Lingashtakam
+# लिङ्गाष्टकम्
 
-Brahma Murari Surarchita Lingam  
-Nirmala Bhasita Shobhita Lingam  
-Janmaja Dukha Vinashaka Lingam  
-Tatpranamami Sada Shiva Lingam ॥ 1 ॥
+ब्रह्ममुरारि सुरार्चित लिङ्गं  
+निर्मलभासित शोभित लिङ्गम् ।  
+जन्मज दुःख विनाशक लिङ्गं  
+तत्प्रणमामि सदाशिव लिङ्गम् ॥ 1 ॥
 
 <!--more-->
 <br>
 
-Deva Muni Pravara Archita Lingam  
-Kama Dahana Karunakara Lingam  
-Ravana Darpa Vinashana Lingam  
-Tatpranamami Sada Shiva Lingam ॥ 2 ॥
+देवमुनि प्रवरार्चित लिङ्गं  
+कामदहन करुणाकर लिङ्गम् ।  
+रावणदर्प विनाशन लिङ्गं  
+तत्प्रणमामि सदाशिव लिङ्गम् ॥ 2 ॥
 
 <br>
 
-Sarva Sugandha Sulepita Lingam  
-Buddhi Vivardhana Karana Lingam  
-Siddha Sura Asura Vandita Lingam  
-Tatpranamami Sada Shiva Lingam ॥ 3 ॥
+सर्व सुगन्ध सुलेपित लिङ्गं  
+बुद्धि विवर्धन कारण लिङ्गम् ।  
+सिद्ध सुरासुर वन्दित लिङ्गं  
+तत्प्रणमामि सदाशिव लिङ्गम् ॥ 3 ॥
 
 <br>
 
-Kanaka Mahamani Bhushita Lingam  
-Phanipati Veshtita Shobhita Lingam  
-Daksha Suyagna Vinashana Lingam  
-Tatpranamami Sada Shiva Lingam ॥ 4 ॥
+कनक महामणि भूषित लिङ्गं  
+फणिपति वेष्टित शोभित लिङ्गम् ।  
+दक्षसुयज्ञ विनाशन लिङ्गं  
+तत्प्रणमामि सदाशिव लिङ्गम् ॥ 4 ॥
 
 <br>
 
-Kunkuma Chandana Lepita Lingam  
-Pankaja Haara Sushobhita Lingam  
-Sanchita Paapa Vinashana Lingam  
-Tatpranamami Sada Shiva Lingam ॥ 5 ॥
+कुङ्कुम चन्दन लेपित लिङ्गं  
+पङ्कज हार सुशोभित लिङ्गम् ।  
+सञ्चित पाप विनाशन लिङ्गं  
+तत्प्रणमामि सदाशिव लिङ्गम् ॥ 5 ॥
 
 <br>
 
-Deva Gana Archita Sevita Lingam  
-Bhavai Bhaktibhireva Cha Lingam  
-Dinakara Koti Prabhakara Lingam  
-Tatpranamami Sada Shiva Lingam ॥ 6 ॥
+देवगणार्चित सेवित लिङ्गं  
+भावैर्भक्तिभिरेव च लिङ्गम् ।  
+दिनकर कोटि प्रभाकर लिङ्गं  
+तत्प्रणमामि सदाशिव लिङ्गम् ॥ 6 ॥
 
 <br>
 
-Ashtadala Pari Veshtita Lingam  
-Sarva Samudbhava Karana Lingam  
-Ashta Daridra Vinashana Lingam  
-Tatpranamami Sada Shiva Lingam ॥ 7 ॥
+अष्टदलोपरिवेष्टित लिङ्गं  
+सर्वसमुद्भव कारण लिङ्गम् ।  
+अष्टदरिद्र विनाशन लिङ्गं  
+तत्प्रणमामि सदाशिव लिङ्गम् ॥ 7 ॥
 
 <br>
 
-Suraguru Suravara Pujita Lingam  
-Suravana Pushpa Sada Archita Lingam  
-Paratparam (Paramapadam) Paramatmaka Lingam  
-Tatpranamami Sada Shiva Lingam ॥ 8 ॥
+सुरगुरु सुरवर पूजित लिङ्गं  
+सुरवन पुष्प सदार्चित लिङ्गम् ।  
+परात्परं (परमपदं) परमात्मक लिङ्गं  
+तत्प्रणमामि सदाशिव लिङ्गम् ॥ 8 ॥
 
 <br>
 
-Lingashtakamidam Punyam Yah Pathet Shiva Sannidhau  
-Shivalokamavapnoti Shivena Saha Modate ॥
+लिङ्गाष्टकमिदं पुण्यं यः पठेश्शिव सन्निधौ ।  
+शिवलोकमवाप्नोति शिवेन सह मोदते ॥
+

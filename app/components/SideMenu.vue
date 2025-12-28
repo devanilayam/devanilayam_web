@@ -10,6 +10,12 @@
                <nuxt-link :to="`/slokas`" class="side-menu__link" @click="close">
                   {{ $t('header.links.slokas') }}
                </nuxt-link>
+               <nuxt-link :to="`/ashtotaras`" class="side-menu__link" @click="close">
+                  {{ $t('header.links.ashtotaras') }}
+               </nuxt-link>
+               <nuxt-link :to="`/blogs`" class="side-menu__link" @click="close">
+                  {{ $t('header.links.blogs') }}
+               </nuxt-link>
             </div>
          </aside>
       </Transition>

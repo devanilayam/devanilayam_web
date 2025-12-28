@@ -1,52 +1,52 @@
 ---
 lord_id: rama
 sloka_id: rama-keerthana
-name: Ramachandraya
-title: Ramachandraya Keerthana
-lord: Rama
-description: Ramachandraya is a famous keerthana that sings of Lord Rama’s valor and humility.
-lang: en
-tags: [Ramachandraya, Rama, Ramachandraya Keerthana]
+name: రామచంద్రాయ
+title: రామచంద్రాయ కీర్తన
+lord: రామ
+description: రామచంద్రాయ అనేది శ్రీరాముని పరాక్రమాన్ని, వినయాన్ని స్మరిస్తూ గానం చేసే ప్రఖ్యాత కీర్తన.
+lang: te
+tags: [రామచంద్రాయ, రామ, రామచంద్రాయ కీర్తన]
 date: 2025-12-01
 ---
 
-# Ramachandraya Keerthana
+# రామచంద్రాయ కీర్తన
 
-Ramachandraya Janakarajaja Manoharaya  
-Mamakabheeshtadaya Mahita Mangalam ||
+రామచంద్రాయ జనకరాజజా మనోహరాయ  
+మామకాభీష్టదాయ మహిత మంగళం ||
 
 <!--more-->
 <br>
 
-Kosaleshaya Mandahaasa Dasaposhanaaya  
-Vasavaadi Vinuta Sadvarada Mangalam || 1 ||
+కోసలేశాయ మందహాస దాసపోషణాయ  
+వాసవాది వినుత సద్వరద మంగళం || 1 ||
 
 <br>
 
-Charu Kunkumopeta Chandanaadi Charchitaaya  
-Haara Kataka Shobhitaya Bhuri Mangalam || 2 ||
+చారు కుంకుమో పేత చందనాది చర్చితాయ  
+హారకటక శోభితాయ భూరి మంగళం || 2 ||
 
 <br>
 
-Lalita Ratnakundalaaya Tulasi Vanamaalikaya  
-Jalada Sadrusha Dehaaya Charu Mangalam || 3 ||
+లలిత రత్నకుండలాయ తులసీవనమాలికాయ  
+జలద సద్రుశ దేహాయ చారు మంగళం || 3 ||
 
 <br>
 
-Devakeeputraaya Deva Devottamaaya  
-Chapa Jaata Guru Varaaya Bhavya Mangalam || 4 ||
+దేవకీపుత్రాయ దేవ దేవోత్తమాయ  
+చాప జాత గురు వరాయ భవ్య మంగళం || 4 ||
 
 <br>
 
-Pundareekakshaaya Poorna Chandrananaaya  
-Andajata Vaahanaaya Atula Mangalam || 5 ||
+పుండరీకాక్షాయ పూర్ణచంద్రాననాయ  
+అండజాతవాహనాయ అతుల మంగళం || 5 ||
 
 <br>
 
-Vimala Roopaaya Vivida Vedanta Vedyaya  
-Sujana Chitta Kaamitaaya Shubhanga Mangalam || 6 ||
+విమలరూపాయ వివిధ వేదాంతవేద్యాయ  
+సుజన చిత్త కామితాయ శుభగ మంగళం || 6 ||
 
 <br>
 
-Ramadasa Mridula Hrudaya Taamarasa Nivaasaaya  
-Swami Bhadragirivaraaya Sarva Mangalam || 7 ||
+రామదాస మృదుల హృదయ తామరస నివాసాయ  
+స్వామి భద్రగిరివరాయ సర్వ మంగళం || 7 ||

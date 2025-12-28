@@ -1,73 +1,73 @@
 ---
 lord_id: shiva
 sloka_id: lingashtakam
-name: Shiva
-title: Lingashtakam
-lord: Shiva
-description: Lingashtakam is an endless hymn extolling the glory and sanctity of Lord Shiva.
-lang: en
-tags: [Lingashtakam, Shiva, Shiva Stotram]
+name: శివ
+title: లింగాష్టకం
+lord: శివుడు
+description: లింగాష్టకం అనేది పరమశివుని వైభవాన్ని, పవిత్రతను స్తుతించే అనంత శ్లోకం.
+lang: te
+tags: [లింగాష్టకం, శివుడు, శివ స్తోత్రం]
 date: 2025-12-01
 ---
 
-# Lingashtakam
+# లింగాష్టకం
 
-Brahma Murari Surarchita Lingam  
-Nirmala Bhasita Shobhita Lingam  
-Janmaja Dukha Vinashaka Lingam  
-Tatpranamami Sada Shiva Lingam ॥ 1 ॥
+బ్రహ్మమురారి సురార్చిత లింగం  
+నిర్మలభాసిత శోభిత లింగమ్ ।  
+జన్మజ దుఃఖ వినాశక లింగం  
+తత్ప్రణమామి సదాశివ లింగమ్ ॥ 1 ॥
 
 <!--more-->
 <br>
 
-Deva Muni Pravara Archita Lingam  
-Kama Dahana Karunakara Lingam  
-Ravana Darpa Vinashana Lingam  
-Tatpranamami Sada Shiva Lingam ॥ 2 ॥
+దేవముని ప్రవరార్చిత లింగం  
+కామదహన కరుణాకర లింగమ్ ।  
+రావణదర్ప వినాశన లింగం  
+తత్ప్రణమామి సదాశివ లింగమ్ ॥ 2 ॥
 
 <br>
 
-Sarva Sugandha Sulepita Lingam  
-Buddhi Vivardhana Karana Lingam  
-Siddha Sura Asura Vandita Lingam  
-Tatpranamami Sada Shiva Lingam ॥ 3 ॥
+సర్వ సుగంధ సులేపిత లింగం  
+బుద్ధి వివర్ధన కారణ లింగమ్ ।  
+సిద్ధ సురాసుర వందిత లింగం  
+తత్ప్రణమామి సదాశివ లింగమ్ ॥ 3 ॥
 
 <br>
 
-Kanaka Mahamani Bhushita Lingam  
-Phanipati Veshtita Shobhita Lingam  
-Daksha Suyagna Vinashana Lingam  
-Tatpranamami Sada Shiva Lingam ॥ 4 ॥
+కనక మహామణి భూషిత లింగం  
+ఫణిపతి వేష్టిత శోభిత లింగమ్ ।  
+దక్షసుయజ్ఞ వినాశన లింగం  
+తత్ప్రణమామి సదాశివ లింగమ్ ॥ 4 ॥
 
 <br>
 
-Kunkuma Chandana Lepita Lingam  
-Pankaja Haara Sushobhita Lingam  
-Sanchita Paapa Vinashana Lingam  
-Tatpranamami Sada Shiva Lingam ॥ 5 ॥
+కుంకుమ చందన లేపిత లింగం  
+పంకజ హార సుశోభిత లింగమ్ ।  
+సంచిత పాప వినాశన లింగం  
+తత్ప్రణమామి సదాశివ లింగమ్ ॥ 5 ॥
 
 <br>
 
-Deva Gana Archita Sevita Lingam  
-Bhavai Bhaktibhireva Cha Lingam  
-Dinakara Koti Prabhakara Lingam  
-Tatpranamami Sada Shiva Lingam ॥ 6 ॥
+దేవగణార్చిత సేవిత లింగం  
+భావై-ర్భక్తిభిరేవ చ లింగమ్ ।  
+దినకర కోటి ప్రభాకర లింగం  
+తత్ప్రణమామి సదాశివ లింగమ్ ॥ 6 ॥
 
 <br>
 
-Ashtadala Pari Veshtita Lingam  
-Sarva Samudbhava Karana Lingam  
-Ashta Daridra Vinashana Lingam  
-Tatpranamami Sada Shiva Lingam ॥ 7 ॥
+అష్టదళోపరివేష్టిత లింగం  
+సర్వసముద్భవ కారణ లింగమ్ ।  
+అష్టదరిద్ర వినాశన లింగం  
+తత్ప్రణమామి సదాశివ లింగమ్ ॥ 7 ॥
 
 <br>
 
-Suraguru Suravara Pujita Lingam  
-Suravana Pushpa Sada Archita Lingam  
-Paratparam (Paramapadam) Paramatmaka Lingam  
-Tatpranamami Sada Shiva Lingam ॥ 8 ॥
+సురగురు సురవర పూజిత లింగం  
+సురవన పుష్ప సదార్చిత లింగమ్ ।  
+పరాత్పరం (పరమపదం) పరమాత్మక లింగం  
+తత్ప్రణమామి సదాశివ లింగమ్ ॥ 8 ॥
 
 <br>
 
-Lingashtakamidam Punyam Yah Pathet Shiva Sannidhau  
-Shivalokamavapnoti Shivena Saha Modate ॥
+లింగాష్టకమిదం పుణ్యం యః పఠేశ్శివ సన్నిధౌ ।  
+శివలోకమవాప్నోతి శివేన సహ మోదతే ॥

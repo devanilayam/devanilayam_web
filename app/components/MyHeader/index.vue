@@ -7,6 +7,8 @@
       <div class="nav-links">
          <nuxt-link to="/">{{ $t('header.links.about') }}</nuxt-link>
          <nuxt-link :to="`/slokas`">{{ $t('header.links.slokas') }}</nuxt-link>
+         <nuxt-link :to="`/ashtotaras`"> {{ $t('header.links.ashtotaras') }}</nuxt-link>
+         <nuxt-link :to="`/blogs`"> {{ $t('header.links.blogs') }}</nuxt-link>
          <my-dropdown ref="languageDropdownRef" placement="bottom-end">
             <template #trigger>
                <p>

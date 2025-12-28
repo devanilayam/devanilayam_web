@@ -1,178 +1,168 @@
 ---
 lord_id: surya
 sloka_id: aditya-hrudayam
-name: Surya
-title: Aditya Hrudayam
-lord: Surya
-description: Aditya Hrudayam is a powerful hymn dedicated to Lord Surya (Sun God), found in the Ramayana. It is said to have been revealed to Lord Rama by Sage Agastya during the battle with Ravana.
-lang: en
-tags: [Aditya Hrudayam, Surya, Sun God, Ramayana, Agastya]
+name: సూర్య
+title: ఆదిత్య హృదయం
+lord: సూర్య
+description: ఆదిత్య హృదయం భగవాన్ సూర్యునికి అంకితం చేయబడిన శక్తివంతమైన స్తోత్రం, ఇది రామాయణంలో కనిపిస్తుంది. రావణుడితో యుద్ధ సమయంలో ఋషి అగస్త్యుడు భగవాన్ రామునికి ఇది బహిర్గతం చేయబడిందని చెప్పబడుతుంది.
+lang: te
+tags: [ఆదిత్య హృదయం, సూర్య, సూర్య దేవుడు, రామాయణం, అగస్త్య]
 date: 2025-12-01
 ---
 
-# Aditya Hrudayam
+# ఆదిత్య హృదయం
 
-Tato Yuddha Parishrantam Samare Chintaya Sthitam  
-Ravanam Chagrato Drushtva Yuddhaya Samupasthitam ॥ 1 ॥
+తతో యుద్ధ పరిశ్రాంతం సమరే చింతయాస్థితమ్  
+రావణం చాగ్రతో దృష్ట్వా యుద్ధాయ సముపస్థితమ్ ॥ 1 ॥
 
 <br>
 
-Daivataishcha Samaagamya Drashtumabhyagato Ranam  
-Upagamyabraveedramam Agastyo Bhagavan Rishih ॥ 2 ॥
+దైవతైశ్చ సమాగమ్య ద్రష్టుమభ్యాగతో రణమ్  
+ఉపాగమ్యాబ్రవీద్రామం అగస్త్యో భగవాన్ ఋషిః ॥ 6 ॥
 
 <!--more-->
 
 <br>
 
-Rama Rama Mahabaho Shrinu Guhyam Sanatanam  
-Yena Sarvanarin Vatsa Samarayajayishyasi ॥ 3 ॥
+రామ రామ మహాబాహో శృణు గుహ్యం సనాతనమ్  
+యేన సర్వానరీన్ వత్స సమరే విజయిష్యసి ॥ 31 ॥
 
 <br>
 
-Aditya Hrudayam Punyam Sarva Shatru Vinaashanam  
-Jayavaham Japennityam Akshayyam Paramam Shivam ॥ 4 ॥
+ఆదిత్యహృదయం పుణ్యం సర్వశత్రు-వినాశనమ్  
+జయావహం జపేన్నిత్యం అక్షయ్యం పరమం శివమ్ ॥ 6 ॥
 
 <br>
 
-Sarvamangala Mangalyam Sarvapapa Pranashanam  
-Chintashoka Prashamanam Ayurvardhanamuttamam ॥ 5 ॥
+సర్వమంగళ-మాంగళ్యం సర్వపాప-ప్రణాశనమ్  
+చింతాశోక-ప్రశమనం ఆయుర్వర్ధనముత్తమమ్ ॥ 31 ॥
 
 <br>
 
-Rashmimantam Samudyantam Devasura Namaskritam  
-Pujayasva Vivasvantam Bhaskaram Bhuvaneshvaram ॥ 6 ॥
+రశ్మిమంతం సముద్యంతం దేవాసుర నమస్కృతమ్  
+పూజయస్వ వివస్వంతం భాస్కరం భువనేశ్వరమ్ ॥ 6 ॥
 
 <br>
 
-Sarvadevamayo Devah Sarvadevamayo Harih  
-Sarva Devatmayo Hyesha Tejorasmi Samanvitah ॥ 7 ॥
+సర్వదేవాత్మకో హ్యేష తేజస్వీ రశ్మిభావనః  
+ఏష దేవాసుర-గణాన్ లోకాన్ పాతి గభస్తిభిః ॥ 31 ॥
 
 <br>
 
-Esha Devasuraganan Lokan Pati Gabhastibhih  
-Esha Brahma Cha Vishnushcha Shivah Skandah Prajapatih ॥ 8 ॥
+ఏష బ్రహ్మా చ విష్ణుశ్చ శివః స్కందః ప్రజాపతిః  
+మహేంద్రో ధనదః కాలో యమః సోమో హ్యపాం పతిః ॥ 6 ॥
 
 <br>
 
-Mahendro Dhanadah Kalo Yama Somo Hyapam Patih  
-Pitaro Vasavah Sadhya Hyashvinau Maruto Manuh ॥ 9 ॥
+పితరో వసవః సాధ్యా హ్యశ్వినౌ మరుతో మనుః  
+వాయుర్వహ్నిః ప్రజాప్రాణః ఋతుకర్తా ప్రభాకరః ॥ 31 ॥
 
 <br>
 
-Vayurvanhih Prajaprana Rituksha Dhipatirdivah  
-Tapati Vishvatomukham Shashvatah Shashvato Dhruvah ॥ 10 ॥
+ఆదిత్యః సవితా సూర్యః ఖగః పూషా గభస్తిమాన్  
+సువర్ణసదృశో భానుః హిరణ్యరేతా దివాకరః ॥ 30 ॥
 
 <br>
 
-Agni Varnah Shatabanhuh Sahasraksho Jitavratah  
-Tapati Tapati Lokam Trishcha Lokam Cha Sahasrashah ॥ 11 ॥
+హరిదశ్వః సహస్రార్చిః సప్తసప్తి-ర్మరీచిమాన్  
+తిమిరోన్మథనః శంభుః త్వష్టా మార్తాండకోంఽశుమాన్ ॥ 31 ॥
 
 <br>
 
-Adityah Savita Suryah Khagah Pusha Gabhastiman  
-Suvarnasadrisho Bhanuh Hiranyaretah Divakarah ॥ 12 ॥
+హిరణ్యగర్భః శిశిరః తపనో భాస్కరో రవిః  
+అగ్నిగర్భోఽదితేః పుత్రః శంఖః శిశిరనాశనః ॥ 30 ॥
 
 <br>
 
-Haridashvah Sahasrarchih Saptasaptirmarichiman  
-Timiromathanah Shambhuh Twashta Martandakoamshuman ॥ 13 ॥
+వ్యోమనాథ-స్తమోభేదీ ఋగ్యజుఃసామ-పారగః  
+ఘనావృష్టిరపాం మిత్రః వింధ్యవీథీ ప్లవంగమః ॥ 31 ॥
 
 <br>
 
-Hiranyagarbhah Shishirah Tapano Bhaskaro Ravih  
-Agnigarbhoaditeh Putrah Shankhah Shishiranashanah ॥ 14 ॥
+ఆతపీ మండలీ మృత్యుః పింగళః సర్వతాపనః  
+కవిర్విశ్వో మహాతేజా రక్తః సర్వభవోద్భవః ॥ 30 ॥
 
 <br>
 
-Vyomanathastamobhedi Rgyajuhsamaparagah  
-Ghanavrishtiraparam Mitrah Vindhyavithi Plavangamah ॥ 15 ॥
+నక్షత్ర గ్రహ తారాణాం అధిపో విశ్వభావనః  
+తేజసామపి తేజస్వీ ద్వాదశాత్మ-న్నమోఽస్తు తే ॥ 31 ॥
 
 <br>
 
-Atapi Mandali Mrityuh Pingalah Sarvatapanah  
-Kavirvishvo Mahateja Raktah Sarvabhavodbhavah ॥ 16 ॥
+నమః పూర్వాయ గిరయే పశ్చిమాయాద్రయే నమః  
+జ్యోతిర్గణానాం పతయే దినాధిపతయే నమః ॥ 30 ॥
 
 <br>
 
-Nakshatra Grahataranam Adhipo Vishvabhavanah  
-Tejasamapi Tejasvi Dvadashatmannamoastu Te ॥ 17 ॥
+జయాయ జయభద్రాయ హర్యశ్వాయ నమో నమః  
+నమో నమః సహస్రాంశో ఆదిత్యాయ నమో నమః ॥ 31 ॥
 
 <br>
 
-Namah Purvaya Giraye Pashchimayadraye Namah  
-Jyotirgananam Pataye Dinadhipataye Namah ॥ 18 ॥
+నమ ఉగ్రాయ వీరాయ సారంగాయ నమో నమః  
+నమః పద్మప్రబోధాయ మార్తాండాయ నమో నమః ॥ 30 ॥
 
 <br>
 
-Jayaya Jayabhadraya Haryashvaya Namo Namah  
-Namo Namah Sahasramsho Adityaya Namo Namah ॥ 19 ॥
+బ్రహ్మేశానాచ్యుతేశాయ సూర్యాయాదిత్య-వర్చసే  
+భాస్వతే సర్వభక్షాయ రౌద్రాయ వపుషే నమః ॥ 31 ॥
 
 <br>
 
-Nam Ugraya Viraya Sarangaya Namo Namah  
-Namah Padmaprabodhaya Martandaya Namo Namah ॥ 20 ॥
+తమోఘ్నాయ హిమఘ్నాయ శత్రుఘ్నాయా మితాత్మనే  
+కృతఘ్నఘ్నాయ దేవాయ జ్యోతిషాం పతయే నమః ॥ 30 ॥
 
 <br>
 
-Brahmeshanachyuteshaya Suryayaditya Varchase  
-Bhasvate Sarvabhakshaya Raudraya Vapushe Namah ॥ 21 ॥
+తప్త చామీకరాభాయ వహ్నయే విశ్వకర్మణే  
+నమస్తమోఽభి నిఘ్నాయ రవయే లోకసాక్షిణే ॥ 31 ॥
 
 <br>
 
-Tamoghnya Himaghnya Shatrughnyamit Atmane  
-Kritaghnaghnya Devaya Jyotisham Pataye Namah ॥ 22 ॥
+నాశయత్యేష వై భూతం తదేవ సృజతి ప్రభుః  
+పాయత్యేష తపత్యేష వర్షత్యేష గభస్తిభిః ॥ 30 ॥
 
 <br>
 
-Tapta Chamikarabha Vahnaye Vishvakarmane  
-Namastamobhinighnaya Ravaye Lokasakshine ॥ 23 ॥
+ఏష సుప్తేషు జాగర్తి భూతేషు పరినిష్ఠితః  
+ఏష ఏవాగ్నిహోత్రం చ ఫలం చైవాగ్ని హోత్రిణామ్ ॥ 31 ॥
 
 <br>
 
-Nashayatyesha Vai Bhutam Tadeva Srijati Prabhuh  
-Payatyesha Tapatyesha Varshatyesha Gabhastibhih ॥ 24 ॥
+వేదాశ్చ క్రతవశ్చైవ క్రతూనాం ఫలమేవ చ  
+యాని కృత్యాని లోకేషు సర్వ ఏష రవిః ప్రభుః ॥ 30 ॥
 
 <br>
 
-Esha Supteshu Jagarti Bhuteshu Parinishthitah  
-Esha Evagnihotram Cha Phalam Chaivagni Hotrinam ॥ 25 ॥
+ఏన మాపత్సు కృచ్ఛ్రేషు కాంతారేషు భయేషు చ  
+కీర్తయన్ పురుషః కశ్చిన్నావశీదతి రాఘవ ॥ 31 ॥
 
 <br>
 
-Vedashcha Kratavashchaiva Kratunam Phalameva Cha  
-Yani Krityani Lokeshu Sarva Esha Ravih Prabhuh ॥ 26 ॥
+పూజయస్వైన మేకాగ్రః దేవదేవం జగత్పతిమ్  
+ఏతత్ త్రిగుణితం జప్త్వా యుద్ధేషు విజయిష్యసి ॥ 30 ॥
 
 <br>
 
-Ena Mapatsu Kricchreshu Kantareshu Bhayeshu Cha  
-Kirtayan Purushah Kashchinnavashidati Raghava ॥ 27 ॥
+అస్మిన్ క్షణే మహాబాహో రావణం త్వం వధిష్యసి  
+ఏవముక్త్వా తదాగస్త్యో జగామ చ యథాగతమ్ ॥ 31 ॥
 
 <br>
 
-Pujayasvainamekagro Devadevam Jagatpatim  
-Etat Trigunitam Japtva Yuddheshu Vijayishyasi ॥ 28 ॥
+ఏతచ్ఛ్రుత్వా మహాతేజాః నష్టశోకోఽభవత్తదా  
+ధారయామాస సుప్రీతః రాఘవః ప్రయతాత్మవాన్ ॥ 30 ॥
 
 <br>
 
-Asmin Kshane Mahabaho Ravanam Twam Vadhishyasi  
-Evamuktv Tadaagastyah Jagama Cha Yathagatam ॥ 29 ॥
+ఆదిత్యం ప్రేక్ష్య జప్త్వా తు పరం హర్షమవాప్తవాన్  
+త్రిరాచమ్య శుచిర్భూత్వా ధనురాదాయ వీర్యవాన్ ॥ 31 ॥
 
 <br>
 
-Etachchhrutva Mahatejah Nashtashokobhavattada  
-Dharayamas Supriteh Raghava Prayatatmavan ॥ 30 ॥
+రావణం ప్రేక్ష్య హృష్టాత్మా యుద్ధాయ సముపాగమత్  
+సర్వయత్నేన మహతా వధే తస్య ధృతోఽభవత్ ॥ 32 ॥
 
 <br>
 
-Adityam Prekshya Japtva Tu Param Harshamavaptavan  
-Trirachamya Shuchirbhutva Dhanuradaya Viryavan ॥ 31 ॥
-
-<br>
-
-Ravanam Prekshya Hrishtatma Yuddhaya Samupagamat  
-Sarvayatnena Mahata Vadhe Tasy Dhritobhavat ॥ 32 ॥
-
-<br>
-
-Adha Raviravadannirikshya Ramam Muditamanah Param Prahrishyamana  
-Nishicharapati Samkshayam Viditva Suragana Madhyagato Vachastvareti ॥ 33 ॥
+అధ రవిరవదన్నిరీక్ష్య రామం ముదితమనాః పరమం ప్రహృష్యమాణః  
+నిశిచరపతి సంక్షయం విదిత్వా సురగణ మధ్యగతో వచస్త్వరేతి ॥ 33 ॥
