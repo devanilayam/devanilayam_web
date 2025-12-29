@@ -1,0 +1,107 @@
+@use "../abstracts" as *;
+
+.page-slokas,
+.page-ashtotaras {
+
+   &__search-input {
+      width: 100%;
+      padding: px-to-rem(12) px-to-rem(16);
+      border: 1px solid var(--border-color, rgba($color: #EB730C, $alpha: 0.6));
+      border-radius: px-to-rem(8);
+      color: rgba($color: #EB730C, $alpha: 0.6);
+      font: inherit;
+
+      &::placeholder {
+         color: rgba($color: #EB730C, $alpha: 0.6);
+      }
+
+      &:focus {
+         border-color: rgba($color: #EB730C, $alpha: 1);
+         outline: none;
+      }
+   }
+
+   &__lords-list {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(px-to-rem(240), 1fr));
+      gap: px-to-rem(8);
+
+      @include mobile {
+         grid-template-columns: repeat(auto-fill, minmax(px-to-rem(150), 1fr));
+      }
+
+      @include small-mobile {
+         grid-template-columns: repeat(auto-fill, minmax(px-to-rem(140), 1fr));
+      }
+   }
+
+   &__stay-tuned-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: px-to-rem(16);
+   }
+}
+
+.page-sloka-preview {
+   .font-size-controls {
+      display: flex;
+      align-items: center;
+      gap: px-to-rem(12);
+      justify-content: flex-end;
+   }
+
+   .font-size-display {
+      font-size: px-to-rem(20);
+      font-weight: 500;
+      min-width: px-to-rem(50);
+      text-align: center;
+      margin-right: auto;
+   }
+
+   .font-size-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: px-to-rem(36);
+      height: px-to-rem(36);
+      border-radius: px-to-rem(8);
+      background: #EB730C;
+      color: #FAF8F3;
+      cursor: pointer;
+      transition: background 0.15s, opacity 0.15s;
+      border: none;
+
+      &:hover:not(:disabled) {
+         background: #d25f07;
+      }
+
+      &:disabled {
+         opacity: 0.5;
+         cursor: not-allowed;
+      }
+
+      .font-size-icon {
+         font-size: px-to-rem(20);
+         font-weight: 600;
+         line-height: 1;
+      }
+   }
+
+   .sloka-area {
+      background: #FEF3C7;
+      border-radius: px-to-rem(12);
+      flex: 1;
+      padding: px-to-rem(8) px-to-rem(16) px-to-rem(20) px-to-rem(16);
+      max-height: fit-content;
+      transition: font-size 0.2s ease;
+
+      @include web-screen {
+         // margin: px-to-rem(32);
+         padding: px-to-rem(32);
+      }
+   }
+}

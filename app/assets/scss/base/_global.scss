@@ -84,3 +84,16 @@ li {
 strong {
    font-weight: 600;
 }
+
+.not-found {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   p {
+      font-size: px-to-rem(24);
+      font-weight: 600;
+      font-style: italic;
+   }
+}
