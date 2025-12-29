@@ -10,7 +10,6 @@ export default defineContentConfig({
             lord_id: z.string(),
             lord: z.string(),
             sloka_id: z.string(),
-            image: z.string(),
             lang: z.string(),
             tags: z.array(z.string()),
             date: z.string(),
@@ -32,7 +31,6 @@ export default defineContentConfig({
          schema: z.object({
             lord_id: z.string(),
             lord: z.string(),
-            image: z.string(),
             lang: z.string(),
             tags: z.array(z.string()),
             date: z.string(),

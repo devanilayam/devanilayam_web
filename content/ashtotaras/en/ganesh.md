@@ -4,7 +4,6 @@ lord: Ganesh
 title: Ganesh Ashototara
 description: Vakratundaya Mantra is a powerful prayer dedicated to Lord Ganesh, seeking his blessings to remove all obstacles and ensure success in all endeavors.
 lang: en
-image: lord/ganesh.webp
 tags: [Vakratundaya, Ganesh, Ganesha Mantra, Obstacle Remover]
 date: 2025-12-01
 ---

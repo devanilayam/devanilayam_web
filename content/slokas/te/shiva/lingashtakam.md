@@ -1,6 +1,6 @@
 ---
 lord_id: shiva
-lord: శివుడు
+lord: శివ
 sloka_id: lingashtakam
 title: లింగాష్టకం
 description: లింగాష్టకం అనేది పరమశివుని వైభవాన్ని, పవిత్రతను స్తుతించే అనంత శ్లోకం.

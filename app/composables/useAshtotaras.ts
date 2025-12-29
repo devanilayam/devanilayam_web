@@ -17,7 +17,6 @@ export const useAshtotaras = (): IUseAshtotarasReturn => {
       listOfLords.value = lords?.map((l) => ({
          lord_id: l.lord_id,
          name: l.lord,
-         image: l.image,
       }));
 
       return listOfLords.value;

@@ -15,7 +15,6 @@ export const useSlokas = (): IUseSlokasReturn => {
       listOfLords.value = lords?.map((l) => ({
          lord_id: l.lord_id,
          name: l.lord,
-         image: l.image,
       }));
 
       return listOfLords.value;
@@ -72,7 +71,6 @@ export interface IUseSlokasReturn {
 export interface Lord {
    lord_id: string;
    name: string;
-   image: string;
    description?: string;
 }
 
