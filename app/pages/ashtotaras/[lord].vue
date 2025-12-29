@@ -13,7 +13,7 @@
       </div>
       <ContentRenderer v-if="ashtotara" :value="ashtotara" class="sloka-area" :style="{ fontSize: `${fontSize}px` }" />
 
-      <ListOfAshotaras />
+      <LordList :is-ashtotara="true" />
    </main>
 </template>
 

@@ -7,7 +7,7 @@
 
          <template v-if="filteredDeities.length > 0">
             <div class="page-slokas__lords-list">
-               <HomeCategoryCard v-for="lord in filteredDeities" :key="lord.lord_id" :lord="lord" />
+               <LordCard v-for="lord in filteredDeities" :key="lord.lord_id" :lord="lord" />
             </div>
          </template>
 

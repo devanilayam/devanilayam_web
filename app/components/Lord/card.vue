@@ -7,22 +7,22 @@
 </template>
 
 <script setup lang="ts">
-import type { CategoryCardProps } from "./types";
+import type { LordCardProps } from "./types";
 
 defineOptions({ name: "CategoryCard" });
 
-const props = defineProps<CategoryCardProps>();
+const props = withDefaults(defineProps<LordCardProps>(), {
+   isAshtotara: false,
+});
 
 const images = import.meta.glob("@/assets/images/**", { eager: true, import: "default" });
 
 const computedImgUrl = computed(() => images[`/assets/images/lord/${props.lord.lord_id.toLowerCase()}.webp`]);
 
-const route = useRoute();
-
 const computedRoutePrefix = computed(() => {
 
    // If current route path contains 'ashtotaras', show ashtotaras
-   if (route.path && route.path.includes("/ashtotaras")) {
+   if (props.isAshtotara) {
 
       return "ashtotaras";
 

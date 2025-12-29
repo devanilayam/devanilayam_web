@@ -20,7 +20,7 @@
          </div>
       </section>
 
-      <ListOfLords />
+      <LordList />
 
       <HomeSection :title="$t('home.sections.features.title')" :subtitle="$t('home.sections.features.subtitle')"
          content-class="features-grid">

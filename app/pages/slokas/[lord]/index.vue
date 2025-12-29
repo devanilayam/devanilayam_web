@@ -8,7 +8,7 @@
          <ContentRenderer v-if="sloka" class="sloka-preview" :value="sloka" :excerpt="true" />
       </nuxt-link>
 
-      <ListOfLords />
+      <LordList />
    </main>
 </template>
 
