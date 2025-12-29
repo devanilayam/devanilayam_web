@@ -37,12 +37,12 @@ onMounted(async () => {
 
 <style lang="scss">
 .page-blogs {
-   padding-block: 2rem;
+   padding-block: px-to-rem(32);
 
    .blogs-heading {
-      font-size: 2rem;
+      font-size: px-to-rem(32);
       font-weight: 700;
-      margin-bottom: 2rem;
+      margin-bottom: px-to-rem(32);
       letter-spacing: -0.03em;
       text-align: left;
    }
@@ -50,29 +50,29 @@ onMounted(async () => {
    .blogs-list {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: px-to-rem(32);
 
-      @media (min-width: 700px) {
-         grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      @media (min-width: px-to-rem(700)) {
+         grid-template-columns: repeat(auto-fill, minmax(px-to-rem(340), 1fr));
       }
    }
 
    .blog-card {
       background: #faf8f3;
-      border-radius: 1rem;
-      box-shadow: 0 2px 14px rgba(36, 30, 7, 0.05);
-      padding: 1.5rem 1.5rem 1rem;
-      border: 1px solid #e7e1d6;
+      border-radius: px-to-rem(16);
+      box-shadow: 0 px-to-rem(2) px-to-rem(14) rgba(36, 30, 7, 0.05);
+      padding: px-to-rem(24) px-to-rem(24) px-to-rem(16);
+      border: px-to-rem(1) solid #e7e1d6;
       cursor: pointer;
       display: flex;
       flex-direction: column;
       transition: box-shadow 0.18s, transform 0.16s, border-color 0.18s;
 
       .blog-card-header {
-         margin-bottom: 0.6rem;
+         margin-bottom: px-to-rem(9.6); // 0.6rem = 9.6px
 
          .blog-title {
-            font-size: 1.25rem;
+            font-size: px-to-rem(20); // 1.25rem = 20px
             font-weight: 600;
             margin: 0 0 px-to-rem(16) 0;
             letter-spacing: -0.01em;
@@ -82,7 +82,7 @@ onMounted(async () => {
          }
 
          .blog-author {
-            font-size: 0.92em;
+            font-size: px-to-rem(14.72); // 0.92em = 14.72px at 16px root
             color: #866735;
             font-weight: 500;
          }
@@ -90,9 +90,9 @@ onMounted(async () => {
 
       .blog-description {
          color: #332613;
-         font-size: 1em;
-         margin-bottom: 1rem;
-         min-height: 2.4em;
+         font-size: px-to-rem(16); // 1em = 16px
+         margin-bottom: px-to-rem(16);
+         min-height: px-to-rem(38.4); // 2.4em = 38.4px
          overflow: hidden;
          text-overflow: ellipsis;
          display: -webkit-box;
@@ -104,14 +104,14 @@ onMounted(async () => {
       .blog-card-tags {
          display: flex;
          flex-wrap: wrap;
-         gap: 0.35em;
+         gap: px-to-rem(5.6); // 0.35em = 5.6px at 16px root
 
          .blog-tag {
-            font-size: 0.92em;
+            font-size: px-to-rem(14.72); // 0.92em = 14.72px at 16px root
             background: #f3e6d2;
             color: #a87627;
-            border-radius: 0.5em;
-            padding: 0.16em 0.7em;
+            border-radius: px-to-rem(8); // 0.5em = 8px at 16px root
+            padding: px-to-rem(2.56) px-to-rem(11.2); // 0.16em 0.7em
             font-weight: 500;
          }
       }
@@ -121,10 +121,10 @@ onMounted(async () => {
 
          &:hover,
          &:focus-visible {
-            box-shadow: 0 6px 26px rgba(232, 115, 12, 0.085),
-               0 2px 12px rgba(36, 30, 7, 0.08);
+            box-shadow: 0 px-to-rem(6) px-to-rem(26) rgba(232, 115, 12, 0.085),
+               0 px-to-rem(2) px-to-rem(12) rgba(36, 30, 7, 0.08);
             border-color: #e8730c;
-            transform: translateY(-4px) scale(1.018);
+            transform: translateY(px-to-rem(-4)) scale(1.018);
 
             .blog-title {
                color: #c26009;

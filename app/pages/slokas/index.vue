@@ -47,8 +47,7 @@ const filteredDeities = computed(() => {
    }
 
    return listOfLords.value.filter(
-      (lord) =>
-         lord.name.toLowerCase().includes(query) || lord.lord_id.toLowerCase().includes(query)
+      (lord) => lord.name.toLowerCase().includes(query) || lord.lord_id.toLowerCase().includes(query)
    );
 
 });
