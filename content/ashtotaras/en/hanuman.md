@@ -1,221 +1,120 @@
 ---
 lord_id: hanuman
 lord: Hanuman
-title: Hanuman Ashtotara
-description: Hanuman Chalisa is a devotional hymn dedicated to Lord Hanuman, composed by Tulsidas. It consists of 40 verses praising the virtues and powers of Hanuman.
+title: Sri Anjaneya Ashtottara Shatanamavali
+description: The 108 names of Lord Anjaneya (Hanuman).
 lang: en
-tags: [Hanuman Chalisa, Hanuman, Tulsidas, Chalisa]
-date: 2025-12-01
+tags: [Anjaneya, Hanuman, Bajrang Bali, Hanuman Mantra, Ashtottaram]
+date: 2025-12-29
 ---
 
-# Hanuman Chalisa
-
-Shri Guru Charan Saroj Raj, Nij Man Mukur Sudhari  
-Barnau Raghubar Bimal Jasu, Jo Dayaku Phal Chari ॥
-
-<br>
-
-Budhi Heen Tanu Janike, Sumirau Pavan Kumar  
-Bal Buddhi Vidya Dehu Mohi, Harahu Kalesh Vikar ॥
-
-<!--more-->
-
-<br>
-
-Jai Hanuman Gyan Gun Sagar  
-Jai Kapis Tihun Lok Ujagar ॥ 1 ॥
-
-<br>
-
-Ram Doot Atulit Bal Dhama  
-Anjani Putra Pavan Sut Nama ॥ 2 ॥
-
-<br>
-
-Mahabir Bikram Bajrangi  
-Kumati Nivar Sumati Ke Sangi ॥ 3 ॥
-
-<br>
-
-Kanchan Baran Biraj Subesa  
-Kanan Kundal Kunchit Kesa ॥ 4 ॥
-
-<br>
-
-Hath Bajra Aur Dhvaja Biraje  
-Kandhe Moonj Janeu Saje ॥ 5 ॥
-
-<br>
-
-Shankar Suvan Kesari Nandan  
-Tej Pratap Maha Jag Vandan ॥ 6 ॥
-
-<br>
-
-Vidyavan Guni Ati Chatur  
-Ram Kaj Karibe Ko Atur ॥ 7 ॥
-
-<br>
-
-Prabhu Charitra Sunibe Ko Rasiya  
-Ram Lakhan Sita Man Basiya ॥ 8 ॥
-
-<br>
-
-Sukshma Roop Dhari Siyahin Dikhava  
-Vikat Roop Dhari Lank Jarava ॥ 9 ॥
-
-<br>
-
-Bhima Roop Dhari Asur Sanhare  
-Ramachandra Ke Kaj Sanvare ॥ 10 ॥
-
-<br>
-
-Laye Sanjivan Lakhan Jiyaye  
-Shri Raghuvir Harashi Ur Laye ॥ 11 ॥
-
-<br>
-
-Raghupati Kinhi Bahut Badai  
-Tum Mama Priya Bharat Sam Bhai ॥ 12 ॥
-
-<br>
-
-Sahas Badan Tumharo Yash Gave  
-As Kahi Shripati Kanth Lagave ॥ 13 ॥
-
-<br>
-
-Sankadik Brahmadi Muneesa  
-Narad Sarad Sahit Aheesa ॥ 14 ॥
-
-<br>
-
-Yam Kuber Digpal Jahan Te  
-Kavi Kovid Kahi Sake Kahan Te ॥ 15 ॥
-
-<br>
-
-Tum Upkar Sugreevahin Keenha  
-Ram Milaaye Rajpad Deenha ॥ 16 ॥
-
-<br>
-
-Tumharo Mantra Vibhishan Maana  
-Lankeshwar Bhaye Sab Jag Jana ॥ 17 ॥
-
-<br>
-
-Yug Sahasra Yojan Par Bhanu  
-Lilyo Tahi Madhur Phal Janu ॥ 18 ॥
-
-<br>
-
-Prabhu Mudrika Meli Mukh Maahi  
-Jaladhi Langhi Gaye Achraj Nahin ॥ 19 ॥
-
-<br>
-
-Durgam Kaj Jagat Ke Jete  
-Sugam Anugraha Tumhre Tete ॥ 20 ॥
-
-<br>
-
-Ram Duware Tum Rakhvare  
-Hoat Na Aagya Binu Paisare ॥ 21 ॥
-
-<br>
-
-Sab Sukh Lahai Tumhari Sarna  
-Tum Rakshak Kahu Ko Darna ॥ 22 ॥
-
-<br>
-
-Aapan Tej Samharo Aapai  
-Teenhon Lok Hank Te Kanpai ॥ 23 ॥
-
-<br>
-
-Bhoot Pisaach Nikat Nahin Aavai  
-Mahavir Jab Naam Sunavai ॥ 24 ॥
-
-<br>
-
-Nase Rog Hare Sab Peera  
-Japat Nirantar Hanumat Beera ॥ 25 ॥
-
-<br>
-
-Sankat Te Hanuman Chhudavai  
-Man Kram Vachan Dhyan Jo Lavai ॥ 26 ॥
-
-<br>
-
-Sab Par Ram Tapasvee Raja  
-Tin Ke Kaj Sakal Tum Saja ॥ 27 ॥
-
-<br>
-
-Aur Manorath Jo Koi Lavai  
-Soi Amit Jivan Phal Pavai ॥ 28 ॥
-
-<br>
-
-Charon Jug Partap Tumhara  
-Hai Parsiddh Jagat Ujiyara ॥ 29 ॥
-
-<br>
-
-Sadhu Sant Ke Tum Rakhware  
-Asur Nikandan Ram Dulare ॥ 30 ॥
-
-<br>
-
-Ashta Siddhi Nav Nidhi Ke Data  
-As Var Deen Janki Mata ॥ 31 ॥
-
-<br>
-
-Ram Rasayan Tumhare Pasa  
-Sada Raho Raghupati Ke Dasa ॥ 32 ॥
-
-<br>
-
-Tumhare Bhajan Ram Ko Pavai  
-Janam Janam Ke Dukh Bisravai ॥ 33 ॥
-
-<br>
-
-Ant Kaal Raghubar Pur Jayi  
-Jahan Janma Hari Bhakt Kahayi ॥ 34 ॥
-
-<br>
-
-Aur Devta Chitt Na Dharai  
-Hanumat Sei Sarv Sukh Karai ॥ 35 ॥
-
-<br>
-
-Sankat Kate Mite Sab Peera  
-Jo Sumire Hanumat Balbeera ॥ 36 ॥
-
-<br>
-
-Jai Jai Jai Hanuman Gosai  
-Kripa Karahu Gurudev Ki Naee ॥ 37 ॥
-
-<br>
-
-Jo Sat Bar Path Kar Koi  
-Chhutahi Bandi Maha Sukh Hoi ॥ 38 ॥
-
-<br>
-
-Jo Yah Padhe Hanuman Chalisa  
-Hoye Siddhi Sakhi Gaurisa ॥ 40 ॥
-
-<br>
-
-Tulsidas Sada Hari Chera  
-Keejai Nath Hriday Mah Dera ॥
+# Sri Anjaneya Ashtottara Shatanamavali
+
+1. Om Anjaneyaya Namaha
+2. Om Mahaviraya Namaha
+3. Om Hanumate Namaha
+4. Om Marutatmajaya Namaha
+5. Om Tattvajnanapradaya Namaha
+6. Om Sitadevimudrapradaya Namaha
+7. Om Ashokavanikachetre Namaha
+8. Om Sarvamayavibhanjanaya Namaha
+9. Om Sarvabandhavimoktre Namaha
+10. Om Rakshovidhvamsakarakaya Namaha
+11. Om Paravidyapariharaya Namaha
+12. Om Parashourya vinashanaya Namaha
+13. Om Paramantranirakartre Namaha
+14. Om Parayantraprabhedakaya Namaha
+15. Om Sarvagrahavinashine Namaha
+16. Om Bhimasenasahayakrute Namaha
+17. Om Sarvaduhkhaharaya Namaha
+18. Om Sarvalokacharine Namaha
+19. Om Manojavaya Namaha
+20. Om Parijatadrumulasthaya Namaha
+21. Om Sarvamantrasvarupavate Namaha
+22. Om Sarvatantrasvarupine Namaha
+23. Om Sarvayantratmakaya Namaha
+24. Om Kapishvaraya Namaha
+25. Om Mahakayaya Namaha
+26. Om Sarvarogaharaya Namaha
+27. Om Prabhave Namaha
+28. Om Balasiddhikaraya Namaha
+29. Om Sarvavidyasampatpradayakaya Namaha
+30. Om Kapisenanayakaya Namaha
+31. Om Bhavishyachaturanana Namaha
+32. Om Kumarabrahmacharine Namaha
+33. Om Ratnakundaladiptimate Namaha
+34. Om Sanchaladvalasannaddhalambamanashikhojjwalaya Namaha
+35. Om Gandharvavidyatattvajnaya Namaha
+36. Om Mahabalaparakramaya Namaha
+37. Om Karagrihavimoktre Namaha
+38. Om Shrinkhalabandhamochakaya Namaha
+39. Om Sagarottarakaya Namaha
+40. Om Prajnaya Namaha
+41. Om Ramadutaya Namaha
+42. Om Pratapavate Namaha
+43. Om Vanaraya Namaha
+44. Om Kesarisutaya Namaha
+45. Om Sitashokanivarakaya Namaha
+46. Om Anjanagarbhasambhutaya Namaha
+47. Om Balarkasadrushananaya Namaha
+48. Om Vibhishanapriyakara Namaha
+49. Om Dashagrivakulantakaya Namaha
+50. Om Lakshmanapranadatre Namaha
+51. Om Vajrakayaya Namaha
+52. Om Mahadyutaye Namaha
+53. Om Chiranjeevine Namaha
+54. Om Ramabhaktaya Namaha
+55. Om Daityakaryavighatakaya Namaha
+56. Om Akshahantre Namaha
+57. Om Kanchanabhaya Namaha
+58. Om Panchavaktraya Namaha
+59. Om Mahatapase Namaha
+60. Om Lankinibhanjanaya Namaha
+61. Om Shrimate Namaha
+62. Om Simhikapranabhanjanaya Namaha
+63. Om Gandhamadanasailasthaya Namaha
+64. Om Lankapuravidahakaya Namaha
+65. Om Sugrivasachivaya Namaha
+66. Om Dhiraya Namaha
+67. Om Shuraya Namaha
+68. Om Daityakulantakaya Namaha
+69. Om Surarchitaya Namaha
+70. Om Mahatejase Namaha
+71. Om Ramachudamanipradaya Namaha
+72. Om Kamarupine Namaha
+73. Om Pingalakshaya Namaha
+74. Om Vardhimainakapujitaya Namaha
+75. Om Kabalikrutamartandamandalaya Namaha
+76. Om Vijitendriyaya Namaha
+77. Om Ramasugrivasandhatre Namaha
+78. Om Mahiravanamardhanaya Namaha
+79. Om Sphatikabhaya Namaha
+80. Om Vagadhishaya Namaha
+81. Om Navavyakritapanditaya Namaha
+82. Om Chaturbahave Namaha
+83. Om Dinabandhave Namaha
+84. Om Mahatmane Namaha
+85. Om Bhaktavatsalaya Namaha
+86. Om Sanjeevananagahartre Namaha
+87. Om Suchaye Namaha
+88. Om Vagmine Namaha
+89. Om Dridhavrataya Namaha
+90. Om Kalanemipramathanaya Namaha
+91. Om Harimarkatamarkataya Namaha
+92. Om Dantaya Namaha
+93. Om Shantaya Namaha
+94. Om Prasannatmane Namaha
+95. Om Shatakantamadapahartre Namaha
+96. Om Yogine Namaha
+97. Om Ramakathalolaya Namaha
+98. Om Sitanveshanapanditaya Namaha
+99. Om Vajradamshtraya Namaha
+100. Om Vajranakhaya Namaha
+101. Om Rudraveeryasamudbhavaya Namaha
+102. Om Indrajitprahitamoghabrahmastranivarakaya Namaha
+103. Om Parthadhvajagrasamvasine Namaha
+104. Om Sharapanjarabhedakaya Namaha
+105. Om Dashabahave Namaha
+106. Om Lokapujyaya Namaha
+107. Om Jambavatpritivardhanaya Namaha
+108. Om Sitaramasameta Sri Hanumanmurtaye Namaha
