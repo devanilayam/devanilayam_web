@@ -1,4 +1,3 @@
-<!-- Start of Selection -->
 <template>
    <div class="font-size-controller">
       <p class="font-size-controller__title">{{ $t('sloka-page.fontSize') }}</p>
@@ -12,10 +11,12 @@
       </button>
    </div>
 </template>
+
 <script lang="ts" setup>
 import { useFontSize } from "~/composables/useFontSize";
 
 const { fontSize, minFontSize, maxFontSize, increaseFontSize, decreaseFontSize } = useFontSize();
+
 </script>
 
 <style lang="scss">

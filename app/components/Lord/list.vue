@@ -1,12 +1,12 @@
 <template>
-   <HomeSection :title="$t('home.sections.slokasList.title')" :subtitle="$t('home.sections.slokasList.subtitle')">
+   <HomeSection :title="sectionTitle" :subtitle="sectionSubtitle">
       <div class="list-of-lords__lords-list">
          <LordCard v-for="lord in slicedListOfLords" :key="lord.lord_id" :lord="lord" />
       </div>
 
       <template #footer>
-         <nuxt-link class="my-button" :to="props.isAshtotara ? `/ashtotaras` : `/slokas`">
-            {{ $t('home.sections.slokasList.viewAll') }}
+         <nuxt-link class="my-button" :to="footerLink">
+            {{ viewAllLabel }}
          </nuxt-link>
       </template>
    </HomeSection>
@@ -24,6 +24,28 @@ const { listOfLords: lordsOfSlokas, getListOfLords: getLordsOfSlokas } = useSlok
 const { listOfLords: lordsOfAshtotaras, getListOfLords: getLordsOfAshtotaras } = useAshtotaras();
 
 const route = useRoute();
+
+const { t } = useI18n();
+
+const sectionTitle = computed(() =>
+   props.isAshtotara
+      ? t("home.sections.ashtotarasList.title")
+      : t("home.sections.slokasList.title")
+);
+
+const sectionSubtitle = computed(() =>
+   props.isAshtotara
+      ? t("home.sections.ashtotarasList.subtitle")
+      : t("home.sections.slokasList.subtitle")
+);
+
+const viewAllLabel = computed(() =>
+   props.isAshtotara
+      ? t("home.sections.ashtotarasList.viewAll")
+      : t("home.sections.slokasList.viewAll")
+);
+
+const footerLink = computed(() => props.isAshtotara ? "/ashtotaras" : "/slokas");
 
 const slicedListOfLords = computed(() => {
 
