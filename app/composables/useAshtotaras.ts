@@ -13,7 +13,6 @@ export const useAshtotaras = (): IUseAshtotarasReturn => {
          .where("lang", "=", locale.value)
          .all();
 
-      console.log("lords", lords);
       listOfLords.value = lords?.map((l) => ({
          lord_id: l.lord_id,
          name: l.lord,

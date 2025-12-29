@@ -73,8 +73,6 @@ onMounted(async () => {
 
    blog.value = await getBlogById(blogId);
 
-   console.log("blog.value: ", blog.value);
-
 });
 </script>
 
