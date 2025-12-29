@@ -1,0 +1,64 @@
+@use "../abstracts" as *;
+
+.page-slokas,
+.page-ashtotaras {
+
+   &__search-input {
+      width: 100%;
+      padding: px-to-rem(12) px-to-rem(16);
+      border: 1px solid var(--border-color, rgba($color: #EB730C, $alpha: 0.6));
+      border-radius: px-to-rem(8);
+      color: rgba($color: #EB730C, $alpha: 0.6);
+      font: inherit;
+
+      &::placeholder {
+         color: rgba($color: #EB730C, $alpha: 0.6);
+      }
+
+      &:focus {
+         border-color: rgba($color: #EB730C, $alpha: 1);
+         outline: none;
+      }
+   }
+
+   &__lords-list {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(px-to-rem(240), 1fr));
+      gap: px-to-rem(8);
+
+      @include mobile {
+         grid-template-columns: repeat(auto-fill, minmax(px-to-rem(150), 1fr));
+      }
+
+      @include small-mobile {
+         grid-template-columns: repeat(auto-fill, minmax(px-to-rem(140), 1fr));
+      }
+   }
+
+   &__stay-tuned-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: px-to-rem(16);
+   }
+}
+
+.page-sloka-preview {
+   .sloka-area {
+      background: #FEF3C7;
+      border-radius: px-to-rem(12);
+      flex: 1;
+      padding: px-to-rem(8) px-to-rem(16) px-to-rem(20) px-to-rem(16);
+      max-height: fit-content;
+      transition: font-size 0.2s ease;
+      font-size: var(--sloka-font-size);
+
+      @include web-screen {
+         // margin: px-to-rem(32);
+         padding: px-to-rem(32);
+      }
+   }
+}

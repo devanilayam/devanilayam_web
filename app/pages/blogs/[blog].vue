@@ -11,18 +11,20 @@
             <span class="font-size-icon">+</span>
          </button>
       </div>
-      <ContentRenderer v-if="sloka" :value="sloka" class="sloka-area" :style="{ fontSize: `${fontSize}px` }" />
+
+      <ContentRenderer v-if="blog" :value="blog" class="sloka-area" :style="{ fontSize: `${fontSize}px` }" />
    </main>
 </template>
 
 <script lang="ts" setup>
 import { useStorage } from "@vueuse/core";
+import { useBlogs } from "~/composables/useBlogs";
 
-const { getSloka } = useSlokas();
+const { getBlogById } = useBlogs();
 
 const route = useRoute();
 
-const sloka = ref();
+const blog = ref();
 
 // Font size controller with localStorage persistence
 const minFontSize = 12;
@@ -54,25 +56,22 @@ const decreaseFontSize = () => {
 };
 
 useSeoMeta({
-   title: computed(() => (sloka.value?.title || "Sloka") + " | Devanilayam"),
-   description: computed(() => sloka.value?.excerpt || "Discover devotional slokas and their meanings at Devanilayam."),
-   ogTitle: computed(() => sloka.value?.title || "Sloka | Devanilayam"),
-   ogDescription: computed(() => sloka.value?.excerpt || "Discover devotional slokas and their meanings at Devanilayam."),
-   twitterTitle: computed(() => sloka.value?.title || "Sloka | Devanilayam"),
-   twitterDescription: computed(() => sloka.value?.excerpt || "Discover devotional slokas and their meanings at Devanilayam."),
-   twitterCard: computed(() => sloka.value?.excerpt || "Discover devotional slokas and their meanings at Devanilayam."),
+   title: computed(() => (blog.value?.title || "Blog") + " | Devanilayam"),
+   description: computed(() => blog.value?.description || "Read devotional blogs at Devanilayam."),
+   ogTitle: computed(() => blog.value?.title || "Blog | Devanilayam"),
+   ogDescription: computed(() => blog.value?.description || "Read devotional blogs at Devanilayam."),
+   twitterTitle: computed(() => blog.value?.title || "Blog | Devanilayam"),
+   twitterDescription: computed(() => blog.value?.description || "Read devotional blogs at Devanilayam."),
+   twitterCard: computed(() => blog.value?.description || "Read devotional blogs at Devanilayam."),
    twitterSite: computed(() => "@devanilayam"),
    twitterCreator: computed(() => "@devanilayam"),
-
 });
 
 onMounted(async () => {
 
-   const lordId = route.params.lord as string;
+   const blogId = route.params.blog as string;
 
-   const slokaId = route.params.id as string;
-
-   sloka.value = await getSloka(lordId, slokaId);
+   blog.value = await getBlogById(blogId);
 
 });
 </script>

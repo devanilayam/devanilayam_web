@@ -1,6 +1,5 @@
 <template>
-   <NuxtLink :to="`/lords/${props.lord.lord_id}`" class="category-card"
-      :style="{ backgroundImage: `url(${computedImgUrl})` }">
+   <NuxtLink :to="computedLink" class="category-card" :style="{ backgroundImage: `url(${computedImgUrl})` }">
       <div class="category-card__overlay">
          <p class="category-card__title">{{ props.lord.name }}</p>
       </div>
@@ -8,15 +7,33 @@
 </template>
 
 <script setup lang="ts">
-import type { CategoryCardProps } from "./types";
+import type { LordCardProps } from "./types";
 
 defineOptions({ name: "CategoryCard" });
 
-const props = defineProps<CategoryCardProps>();
+const props = withDefaults(defineProps<LordCardProps>(), {
+   isAshtotara: false,
+});
 
 const images = import.meta.glob("@/assets/images/**", { eager: true, import: "default" });
 
 const computedImgUrl = computed(() => images[`/assets/images/lord/${props.lord.lord_id.toLowerCase()}.webp`]);
+
+const computedRoutePrefix = computed(() => {
+
+   // If current route path contains 'ashtotaras', show ashtotaras
+   if (props.isAshtotara) {
+
+      return "ashtotaras";
+
+   }
+
+   // Otherwise, fallback to slokas
+   return "slokas";
+
+});
+
+const computedLink = computed(() => `/${computedRoutePrefix.value}/${props.lord.lord_id}`);
 
 </script>
 

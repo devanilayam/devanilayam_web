@@ -7,8 +7,14 @@
                   <icon name="x" color="#854D0E" />
                </button>
                <nuxt-link to="/" class="side-menu__link" @click="close">{{ $t('header.links.about') }}</nuxt-link>
-               <nuxt-link :to="`/lords`" class="side-menu__link" @click="close">
+               <nuxt-link :to="`/slokas`" class="side-menu__link" @click="close">
                   {{ $t('header.links.slokas') }}
+               </nuxt-link>
+               <nuxt-link :to="`/ashtotaras`" class="side-menu__link" @click="close">
+                  {{ $t('header.links.ashtotaras') }}
+               </nuxt-link>
+               <nuxt-link :to="`/blogs`" class="side-menu__link" @click="close">
+                  {{ $t('header.links.blogs') }}
                </nuxt-link>
             </div>
          </aside>
