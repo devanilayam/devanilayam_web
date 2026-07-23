@@ -6,7 +6,7 @@
             <p class="hero__subtitle">{{ $t('home.hero.subtitle') }}</p>
             <p class="hero__description">{{ $t('home.hero.description') }}</p>
             <div class="hero__actions">
-               <nuxt-link class="my-button" :to="{ path: `/slokas` }">
+               <nuxt-link class="my-button" :to="localePath('/slokas')">
                   {{ $t('home.cta.exploreSlokas') }}
                </nuxt-link>
                <nuxt-link class="my-button my-button--outlined" :to="WHATSAPP_CHANNEL_LINK" external target="_blank">
@@ -34,6 +34,31 @@
 
 <script lang="ts" setup>
 import { HOME_PAGE_FEATURES, WHATSAPP_CHANNEL_LINK } from "~/configs";
+
+const { t } = useI18n();
+
+const localePath = useLocalePath();
+
+useSeoMeta({
+   title: () => t("home.hero.title"),
+   description: () => t("home.hero.description"),
+   ogTitle: () => t("home.hero.title"),
+   ogDescription: () => t("home.hero.description"),
+   ogType: "website",
+   twitterTitle: () => t("home.hero.title"),
+   twitterDescription: () => t("home.hero.description"),
+});
+
+// CollectionPage describes the home page as the entry into the sloka collection
+// (Organization + WebSite are injected site-wide in the default layout).
+useJsonLd(() => ({
+   "@type": "CollectionPage",
+   name: t("home.hero.title"),
+   description: t("home.hero.description"),
+   url: SITE_URL,
+   isPartOf: { "@id": `${SITE_URL}/#website` },
+   about: { "@id": `${SITE_URL}/#organization` },
+}));
 
 </script>
 

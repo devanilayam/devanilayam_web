@@ -1,14 +1,14 @@
 <template>
    <header class="my-header">
-      <nuxt-link to="/" class="logo-link" aria-label="Devanilayam - Home">
+      <nuxt-link :to="localePath('/')" class="logo-link" aria-label="Devanilayam - Home">
          <logo />
       </nuxt-link>
 
-      <div class="nav-links">
-         <nuxt-link to="/">{{ $t('header.links.about') }}</nuxt-link>
-         <nuxt-link :to="`/slokas`">{{ $t('header.links.slokas') }}</nuxt-link>
-         <nuxt-link :to="`/ashtotaras`"> {{ $t('header.links.ashtotaras') }}</nuxt-link>
-         <nuxt-link :to="`/blogs`"> {{ $t('header.links.blogs') }}</nuxt-link>
+      <nav class="nav-links" aria-label="Primary">
+         <nuxt-link :to="localePath('/')">{{ $t('header.links.about') }}</nuxt-link>
+         <nuxt-link :to="localePath('/slokas')">{{ $t('header.links.slokas') }}</nuxt-link>
+         <nuxt-link :to="localePath('/ashtotaras')"> {{ $t('header.links.ashtotaras') }}</nuxt-link>
+         <nuxt-link :to="localePath('/blogs')"> {{ $t('header.links.blogs') }}</nuxt-link>
          <my-dropdown ref="languageDropdownRef" placement="bottom-end">
             <template #trigger>
                <p>
@@ -26,7 +26,7 @@
                </div>
             </template>
          </my-dropdown>
-      </div>
+      </nav>
 
       <div class="nav-links--mobile">
          <my-dropdown ref="mobileLanguageDropdownRef" placement="bottom-end">
@@ -55,6 +55,8 @@
 <script setup lang="ts">
 import { useSideMenu } from "~/composables/useSideMenu";
 import { Locale } from "~/types/locale";
+
+const localePath = useLocalePath();
 
 const { toggle } = useSideMenu();
 

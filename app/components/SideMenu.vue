@@ -6,14 +6,14 @@
                <button class="side-menu__close" aria-label="Close menu" @click="close">
                   <icon name="x" color="#854D0E" />
                </button>
-               <nuxt-link to="/" class="side-menu__link" @click="close">{{ $t('header.links.about') }}</nuxt-link>
-               <nuxt-link :to="`/slokas`" class="side-menu__link" @click="close">
+               <nuxt-link :to="localePath('/')" class="side-menu__link" @click="close">{{ $t('header.links.about') }}</nuxt-link>
+               <nuxt-link :to="localePath('/slokas')" class="side-menu__link" @click="close">
                   {{ $t('header.links.slokas') }}
                </nuxt-link>
-               <nuxt-link :to="`/ashtotaras`" class="side-menu__link" @click="close">
+               <nuxt-link :to="localePath('/ashtotaras')" class="side-menu__link" @click="close">
                   {{ $t('header.links.ashtotaras') }}
                </nuxt-link>
-               <nuxt-link :to="`/blogs`" class="side-menu__link" @click="close">
+               <nuxt-link :to="localePath('/blogs')" class="side-menu__link" @click="close">
                   {{ $t('header.links.blogs') }}
                </nuxt-link>
             </div>
@@ -24,6 +24,8 @@
 
 <script setup lang="ts">
 import { useSideMenu } from "~/composables/useSideMenu";
+
+const localePath = useLocalePath();
 
 const { isOpen, close } = useSideMenu();
 </script>

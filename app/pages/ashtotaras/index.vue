@@ -36,7 +36,16 @@ import { WHATSAPP_CHANNEL_LINK } from "~/configs";
 const searchQuery = ref("");
 
 // Use Ashtotaras composable instead of slokas
-const { listOfLords, getListOfLords } = useAshtotaras();
+const { getListOfLords } = useAshtotaras();
+
+const { locale } = useLocale();
+
+// Fetch on the server so the deity list is crawlable in the HTML.
+const { data: listOfLords } = await useAsyncData(
+   () => `ashtotaras-lords-${locale.value}`,
+   () => getListOfLords(),
+   { default: () => [], watch: [locale] }
+);
 
 const filteredDeities = computed(() => {
 
@@ -54,10 +63,11 @@ const filteredDeities = computed(() => {
 
 });
 
-onMounted(async () => {
-
-   await getListOfLords();
-
+useSeoMeta({
+   title: "Ashtotaras",
+   description: "Browse Ashtottara Shatanamavali (108 sacred names) of Hindu deities with meanings in English, Telugu and Hindi at Devanilayam.",
+   ogTitle: "Ashtotaras",
+   ogType: "website",
 });
 
 </script>
