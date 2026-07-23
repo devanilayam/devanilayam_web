@@ -34,7 +34,16 @@ import { WHATSAPP_CHANNEL_LINK } from "~/configs";
 
 const searchQuery = ref("");
 
-const { listOfLords, getListOfLords } = useSlokas();
+const { getListOfLords } = useSlokas();
+
+const { locale } = useLocale();
+
+// Fetch on the server so the deity list is crawlable in the HTML.
+const { data: listOfLords } = await useAsyncData(
+   () => `slokas-lords-${locale.value}`,
+   () => getListOfLords(),
+   { default: () => [], watch: [locale] }
+);
 
 const filteredDeities = computed(() => {
 
@@ -52,10 +61,11 @@ const filteredDeities = computed(() => {
 
 });
 
-onMounted(async () => {
-
-   await getListOfLords();
-
+useSeoMeta({
+   title: "Slokas",
+   description: "Browse Hindu devotional slokas by deity — Shiva, Hanuman, Rama, Ganesh, Surya and more — with meanings in English, Telugu and Hindi at Devanilayam.",
+   ogTitle: "Slokas",
+   ogType: "website",
 });
 
 </script>

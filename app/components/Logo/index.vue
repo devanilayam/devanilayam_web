@@ -6,22 +6,22 @@
 </template>
 
 <script lang="ts" setup>
-import type { LogoProps } from './types';
+import type { LogoProps } from "./types";
 
 const props = withDefaults(defineProps<LogoProps>(), {
-    orientation: 'horizontal',
-    variant: 'default',
+    orientation: "horizontal",
+    variant: "default",
     height: 48,
     color: "#EB730C",
 });
 
 const emblemBindings = computed(() => ({
-    height: props.orientation === 'vertical' ? ((props.height - 4) * 4) / 5 : props.height,
+    height: props.orientation === "vertical" ? ((props.height - 4) * 4) / 5 : props.height,
     fill: props.color,
 }));
 
 const wordmarkBindings = computed(() => ({
-    height: props.orientation === 'vertical' ? (props.height - 4) / 5 : props.height,
+    height: props.orientation === "vertical" ? (props.height - 4) / 5 : props.height,
     fill: props.color,
 }));
 

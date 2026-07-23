@@ -24,7 +24,22 @@ const { getBlogById } = useBlogs();
 
 const route = useRoute();
 
-const blog = ref();
+const { locale } = useLocale();
+
+const blogId = computed(() => route.params.blog as string);
+
+// Fetch on the server so crawlers receive the fully-rendered blog in the HTML.
+const { data: blog } = await useAsyncData(
+   () => `blog-${locale.value}-${blogId.value}`,
+   () => getBlogById(blogId.value),
+   { watch: [locale] }
+);
+
+if (!blog.value) {
+
+   throw createError({ statusCode: 404, statusMessage: "Blog not found", fatal: true });
+
+}
 
 // Font size controller with localStorage persistence
 const minFontSize = 12;
@@ -55,25 +70,36 @@ const decreaseFontSize = () => {
 
 };
 
+const fallbackDescription = "Read devotional blogs at Devanilayam.";
+
+const title = computed(() => blog.value?.title || "Blog");
+
+const description = computed(() => blog.value?.description || fallbackDescription);
+
 useSeoMeta({
-   title: computed(() => (blog.value?.title || "Blog") + " | Devanilayam"),
-   description: computed(() => blog.value?.description || "Read devotional blogs at Devanilayam."),
-   ogTitle: computed(() => blog.value?.title || "Blog | Devanilayam"),
-   ogDescription: computed(() => blog.value?.description || "Read devotional blogs at Devanilayam."),
-   twitterTitle: computed(() => blog.value?.title || "Blog | Devanilayam"),
-   twitterDescription: computed(() => blog.value?.description || "Read devotional blogs at Devanilayam."),
-   twitterCard: computed(() => blog.value?.description || "Read devotional blogs at Devanilayam."),
-   twitterSite: computed(() => "@devanilayam"),
-   twitterCreator: computed(() => "@devanilayam"),
+   title,
+   description,
+   ogTitle: title,
+   ogDescription: description,
+   ogType: "article",
+   articleAuthor: computed(() => (blog.value?.author ? [blog.value.author] : undefined)),
+   twitterTitle: title,
+   twitterDescription: description,
+   twitterCard: "summary_large_image",
 });
 
-onMounted(async () => {
-
-   const blogId = route.params.blog as string;
-
-   blog.value = await getBlogById(blogId);
-
-});
+useJsonLd(() => ({
+   "@type": "BlogPosting",
+   headline: title.value,
+   description: description.value,
+   inLanguage: locale.value,
+   author: blog.value?.author ? { "@type": "Person", name: blog.value.author } : undefined,
+   keywords: blog.value?.tags,
+   datePublished: blog.value?.date,
+   image: `${SITE_URL}/og-image.png`,
+   isPartOf: { "@id": `${SITE_URL}/#website` },
+   publisher: { "@id": `${SITE_URL}/#organization` },
+}));
 </script>
 
 <style lang="scss">

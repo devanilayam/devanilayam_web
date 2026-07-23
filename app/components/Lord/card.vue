@@ -33,7 +33,9 @@ const computedRoutePrefix = computed(() => {
 
 });
 
-const computedLink = computed(() => `/${computedRoutePrefix.value}/${props.lord.lord_id}`);
+const localePath = useLocalePath();
+
+const computedLink = computed(() => localePath(`/${computedRoutePrefix.value}/${props.lord.lord_id}`));
 
 </script>
 

@@ -20,10 +20,12 @@
          <div class="my-footer__column">
             <div class="my-footer__heading">{{ $t('footer.sections.legal.title') }}</div>
             <div class="my-footer__list">
-               <a :href="`/policies/privacy-policy`" class="my-footer__link">{{
-                  $t('footer.sections.legal.links.privacy') }}</a>
-               <a :href="`/policies/terms-of-service`" class="my-footer__link">{{
-                  $t('footer.sections.legal.links.terms') }}</a>
+               <nuxt-link :to="localePath('/policies/privacy-policy')" class="my-footer__link">
+                  {{ $t('footer.sections.legal.links.privacy') }}
+               </nuxt-link>
+               <nuxt-link :to="localePath('/policies/terms-of-service')" class="my-footer__link">
+                  {{ $t('footer.sections.legal.links.terms') }}
+               </nuxt-link>
                <a href="#" class="my-footer__link">{{ $t('footer.sections.legal.links.contact') }}</a>
             </div>
          </div>
@@ -33,11 +35,12 @@
             <div class="my-footer__heading">{{ $t('footer.sections.follow.title') }}</div>
             <div class="my-footer__list">
 
-               <nuxt-link v-for="social in HOME_PAGE_SOCIAL_LINKS.slice(0, 3)" :key="social.icon" :to="social.link"
-                  target="_blank">
+               <a v-for="social in HOME_PAGE_SOCIAL_LINKS.slice(0, 3)" :key="social.icon" :href="social.link"
+                  class="my-footer__link" target="_blank" rel="noopener noreferrer"
+                  :aria-label="`Devanilayam on ${social.label}`">
                   <icon :name="social.icon" :size="12" />
                   {{ social.label }}
-               </nuxt-link>
+               </a>
 
             </div>
          </div>
@@ -55,6 +58,8 @@
 
 <script setup lang="ts">
 import { HOME_PAGE_SOCIAL_LINKS } from "~/configs";
+
+const localePath = useLocalePath();
 
 const currentYear = new Date().getFullYear();
 

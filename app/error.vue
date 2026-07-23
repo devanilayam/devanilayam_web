@@ -3,13 +3,8 @@
     <SideMenu />
     <main class="page error-page">
         <div class="error-content">
-            <h1>Something went wrong</h1>
-            <p v-if="error">
-                <strong>Error:</strong> {{ error?.message || error?.statusMessage || 'An unexpected error occurred.' }}
-            </p>
-            <p v-else>
-                An unexpected error occurred.
-            </p>
+            <h1>{{ heading }}</h1>
+            <p>{{ message }}</p>
             <my-button @click="goHome">Go back to Home Page</my-button>
         </div>
     </main>
@@ -17,16 +12,28 @@
 </template>
 
 <script setup lang="ts">
+import type { NuxtError } from "#app";
 
-const props = defineProps<{ error?: any }>();
+const props = defineProps<{ error?: NuxtError }>();
 
-const router = useRouter();
+const isNotFound = computed(() => props.error?.statusCode === 404);
 
-const goHome = () => {
+const heading = computed(() => (isNotFound.value ? "Page not found" : "Something went wrong"));
 
-    router.replace({ path: "/" });
+// Avoid leaking internal error details to users/crawlers; show a safe message.
+const message = computed(() =>
+    isNotFound.value
+        ? "The page you are looking for doesn't exist or may have moved."
+        : "An unexpected error occurred. Please try again later."
+);
 
-};
+// Error pages must never be indexed.
+useHead({
+    title: computed(() => heading.value),
+    meta: [{ name: "robots", content: "noindex, follow" }],
+});
+
+const goHome = (): Promise<void> => clearError({ redirect: "/" });
 
 </script>
 

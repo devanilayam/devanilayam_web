@@ -7,17 +7,31 @@
 <script lang="ts" setup>
 const route = useRoute();
 
-const policy = ref();
-
 const { locale } = useLocale();
 
-onMounted(async () => {
+const id = computed(() => route.params.id as string);
 
-    const id = route.params.id as string;
+// Fetch on the server so crawlers receive the fully-rendered policy in the HTML.
+const { data: policy } = await useAsyncData(
+    () => `policy-${locale.value}-${id.value}`,
+    () => queryCollection("policies")
+        .where("id", "=", `policies/policies/${locale.value}/${id.value}.md`)
+        .first(),
+    { watch: [locale] }
+);
 
-    policy.value = await queryCollection("policies")
-        .where("id", "=", `policies/policies/${locale.value}/${id}.md`)
-        .first();
+if (!policy.value) {
 
+    throw createError({ statusCode: 404, statusMessage: "Policy not found", fatal: true });
+
+}
+
+const title = computed(() => policy.value?.title || "Policy");
+
+useSeoMeta({
+    title,
+    description: computed(() => policy.value?.description || `${title.value} for Devanilayam.`),
+    ogTitle: title,
+    robots: "noindex, follow",
 });
 </script>

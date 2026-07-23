@@ -19,13 +19,20 @@ const props = withDefaults(defineProps<LordListProps>(), {
    isAshtotara: false,
 });
 
-const { listOfLords: lordsOfSlokas, getListOfLords: getLordsOfSlokas } = useSlokas();
+const { getListOfLords: getLordsOfSlokas } = useSlokas();
 
-const { listOfLords: lordsOfAshtotaras, getListOfLords: getLordsOfAshtotaras } = useAshtotaras();
+const { getListOfLords: getLordsOfAshtotaras } = useAshtotaras();
 
 const route = useRoute();
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
+
+// Fetch on the server so deity links are present in the crawlable HTML.
+const { data: lords } = await useAsyncData(
+   () => `lord-list-${props.isAshtotara ? "ashtotaras" : "slokas"}-${locale.value}`,
+   () => (props.isAshtotara ? getLordsOfAshtotaras() : getLordsOfSlokas()),
+   { default: () => [], watch: [locale, () => props.isAshtotara] }
+);
 
 const sectionTitle = computed(() =>
    props.isAshtotara
@@ -45,13 +52,13 @@ const viewAllLabel = computed(() =>
       : t("home.sections.slokasList.viewAll")
 );
 
-const footerLink = computed(() => props.isAshtotara ? "/ashtotaras" : "/slokas");
+const localePath = useLocalePath();
+
+const footerLink = computed(() => localePath(props.isAshtotara ? "/ashtotaras" : "/slokas"));
 
 const slicedListOfLords = computed(() => {
 
    const currentLordId = route.params.lord;
-
-   const lords = props.isAshtotara ? lordsOfAshtotaras : lordsOfSlokas;
 
    // Filter out the current lord if on a lord-specific page, else leave as is
    const filtered = currentLordId
@@ -59,20 +66,6 @@ const slicedListOfLords = computed(() => {
       : lords.value;
 
    return filtered.slice(0, 3);
-
-});
-
-onMounted(async () => {
-
-   if (props.isAshtotara) {
-
-      await getLordsOfAshtotaras();
-
-   } else {
-
-      await getLordsOfSlokas();
-
-   }
 
 });
 </script>

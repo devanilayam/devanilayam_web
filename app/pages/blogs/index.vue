@@ -3,8 +3,8 @@
       <section>
          <h1 class="blogs-heading">{{ $t('blogs.pageTitle') || 'Blogs' }}</h1>
          <div class="blogs-list">
-            <div v-for="blog in listOfBlogs" :key="blog.blog_id" class="blog-card" tabindex="0"
-               @click="$router.push(`/blogs/${blog.blog_id}`)">
+            <nuxt-link v-for="blog in listOfBlogs" :key="blog.blog_id" class="blog-card"
+               :to="localePath(`/blogs/${blog.blog_id}`)">
                <div class="blog-card-header">
                   <h2 class="blog-title">{{ blog.title }}</h2>
                   <p v-if="blog.author" class="blog-author">{{ $t('blogs.by', { author: blog.author }) }}</p>
@@ -16,7 +16,7 @@
                <div v-if="blog.tags && blog.tags.length" class="blog-card-tags">
                   <span v-for="tag in blog.tags" :key="tag" class="blog-tag">{{ tag }}</span>
                </div>
-            </div>
+            </nuxt-link>
          </div>
       </section>
       <my-socials />
@@ -26,12 +26,24 @@
 <script setup lang="ts">
 import { useBlogs } from "~/composables/useBlogs";
 
-const { listOfBlogs, getListOfBlogs } = useBlogs();
+const { getListOfBlogs } = useBlogs();
 
-onMounted(async () => {
+const localePath = useLocalePath();
 
-   await getListOfBlogs();
+const { locale } = useLocale();
 
+// Fetch on the server so the blog list is crawlable in the HTML.
+const { data: listOfBlogs } = await useAsyncData(
+   () => `blogs-list-${locale.value}`,
+   () => getListOfBlogs(),
+   { default: () => [], watch: [locale] }
+);
+
+useSeoMeta({
+   title: "Blogs",
+   description: "Read articles on Hindu mythology, deities, festivals and devotional practices at Devanilayam.",
+   ogTitle: "Blogs",
+   ogType: "website",
 });
 </script>
 
@@ -58,6 +70,8 @@ onMounted(async () => {
    }
 
    .blog-card {
+      text-decoration: none;
+      color: inherit;
       background: #faf8f3;
       border-radius: px-to-rem(16);
       box-shadow: 0 px-to-rem(2) px-to-rem(14) rgba(36, 30, 7, 0.05);
