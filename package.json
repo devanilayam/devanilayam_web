@@ -8,7 +8,7 @@
       "generate": "nuxt generate",
       "preview": "nuxt preview",
       "postinstall": "nuxt prepare",
-      "build:icons": "tsx generate-icon-fonts.ts"
+      "build:icons": "bun run generate-icon-fonts.ts"
    },
    "dependencies": {
       "@nuxt/content": "^3.8.2",
@@ -26,8 +26,6 @@
       "eslint": "^9.39.1",
       "fantasticon": "^3.0.0",
       "sass": "^1.96.0",
-      "tsx": "^4.20.6",
       "typescript": "^5.9.3"
-   },
-   "packageManager": "yarn@4.12.0"
+   }
 }

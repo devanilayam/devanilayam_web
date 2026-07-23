@@ -5,7 +5,7 @@
  *
  * ONLY MODIFY THIS FILE IF ABSOLUTELY NECESSARY.
  *
- * Usage: yarn build:icons
+ * Usage: bun run build:icons
  */
 
 import { type RunnerOptions, FontAssetType, generateFonts, OtherAssetType } from "fantasticon";
