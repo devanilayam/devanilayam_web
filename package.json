@@ -59,7 +59,7 @@
 		"@vueuse/core": "^14.0.0",
 		"conventional-changelog-conventionalcommits": "^10.4.0",
 		"eslint": "^9.39.1",
-		"fantasticon": "^3.0.0",
+		"fantasticon": "^4.1.0",
 		"happy-dom": "^20.11.6",
 		"postcss-html": "^2.0.0",
 		"sass": "^1.96.0",
