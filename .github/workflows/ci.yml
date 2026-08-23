@@ -1,0 +1,195 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# A newer push to the same branch makes the in-flight run obsolete.
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  # Nuxt's postinstall and the gates below are noisy without this.
+  NUXT_TELEMETRY_DISABLED: 1
+
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      # Warm the dependency cache once so the gates below all restore it
+      # instead of resolving the lockfile four times over.
+      - name: Cache dependencies
+        uses: actions/cache@v6
+        with:
+          path: |
+            ~/.bun/install/cache
+            node_modules
+          key: bun-${{ runner.os }}-${{ hashFiles('bun.lock', 'package.json') }}
+          restore-keys: |
+            bun-${{ runner.os }}-
+
+      - name: Install
+        run: bun install --frozen-lockfile
+
+  lint:
+    name: Lint
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - uses: actions/cache@v6
+        with:
+          path: |
+            ~/.bun/install/cache
+            node_modules
+          key: bun-${{ runner.os }}-${{ hashFiles('bun.lock', 'package.json') }}
+          restore-keys: |
+            bun-${{ runner.os }}-
+
+      - name: Install
+        run: bun install --frozen-lockfile
+
+      - name: ESLint
+        run: bun run lint
+
+      - name: Stylelint
+        run: bun run lint:style
+
+  typecheck:
+    name: Typecheck
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - uses: actions/cache@v6
+        with:
+          path: |
+            ~/.bun/install/cache
+            node_modules
+          key: bun-${{ runner.os }}-${{ hashFiles('bun.lock', 'package.json') }}
+          restore-keys: |
+            bun-${{ runner.os }}-
+
+      - name: Cache Nuxt build state
+        uses: actions/cache@v6
+        with:
+          path: |
+            .nuxt
+            node_modules/.cache
+          key: nuxt-${{ runner.os }}-${{ hashFiles('bun.lock', 'nuxt.config.ts') }}
+          restore-keys: |
+            nuxt-${{ runner.os }}-
+
+      - name: Install
+        run: bun install --frozen-lockfile
+
+      - name: vue-tsc
+        run: bun run typecheck
+
+  test:
+    name: Tests
+    needs: typecheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - uses: actions/cache@v6
+        with:
+          path: |
+            ~/.bun/install/cache
+            node_modules
+          key: bun-${{ runner.os }}-${{ hashFiles('bun.lock', 'package.json') }}
+          restore-keys: |
+            bun-${{ runner.os }}-
+
+      - name: Cache Nuxt build state
+        uses: actions/cache@v6
+        with:
+          path: |
+            .nuxt
+            node_modules/.cache
+          key: nuxt-${{ runner.os }}-${{ hashFiles('bun.lock', 'nuxt.config.ts') }}
+          restore-keys: |
+            nuxt-${{ runner.os }}-
+
+      - name: Install
+        run: bun install --frozen-lockfile
+
+      - name: Vitest
+        run: bun run test
+
+  build:
+    name: Build
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - uses: actions/cache@v6
+        with:
+          path: |
+            ~/.bun/install/cache
+            node_modules
+          key: bun-${{ runner.os }}-${{ hashFiles('bun.lock', 'package.json') }}
+          restore-keys: |
+            bun-${{ runner.os }}-
+
+      - name: Cache Nuxt build state
+        uses: actions/cache@v6
+        with:
+          path: |
+            .nuxt
+            node_modules/.cache
+          key: nuxt-${{ runner.os }}-${{ hashFiles('bun.lock', 'nuxt.config.ts') }}
+          restore-keys: |
+            nuxt-${{ runner.os }}-
+
+      - name: Install
+        run: bun install --frozen-lockfile
+
+      - name: Build
+        run: bun run build
+
+      # Installability and offline support are part of the product, so they are
+      # gated on every push rather than checked by hand before a release.
+      - name: Verify PWA
+        run: bun run pwa:verify
+
+      - name: Verify SEO
+        run: bun run seo:verify
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: nuxt-output
+          path: .output/
+          retention-days: 7

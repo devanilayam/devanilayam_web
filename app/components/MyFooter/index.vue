@@ -83,6 +83,7 @@ const currentYear = new Date().getFullYear();
       justify-content: space-between;
       width: 100%;
       gap: px-to-rem(48);
+
       // flex-wrap: wrap;
    }
 
@@ -96,7 +97,7 @@ const currentYear = new Date().getFullYear();
    }
 
    // Tablet styles
-   @media (max-width: 1024px) {
+   @media (width <= 1024px) {
       &__columns {
          gap: px-to-rem(32);
       }

@@ -1,6 +1,5 @@
 <!-- eslint-disable vue/no-multiple-template-root -->
 <template>
-   <speed-insights />
    <MyHeader />
    <SideMenu />
    <NuxtPage />
@@ -8,8 +7,6 @@
 </template>
 
 <script setup lang="ts">
-import { SpeedInsights } from "@vercel/speed-insights/nuxt";
-
 // Inject <html lang>, hreflang alternates and og:locale for every route so
 // search engines correctly index the multilingual (en/te/hi) versions.
 const head = useLocaleHead({ dir: true, lang: true, seo: true });

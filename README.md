@@ -1,37 +1,81 @@
-# Nuxt Minimal Starter
+# Devanilayam
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+An ad-free devotional platform to read, learn and practice Hindu slokas,
+ashtotaras and stotras in multiple scripts — English, Telugu and Hindi — with
+meanings and audio.
 
-This project uses [Bun](https://bun.sh) as its package manager and runtime.
+Live at **[devanilayam.com](https://devanilayam.com)**.
+
+## Stack
+
+- [Nuxt 4](https://nuxt.com) + Vue 3, server-side rendered
+- [Bun](https://bun.sh) as package manager and runtime
+- SCSS with a token-driven design system
+- `@nuxt/content` for the devotional corpus, `@nuxtjs/i18n` for the three
+  scripts, `@nuxtjs/seo` for metadata and structured data
+- `@vite-pwa/nuxt` for installability and offline support
+- Deployed on Vercel
 
 ## Setup
 
-Make sure to install dependencies:
-
 ```bash
-bun install
+bun install   # dependencies, Nuxt types, and the git hooks
+bun run dev   # http://localhost:3000
 ```
 
-## Development Server
+## Scripts
 
-Start the development server on `http://localhost:3000`:
+### Development
 
-```bash
-bun run dev
-```
+| Command | Description |
+| --- | --- |
+| `bun run dev` | Development server |
+| `bun run build` | Production build into `.output` |
+| `bun run preview` | Serve the production build |
+| `bun run generate` | Fully static build |
+| `bun run build:icons` | Regenerate the icon font from the SVG set |
 
-## Production
+### Quality gates
 
-Build the application for production:
+| Command | Description |
+| --- | --- |
+| `bun run lint` / `lint:fix` | ESLint over TS, JS and Vue |
+| `bun run lint:style` / `lint:style:fix` | Stylelint over SCSS and `<style>` blocks |
+| `bun run typecheck` | `vue-tsc --noEmit` |
+| `bun run test` / `test:watch` | Vitest — Vue/TS units and sass-true SCSS specs |
+| `bun run pwa:verify` | Manifest, icons, service worker and offline fallback |
+| `bun run seo:verify` | robots, sitemap, canonical, hreflang, JSON-LD and SSR output |
+| `bun run seo:lighthouse` | Lighthouse CI (add `-- mobile` for the throttled profile) |
 
-```bash
-bun run build
-```
+The first four run on every commit through the `pre-commit` hook, and all of
+them except Lighthouse run in CI.
 
-Locally preview production build:
+### Generated assets
 
-```bash
-bun run preview
-```
+| Command | Output |
+| --- | --- |
+| `bun run pwa:icons` | `public/icons/` — home-screen and maskable icons (committed) |
+| `bun run play:assets` | `.play/` — Play Store icon and feature graphic |
+| `bun run play:screenshots` | `.play/screenshots/` — Play Store screenshots |
+| `bun run android:version` | Syncs `android/twa-manifest.json` with `package.json` |
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Every generated asset is drawn from the site's own logo component and palette,
+so the store listing and the home-screen icon can never drift from the brand.
+
+## Automation
+
+| Workflow | Trigger | Does |
+| --- | --- | --- |
+| **CI** | push to `main`, all PRs | lint → typecheck → tests → build, then the PWA and SEO gates |
+| **Release** | push to `main` | semantic-release: version, `CHANGELOG.md`, git tag, GitHub release |
+| **Android (TWA)** | manual | Bubblewrap build of the signed `.aab` / `.apk` |
+
+Versions are never set by hand: semantic-release derives them from the
+conventional commit history, which the `commit-msg` hook enforces.
+
+## Documentation
+
+- [CONTRIBUTING.md](CONTRIBUTING.md) — how to work on the site
+- [BRANCHING.md](BRANCHING.md) — branch naming, PRs and how releases are cut
+- [SECURITY.md](SECURITY.md) — reporting a vulnerability
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) — community expectations

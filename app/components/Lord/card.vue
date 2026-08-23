@@ -68,7 +68,7 @@ const computedLink = computed(() => localePath(`/${computedRoutePrefix.value}/${
    &__title {
       margin-bottom: px-to-rem(24);
       color: #FFF;
-      font-family: 'Merriweather', serif;
+      font-family: Merriweather, serif;
       font-size: px-to-rem(24);
       line-height: px-to-rem(32);
       text-align: center;

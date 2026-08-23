@@ -13,6 +13,17 @@ node_modules
 logs
 *.log
 
+# Test and audit output
+coverage
+.lighthouseci
+
+# Generated release assets (regenerate with `bun run play:assets` / `play:screenshots`)
+.play
+
+# Android: the Bubblewrap project is generated in CI, and the keystore is a secret
+android/*
+!android/twa-manifest.json
+
 # Misc
 .DS_Store
 .fleet

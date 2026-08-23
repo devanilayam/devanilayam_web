@@ -29,15 +29,15 @@ const wordmarkBindings = computed(() => ({
 
 <style lang="scss">
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    max-width: fit-content !important;
+   display: flex;
+   align-items: center;
+   gap: 0.25rem;
+   max-width: fit-content !important;
 
-    &--vertical {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+   &--vertical {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
 }
 </style>

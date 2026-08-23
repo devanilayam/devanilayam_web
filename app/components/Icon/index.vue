@@ -34,8 +34,8 @@ const iconStyle = computed(() => ({
    // There was an extra space visible bottom of the icon when inspected. So this is not properly aligning with other UI elements.
    line-height: 0;
 
-   color: v-bind('iconStyle.color');
-   font-size: v-bind('iconStyle.fontSize');
+   color: v-bind("iconStyle.color");
+   font-size: v-bind("iconStyle.fontSize");
 }
 
 .icon-fallback {

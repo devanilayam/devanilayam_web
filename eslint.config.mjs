@@ -3,7 +3,21 @@ import withNuxt from "./.nuxt/eslint.config.mjs";
 
 export default withNuxt(
   {
-    ignores: ["src-tauri/**"],
+    ignores: ["src-tauri/**", ".play/**", ".lighthouseci/**", "coverage/**"],
+  },
+  // Node/Bun scripts: these run outside the app bundle, so they use the
+  // runtime globals rather than Nuxt's auto-imports.
+  {
+    files: ["scripts/**/*.mjs"],
+    languageOptions: {
+      globals: {
+        Bun: "readonly",
+        Buffer: "readonly",
+        console: "readonly",
+        fetch: "readonly",
+        process: "readonly",
+      },
+    },
   },
   // File-specific overrides for stores and composables
   {

@@ -39,35 +39,35 @@ const goHome = (): Promise<void> => clearError({ redirect: "/" });
 
 <style scoped lang="scss">
 .error-page {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   flex: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 
-    .error-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        max-width: 440px;
-        padding: 2rem;
-        background: #fffbe8; // soft yellow, lighter background
-        border: 1px solid #ffe4b5; // soft orange border (moccasin)
-        border-radius: 0.75rem;
-        box-shadow: 0 2px 12px rgba(255, 152, 0, 0.08); // soft orange shadow
+   .error-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      max-width: 440px;
+      padding: 2rem;
+      background: #FFFBE8; // soft yellow, lighter background
+      border: 1px solid #FFE4B5; // soft orange border (moccasin)
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 12px rgba(255, 152, 0, 0.08); // soft orange shadow
 
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #fb8c00; // vivid orange (Material orange 600)
-        }
+      h1 {
+         font-size: 2rem;
+         margin-bottom: 1rem;
+         color: #FB8C00; // vivid orange (Material orange 600)
+      }
 
-        p {
-            font-size: 1.15rem;
-            margin-bottom: 1.5rem;
-            color: #ad6500; // dark orange for text
-        }
-    }
+      p {
+         font-size: 1.15rem;
+         margin-bottom: 1.5rem;
+         color: #AD6500; // dark orange for text
+      }
+   }
 }
 </style>

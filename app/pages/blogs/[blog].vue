@@ -132,7 +132,7 @@ useJsonLd(() => ({
    border: none;
 
    &:hover:not(:disabled) {
-      background: #d25f07;
+      background: #D25F07;
    }
 
    &:disabled {

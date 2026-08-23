@@ -19,5 +19,3 @@ const handleImageError = (): void => {
 };
 
 </script>
-
-<style lang="scss"></style>
