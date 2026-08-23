@@ -62,10 +62,6 @@ version from the commits since the last tag, writes `CHANGELOG.md`, bumps
 `package.json`, tags the commit and publishes a GitHub release. The release
 commit carries `[skip ci]` so it does not trigger another run.
 
-Android builds are separate and manual: run the **Android (TWA)** workflow from
-the Actions tab once the web release is live, since Bubblewrap wraps the
-deployed site rather than the repository.
-
 ## Hotfixes
 
 There is no separate hotfix flow. Branch `fix/...` off `main`, open a PR, and

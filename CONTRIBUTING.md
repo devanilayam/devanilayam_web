@@ -118,13 +118,11 @@ publishes a GitHub release. Never bump the version by hand.
 
 ## Generated assets
 
-Some assets are generated rather than drawn, so they cannot drift from the
-brand. Re-run the generator instead of editing the output:
+The home-screen icon set is generated rather than drawn, so it cannot drift
+from the brand. Re-run the generator instead of editing the output:
 
 ```bash
-bun run pwa:icons        # public/icons/* — committed
-bun run play:assets      # .play/* — Play Store icon and feature graphic
-bun run play:screenshots # .play/screenshots/* — Play Store screenshots
+bun run pwa:icons  # public/icons/* — committed
 ```
 
 ## Reporting problems

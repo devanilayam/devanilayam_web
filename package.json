@@ -23,10 +23,6 @@
 		"seo:verify": "bash scripts/seo/verify.sh",
 		"seo:lighthouse": "bash scripts/seo/lighthouse.sh",
 		"seo:lighthouse:mobile": "bash scripts/seo/lighthouse.sh lighthouserc.mobile.json",
-		"play:assets": "bun run scripts/play/assets.mjs",
-		"play:screenshots": "bun run scripts/play/screenshots.mjs",
-		"android:version": "bun run scripts/android/version.mjs",
-		"android:target-sdk": "bash scripts/android/target-sdk.sh",
 		"release": "semantic-release"
 	},
 	"overrides": {

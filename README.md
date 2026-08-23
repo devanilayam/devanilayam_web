@@ -64,12 +64,9 @@ failed checks.
 | Command | Output |
 | --- | --- |
 | `bun run pwa:icons` | `public/icons/` — home-screen and maskable icons (committed) |
-| `bun run play:assets` | `.play/` — Play Store icon and feature graphic |
-| `bun run play:screenshots` | `.play/screenshots/` — Play Store screenshots |
-| `bun run android:version` | Syncs `android/twa-manifest.json` with `package.json` |
 
-Every generated asset is drawn from the site's own logo component and palette,
-so the store listing and the home-screen icon can never drift from the brand.
+The icons are drawn from the site's own logo component and palette, so the
+home-screen icon can never drift from the brand.
 
 ## Automation
 
@@ -77,7 +74,6 @@ so the store listing and the home-screen icon can never drift from the brand.
 | --- | --- | --- |
 | **CI** | push to `main`, all PRs | lint → typecheck → tests → build, then the PWA and SEO gates |
 | **Release** | push to `main` | semantic-release: version, `CHANGELOG.md`, git tag, GitHub release |
-| **Android (TWA)** | manual | Bubblewrap build of the signed `.aab` / `.apk` |
 
 Versions are never set by hand: semantic-release derives them from the
 conventional commit history, which the `commit-msg` hook enforces.
