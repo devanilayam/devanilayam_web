@@ -32,7 +32,7 @@ the first three:
 | `bun run test` | Vitest — TS/Vue units and sass-true SCSS specs |
 | `bun run build` | The production build |
 | `bun run pwa:verify` | Manifest, icons, service worker, offline fallback |
-| `bun run seo:verify` | robots, sitemap, canonical, hreflang, JSON-LD, SSR |
+| `bun run seo:verify` | robots, sitemap, per-route meta/OG/hreflang/JSON-LD, OG image, soft-404s |
 
 `--fix` variants exist for both linters: `bun run lint:fix`,
 `bun run lint:style:fix`.
@@ -42,12 +42,13 @@ URL, which is too slow and too noisy to gate every push. Run it by hand when
 you touch layout, fonts or images:
 
 ```bash
-bun run seo:lighthouse           # desktop
-bun run seo:lighthouse -- mobile # throttled mobile
+bun run seo:lighthouse         # desktop
+bun run seo:lighthouse:mobile  # throttled mobile
 ```
 
 Accessibility is an error at 0.9; performance, SEO and best-practices are
-warnings.
+warnings. Both SEO scripts are documented in
+[scripts/seo/README.md](scripts/seo/README.md).
 
 ## Code style
 
@@ -60,6 +61,15 @@ The repository is opinionated and the linters are the source of truth:
   kebab-case
 - Design tokens live in `app/assets/scss/tokens`, and anything mirrored in
   TypeScript lives in `app/utils/design`
+
+## Fonts
+
+Webfonts are self-hosted in `public/fonts` and declared with an explicit `src`,
+so builds never reach the network to resolve them. Read
+[public/fonts/README.md](public/fonts/README.md) before adding or replacing
+one — in particular, the `fallbacks` list is what stops text reflowing when the
+webfont swaps in, and Indic faces are what stop Telugu and Devanagari content
+rendering as tofu boxes.
 
 ## Content and languages
 

@@ -70,7 +70,7 @@ useJsonLd(() => ({
    align-items: center;
    gap: px-to-rem(24);
    color: #6B6760;
-   font-family: "Noto Sans", sans-serif;
+   font-family: "Noto Sans", "Noto Sans Telugu", "Noto Sans Devanagari", sans-serif;
 
    &__left {
       display: flex;
@@ -81,7 +81,7 @@ useJsonLd(() => ({
 
    &__title {
       color: #EB730C;
-      font-family: Merriweather, serif;
+      font-family: Merriweather, "Noto Sans Telugu", "Noto Sans Devanagari", serif;
       font-size: px-to-rem(48);
       line-height: px-to-rem(48);
    }

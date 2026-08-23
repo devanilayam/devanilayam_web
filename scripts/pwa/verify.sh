@@ -123,11 +123,74 @@ else
    fail "sw.js does not appear to precache anything"
 fi
 
-if grep -q "NavigationRoute\|navigateFallback\|createHandlerBoundToURL" "$PUBLIC_DIR/sw.js" 2>/dev/null; then
-   pass "sw.js serves an offline navigation fallback"
-else
+# The fallback must exist AND point somewhere useful. A NavigationRoute matches
+# every navigation, so an ill-chosen target breaks the site rather than
+# rescuing it: "/" is only a meta-refresh stub under the i18n prefix strategy,
+# so serving it for a /en navigation refreshes to /en, matches this route
+# again, and loops forever.
+FALLBACK="$(grep -o 'createHandlerBoundToURL("[^"]*")' "$PUBLIC_DIR/sw.js" 2>/dev/null \
+   | sed -E 's/.*\("([^"]*)"\).*/\1/' | head -n1)"
+
+if [ -z "$FALLBACK" ]; then
    fail "sw.js has no navigation fallback — offline navigations will 404"
+else
+   pass "sw.js serves an offline navigation fallback ($FALLBACK)"
+
+   if [ "$FALLBACK" = "/" ]; then
+      fail "the navigation fallback is \"/\", the locale redirect stub — this loops forever"
+   else
+      pass "the navigation fallback is not the redirect stub"
+   fi
+
+   if [ -f "$PUBLIC_DIR${FALLBACK}/index.html" ] || [ -f "$PUBLIC_DIR${FALLBACK}" ]; then
+      pass "the navigation fallback resolves to a prerendered document"
+   else
+      fail "the navigation fallback \"$FALLBACK\" was never prerendered"
+   fi
 fi
+
+# Without a denylist the fallback also answers robots.txt, the sitemap and
+# /_nuxt assets with page HTML, which is worse than letting them fail.
+if grep -q "denylist" "$PUBLIC_DIR/sw.js" 2>/dev/null; then
+   pass "sw.js excludes non-app paths from the fallback"
+else
+   fail "sw.js has no navigateFallbackDenylist — robots/sitemap would be served page HTML"
+fi
+
+echo "▸ Offline coverage"
+
+# A locale root that is not prerendered cannot be precached, so an offline
+# visit to it misses entirely.
+for locale in en te hi; do
+   if [ ! -f "$PUBLIC_DIR/$locale/index.html" ]; then
+      fail "/$locale was not prerendered"
+   elif grep -q "{url:\"$locale\"" "$PUBLIC_DIR/sw.js" 2>/dev/null; then
+      pass "/$locale is prerendered and precached"
+   else
+      fail "/$locale is prerendered but not precached"
+   fi
+done
+
+# Two distinct failures, both silent:
+#  - not precached      → offline text reflows to a system font
+#  - no @font-face      → the file ships but nothing ever references it, so the
+#                         script renders in a system fallback (or as tofu).
+# @nuxt/fonts only resolves the FIRST family in a stack, so a face added only
+# as a later fallback lands in exactly that second state.
+for font in merriweather-latin-variable noto-sans-latin-variable \
+   noto-sans-telugu-variable noto-sans-devanagari-variable; do
+   if grep -q "fonts/$font.woff2" "$PUBLIC_DIR/sw.js" 2>/dev/null; then
+      pass "$font is precached"
+   else
+      fail "$font is not precached — offline text would reflow"
+   fi
+
+   if grep -rqs "$font.woff2" "$PUBLIC_DIR"/_nuxt/*.css; then
+      pass "$font is referenced by an @font-face"
+   else
+      fail "$font ships but no @font-face references it — it will never load"
+   fi
+done
 
 echo "▸ Document (served)"
 

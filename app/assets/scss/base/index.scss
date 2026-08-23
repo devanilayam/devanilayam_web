@@ -5,4 +5,7 @@
 // NOTE: The order of the files is important.
 // First reset the CSS, then apply the global styles.
 @use "reset";
+
+// Before "global": the @font-face rules must exist before the stacks use them.
+@use "fonts";
 @use "global";

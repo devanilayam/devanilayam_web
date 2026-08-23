@@ -11,6 +11,9 @@ Live at **[devanilayam.com](https://devanilayam.com)**.
 - [Nuxt 4](https://nuxt.com) + Vue 3, server-side rendered
 - [Bun](https://bun.sh) as package manager and runtime
 - SCSS with a token-driven design system
+- Self-hosted webfonts (`public/fonts`) — no runtime or build-time requests to
+  Google, and Telugu/Devanagari faces so Indic content is not left to system
+  fallbacks
 - `@nuxt/content` for the devotional corpus, `@nuxtjs/i18n` for the three
   scripts, `@nuxtjs/seo` for metadata and structured data
 - `@vite-pwa/nuxt` for installability and offline support
@@ -44,11 +47,16 @@ bun run dev   # http://localhost:3000
 | `bun run typecheck` | `vue-tsc --noEmit` |
 | `bun run test` / `test:watch` | Vitest — Vue/TS units and sass-true SCSS specs |
 | `bun run pwa:verify` | Manifest, icons, service worker and offline fallback |
-| `bun run seo:verify` | robots, sitemap, canonical, hreflang, JSON-LD and SSR output |
-| `bun run seo:lighthouse` | Lighthouse CI (add `-- mobile` for the throttled profile) |
+| `bun run seo:verify` | robots, sitemap, per-route meta/OG/hreflang/JSON-LD, OG image, soft-404s |
+| `bun run seo:lighthouse` / `seo:lighthouse:mobile` | Lighthouse CI against the running SSR server |
 
 The first four run on every commit through the `pre-commit` hook, and all of
 them except Lighthouse run in CI.
+
+`seo:verify` takes `ROUTES=`, `PORT=`, `BUILD=1` and `BASE_URL=` (to check a
+deployed preview instead of a local build) — see
+[scripts/seo/README.md](scripts/seo/README.md). Its exit code is the number of
+failed checks.
 
 ### Generated assets
 

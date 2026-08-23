@@ -1,14 +1,6 @@
 {
    "ci": {
       "collect": {
-         "startServerCommand": "node .output/server/index.mjs",
-         "startServerReadyPattern": "Listening|Server listening|localhost",
-         "startServerReadyTimeout": 60000,
-         "url": [
-            "http://127.0.0.1:3230/en",
-            "http://127.0.0.1:3230/en/slokas",
-            "http://127.0.0.1:3230/en/blogs"
-         ],
          "numberOfRuns": 3,
          "settings": {
             "chromeFlags": "--no-sandbox --headless=new"

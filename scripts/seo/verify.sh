@@ -1,112 +1,228 @@
 #!/usr/bin/env bash
 #
-# SEO gate: boots the production build and asserts that the machine-readable
-# surface search engines and AI crawlers rely on is actually in the SSR HTML —
-# not added later by client-side JavaScript.
+# SEO verification smoke test for Devanilayam (Nuxt SEO suite + i18n).
 #
-# Usage: bun run seo:verify
+# Boots the production build locally and asserts every SEO surface actually
+# renders in the SSR HTML: robots.txt, the sitemap, per-route meta/OG/Twitter,
+# canonical, hreflang alternates, JSON-LD, and the OG image itself.
+#
+# Usage:
+#   scripts/seo/verify.sh                 # build if needed, boot server, check
+#   BUILD=1 scripts/seo/verify.sh         # force a fresh build first
+#   PORT=4000 scripts/seo/verify.sh       # use a different local port
+#   ROUTES="/en /te" scripts/seo/verify.sh              # check specific routes
+#   BASE_URL=https://foo.vercel.app scripts/seo/verify.sh
+#                                         # check a remote deploy (no build/boot)
+#
+# Exit code = number of failed checks (0 = all green).
 
-set -euo pipefail
+set -uo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-PROJECT_ROOT="$ROOT"
-# shellcheck source=../lib/serve.sh
-. "$ROOT/scripts/lib/serve.sh"
+cd "$ROOT"
 
-failures=0
+PORT="${PORT:-3220}"
+SERVER_PID=""
 
-fail() {
-   printf '  \033[31m✗\033[0m %s\n' "$1"
-   failures=$((failures + 1))
+# The locales the site ships, in the order the sitemap and hreflang list them.
+LOCALES="${LOCALES:-en te hi}"
+
+# One route per page type, so every template's metadata is asserted, plus each
+# locale root so the hreflang cluster is checked in all three. The content
+# routes are read out of the sitemap at runtime rather than hardcoded — the
+# server already enumerates every sloka, ashtotara and blog for the sitemap
+# (server/api/__sitemap__/urls.ts), so a hand-kept list here would drift the
+# moment content is added.
+SAMPLE_PER_SECTION="${SAMPLE_PER_SECTION:-1}"
+
+# ── pretty output ────────────────────────────────────────────────────────────
+if [[ -t 1 ]]; then
+   G=$'\e[32m'; R=$'\e[31m'; Y=$'\e[33m'; C=$'\e[36m'; D=$'\e[2m'; B=$'\e[1m'; X=$'\e[0m'
+else
+   G=""; R=""; Y=""; C=""; D=""; B=""; X=""
+fi
+PASS=0; FAIL=0
+
+pass()    { printf "  ${G}✔${X} %s\n" "$1"; PASS=$((PASS + 1)); }
+fail()    { printf "  ${R}✗${X} %s${D} — %s${X}\n" "$1" "$2"; FAIL=$((FAIL + 1)); }
+warn()    { printf "  ${Y}!${X} %s\n" "$1"; }
+section() { printf "\n${B}%s${X}\n" "$1"; }
+
+# Nitro content-negotiates: without a browser-like Accept header it answers
+# error routes with JSON instead of the rendered error page, so a check that
+# omits this tests something no crawler ever sees.
+ACCEPT_HTML="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+
+fetch_html() { curl -s -H "Accept: $ACCEPT_HTML" "$@"; }
+
+# assert_contains "<desc>" "<content>" "<regex>"
+assert_contains() {
+   if grep -qiE -- "$3" <<<"$2"; then pass "$1"; else fail "$1" "missing: $3"; fi
 }
 
-pass() {
-   printf '  \033[32m✓\033[0m %s\n' "$1"
+# assert_absent "<desc>" "<content>" "<regex>"
+assert_absent() {
+   if grep -qiE -- "$3" <<<"$2"; then fail "$1" "unexpected: $3"; else pass "$1"; fi
 }
 
-# Asserts that $2 (a grep -E pattern) appears in the document held in $DOCUMENT.
-expect_in_document() {
-   local label="$1"
-   local pattern="$2"
+# ── server lifecycle ─────────────────────────────────────────────────────────
+cleanup() {
+   [[ -n "$SERVER_PID" ]] && kill "$SERVER_PID" 2>/dev/null
+}
+trap cleanup EXIT INT TERM
 
-   if echo "$DOCUMENT" | grep -Eq "$pattern"; then
-      pass "$label"
-   else
-      fail "$label"
+if [[ -n "${BASE_URL:-}" ]]; then
+   BASE="${BASE_URL%/}"
+   section "Target: ${C}${BASE}${X} ${D}(remote — no build/boot)${X}"
+else
+   BASE="http://127.0.0.1:${PORT}"
+   if [[ "${BUILD:-0}" == "1" || ! -f .output/server/index.mjs ]]; then
+      printf "${D}Building production output…${X}\n"
+      if ! bun run build > /tmp/seo-build.log 2>&1; then
+         printf "${R}Build failed.${X} See /tmp/seo-build.log\n"; tail -20 /tmp/seo-build.log; exit 1
+      fi
    fi
-}
-
-trap stop_preview_server EXIT
-
-if ! start_preview_server "${SEO_VERIFY_PORT:-3220}"; then
-   echo "The built server did not start — cannot verify."
-   exit 1
+   printf "${D}Starting server on :%s …${X}\n" "$PORT"
+   PORT="$PORT" HOST=127.0.0.1 node .output/server/index.mjs > /tmp/seo-server.log 2>&1 &
+   SERVER_PID=$!
+   ready=0
+   for _ in $(seq 1 60); do
+      if curl -sf -o /dev/null "$BASE/"; then ready=1; break; fi
+      sleep 1
+   done
+   if [[ "$ready" != "1" ]]; then
+      printf "${R}Server never became ready.${X} See /tmp/seo-server.log\n"; tail -20 /tmp/seo-server.log; exit 1
+   fi
+   section "Target: ${C}${BASE}${X}"
 fi
 
-ENTRY="$(resolve_entry_path)"
-DOCUMENT="$(curl -fsSL "$SERVER_URL$ENTRY")"
+# ── fetch once, reuse ────────────────────────────────────────────────────────
+ROBOTS="$(curl -s "$BASE/robots.txt")"
+# Multi-locale, so @nuxtjs/sitemap serves an index that fans out to a file per
+# language; follow it and concatenate so route membership can be checked once.
+SITEMAP_INDEX="$(curl -sL "$BASE/sitemap.xml")"
+SITEMAP="$SITEMAP_INDEX"
 
-echo "▸ Crawlability"
+for child in $(grep -oE "<loc>[^<]*sitemap[^<]*</loc>" <<<"$SITEMAP_INDEX" \
+   | sed -E 's#</?loc>##g' | sed -E "s#^https?://[^/]+##"); do
+   SITEMAP+=$'\n'"$(curl -s "$BASE$child")"
+done
 
-if curl -fs "$SERVER_URL/robots.txt" | grep -q "Sitemap:"; then
-   pass "robots.txt is served and points at a sitemap"
+# ── robots ───────────────────────────────────────────────────────────────────
+section "robots.txt"
+assert_contains "generated by nuxt-robots"  "$ROBOTS" "nuxt-robots"
+assert_contains "references the sitemap"    "$ROBOTS" "Sitemap: https?://"
+assert_contains "site is indexable"         "$ROBOTS" "User-agent: \*"
+assert_absent   "no malformed locale rules" "$ROBOTS" "/undefined/"
+
+# The site is meant to be readable by AI assistants, not just search engines.
+section "AI crawler policy"
+for bot in GPTBot ClaudeBot PerplexityBot Google-Extended OAI-SearchBot; do
+   assert_contains "$bot is addressed" "$ROBOTS" "User-agent: $bot"
+done
+
+# ── sitemap ──────────────────────────────────────────────────────────────────
+section "sitemap"
+assert_contains "sitemap served"        "$SITEMAP_INDEX" "<urlset|<sitemapindex"
+assert_contains "sitemap has entries"   "$SITEMAP" "<loc>https?://"
+
+for locale in $LOCALES; do
+   assert_contains "sitemap covers /$locale" "$SITEMAP" "<loc>[^<]*/$locale(/|<)"
+done
+
+# ── build the route list ─────────────────────────────────────────────────────
+# Locale roots always, plus a sample of each content section from the sitemap.
+if [[ -n "${ROUTES:-}" ]]; then
+   CHECK_ROUTES="$ROUTES"
 else
-   fail "robots.txt is missing or does not reference a sitemap"
+   CHECK_ROUTES=""
+   for locale in $LOCALES; do
+      CHECK_ROUTES+=" /$locale"
+   done
+   ALL_PATHS="$(grep -oE "<loc>[^<]*</loc>" <<<"$SITEMAP" \
+      | sed -E 's#</?loc>##g' | sed -E "s#^https?://[^/]+##" | sort -u)"
+   for pattern in "/en/slokas$" "/en/slokas/[^/]*$" "/en/slokas/[^/]*/[^/]*$" \
+      "/en/ashtotaras$" "/en/ashtotaras/[^/]*$" "/en/blogs$" "/en/blogs/[^/]*$" \
+      "/te/slokas/[^/]*/[^/]*$" "/hi/blogs/[^/]*$"; do
+      CHECK_ROUTES+=" $(grep -E "$pattern" <<<"$ALL_PATHS" | head -"$SAMPLE_PER_SECTION" | tr '\n' ' ')"
+   done
 fi
 
-# /sitemap.xml redirects to the locale-aware index, so follow redirects.
-if curl -fsL "$SERVER_URL/sitemap.xml" | grep -q "<urlset\|<sitemapindex"; then
-   pass "sitemap.xml resolves to a sitemap"
+# ── per-route checks ─────────────────────────────────────────────────────────
+for route in $CHECK_ROUTES; do
+   section "route ${C}${route}${X}"
+   HTML="$(fetch_html "$BASE$route")"
+
+   assert_contains "has <title>"          "$HTML" "<title>[^<]+</title>"
+   assert_contains "meta description"     "$HTML" "name=\"description\" content=\"[^\"]+\""
+   assert_contains "canonical URL"        "$HTML" "rel=\"canonical\""
+   assert_contains "og:title"             "$HTML" "property=\"og:title\""
+   assert_contains "og:description"       "$HTML" "property=\"og:description\""
+   assert_contains "og:image"             "$HTML" "property=\"og:image\""
+   assert_contains "twitter summary card" "$HTML" "name=\"twitter:card\" content=\"summary_large_image\""
+   assert_contains "schema.org JSON-LD"   "$HTML" "application/ld\+json"
+   assert_contains "renders an <h1>"      "$HTML" "<h1"
+
+   # Multi-locale: every page must annotate its alternates, including x-default,
+   # and declare the language of the document it is actually serving.
+   route_locale="$(sed -E 's#^/([a-z]{2})(/.*)?$#\1#' <<<"$route")"
+   # useLocaleHead emits the full BCP-47 tag (en-US, te-IN, hi-IN), so match the
+   # language subtag and allow an optional region rather than demanding a bare code.
+   assert_contains "declares lang=\"$route_locale\"" "$HTML" "<html[^>]*lang=\"$route_locale(-[A-Za-z]+)?\""
+   assert_contains "hreflang x-default"   "$HTML" "hreflang=\"x-default\""
+   for locale in $LOCALES; do
+      assert_contains "hreflang alternate ($locale)" "$HTML" "rel=\"alternate\"[^>]*hreflang=\"$locale\""
+   done
+
+   assert_contains "listed in sitemap"    "$SITEMAP" "<loc>[^<]*${route%/}/?</loc>"
+
+   # SSR is the whole point: an empty shell means crawlers see nothing.
+   text_len="$(sed -e 's/<[^>]*>/ /g' <<<"$HTML" | tr -s ' \n' ' ' | wc -c)"
+   if [[ "$text_len" -gt 500 ]]; then
+      pass "server-rendered text present (${text_len} chars)"
+   else
+      fail "server-rendered text present" "only ${text_len} chars — is SSR on?"
+   fi
+
+   # Every JSON-LD block must parse, or Google discards it silently.
+   if jsonld_blocks="$(bun scripts/lib/check-jsonld.mjs <<<"$HTML")"; then
+      pass "JSON-LD parses (${jsonld_blocks} block(s))"
+   else
+      fail "JSON-LD parses" "no blocks, or one is malformed"
+   fi
+
+   # The OG card must actually render, not just be linked.
+   OG_PATH="$(grep -oiE 'property="og:image" content="[^"]*"' <<<"$HTML" \
+      | sed -E 's/.*content="([^"]*)".*/\1/' | sed -E 's#^https?://[^/]+##' | head -1)"
+   if [[ -z "$OG_PATH" ]]; then
+      fail "og:image URL found" "no og:image meta tag"
+   else
+      read -r OG_CODE OG_TYPE OG_SIZE < <(curl -s -o /dev/null -w "%{http_code} %{content_type} %{size_download}" "$BASE$OG_PATH")
+      if [[ "$OG_CODE" == "200" && "$OG_TYPE" == image/png* && "${OG_SIZE:-0}" -gt 1000 ]]; then
+         pass "OG card renders PNG (${OG_SIZE} bytes)"
+      else
+         fail "OG card renders PNG" "code=$OG_CODE type=$OG_TYPE size=${OG_SIZE:-0}"
+      fi
+   fi
+done
+
+# ── negative checks ──────────────────────────────────────────────────────────
+# A soft-404 (missing content answered with HTTP 200) gets a site demoted.
+section "error handling"
+MISSING_CODE="$(fetch_html -o /dev/null -w "%{http_code}" "$BASE/en/slokas/nonexistent/xyz")"
+if [[ "$MISSING_CODE" == "404" ]]; then
+   pass "missing content returns HTTP 404"
 else
-   fail "sitemap.xml is missing or empty"
+   fail "missing content returns HTTP 404" "got HTTP $MISSING_CODE (soft-404)"
 fi
 
-echo "▸ Document head ($ENTRY)"
+MISSING_HTML="$(fetch_html "$BASE/en/slokas/nonexistent/xyz")"
+assert_contains "error page is noindex" "$MISSING_HTML" "name=\"robots\"[^>]*noindex"
 
-expect_in_document "the page has a <title>" "<title>[^<]+</title>"
-expect_in_document "the page has a meta description" 'name="description" content="[^"]+"'
-expect_in_document "the page declares a canonical URL" 'rel="canonical"'
-expect_in_document "the page declares hreflang alternates" 'rel="alternate"[^>]*hreflang='
-expect_in_document "the <html> element declares a language" '<html[^>]*lang="[a-z]'
+# Policy pages are legal boilerplate and should not compete for rankings.
+POLICY_HTML="$(fetch_html "$BASE/en/policies/privacy-policy")"
+assert_contains "policy pages are noindex" "$POLICY_HTML" "name=\"robots\"[^>]*noindex"
 
-echo "▸ Social cards"
-
-expect_in_document "og:title is set" 'property="og:title"'
-expect_in_document "og:description is set" 'property="og:description"'
-expect_in_document "og:image is set" 'property="og:image"'
-expect_in_document "twitter:card is set" 'name="twitter:card"'
-
-echo "▸ Structured data"
-
-# Delegated to a script so the regex survives shell quoting.
-if jsonld_blocks=$(echo "$DOCUMENT" | bun "$ROOT/scripts/lib/check-jsonld.mjs"); then
-   pass "all $jsonld_blocks JSON-LD block(s) parse as JSON"
-else
-   fail "the page ships no JSON-LD, or a block is not valid JSON"
-fi
-
-echo "▸ Content"
-
-if echo "$DOCUMENT" | grep -q "<h1"; then
-   pass "the page renders an <h1>"
-else
-   fail "the page renders no <h1>"
-fi
-
-# SSR is the whole point: an empty shell means crawlers see nothing.
-body_text=$(echo "$DOCUMENT" | sed -e 's/<[^>]*>/ /g' | tr -s ' \n' ' ' | wc -c)
-
-if [ "$body_text" -gt 500 ]; then
-   pass "the server-rendered HTML carries $body_text characters of text"
-else
-   fail "the server-rendered HTML is nearly empty ($body_text characters) — is SSR on?"
-fi
-
-echo
-
-if [ "$failures" -gt 0 ]; then
-   echo "SEO verification failed with $failures problem(s)."
-   exit 1
-fi
-
-echo "SEO verification passed."
+# ── summary ──────────────────────────────────────────────────────────────────
+printf "\n${B}Summary${X}  ${G}%d passed${X}  ${R}%d failed${X}\n" "$PASS" "$FAIL"
+exit "$FAIL"
