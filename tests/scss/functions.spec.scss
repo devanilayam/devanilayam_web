@@ -1,0 +1,28 @@
+@use "true" as *;
+@use "../../app/assets/scss/abstracts/functions" as *;
+
+@include describe("px-to-rem()") {
+   @include it("converts pixels against the 16px root context") {
+      @include assert-equal(px-to-rem(24), 1.5rem);
+   }
+
+   @include it("honours an explicit context") {
+      @include assert-equal(px-to-rem(24, 12), 2rem);
+   }
+}
+
+@include describe("px-to-em()") {
+   @include it("converts pixels against the 16px parent context") {
+      @include assert-equal(px-to-em(8), 0.5em);
+   }
+}
+
+@include describe("get-color()") {
+   @include it("resolves an explicit shade from the token map") {
+      @include assert-equal(get-color("blue", 500), #0000FA);
+   }
+
+   @include it("defaults to the 500 shade when none is given") {
+      @include assert-equal(get-color("blue"), #0000FA);
+   }
+}

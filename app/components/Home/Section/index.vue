@@ -43,7 +43,7 @@ const hasFooterSlot = computed(() => !!slots.footer);
    &__heading {
       color: #854D0E;
       text-align: center;
-      font-family: 'Merriweather', serif;
+      font-family: Merriweather, serif;
       font-size: px-to-rem(36);
       line-height: px-to-rem(40);
       font-weight: 600;

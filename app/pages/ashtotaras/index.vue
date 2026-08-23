@@ -70,4 +70,10 @@ useSeoMeta({
    ogType: "website",
 });
 
+defineOgImageComponent("Default", {
+   eyebrow: "Collection",
+   title: "Ashtotaras",
+   description: "The 108 sacred names of each deity, with meanings in English, Telugu and Hindi.",
+});
+
 </script>

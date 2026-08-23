@@ -45,6 +45,12 @@ useSeoMeta({
    ogTitle: "Blogs",
    ogType: "website",
 });
+
+defineOgImageComponent("Default", {
+   eyebrow: "Collection",
+   title: "Blogs",
+   description: "Readings and reflections on the stories behind the slokas.",
+});
 </script>
 
 <style lang="scss">
@@ -72,11 +78,11 @@ useSeoMeta({
    .blog-card {
       text-decoration: none;
       color: inherit;
-      background: #faf8f3;
+      background: #FAF8F3;
       border-radius: px-to-rem(16);
       box-shadow: 0 px-to-rem(2) px-to-rem(14) rgba(36, 30, 7, 0.05);
       padding: px-to-rem(24) px-to-rem(24) px-to-rem(16);
-      border: px-to-rem(1) solid #e7e1d6;
+      border: px-to-rem(1) solid #E7E1D6;
       cursor: pointer;
       display: flex;
       flex-direction: column;
@@ -90,7 +96,7 @@ useSeoMeta({
             font-weight: 600;
             margin: 0 0 px-to-rem(16) 0;
             letter-spacing: -0.01em;
-            color: #e8730c;
+            color: #E8730C;
             line-height: 1.1;
             transition: color 0.16s;
          }
@@ -122,8 +128,8 @@ useSeoMeta({
 
          .blog-tag {
             font-size: px-to-rem(14.72); // 0.92em = 14.72px at 16px root
-            background: #f3e6d2;
-            color: #a87627;
+            background: #F3E6D2;
+            color: #A87627;
             border-radius: px-to-rem(8); // 0.5em = 8px at 16px root
             padding: px-to-rem(2.56) px-to-rem(11.2); // 0.16em 0.7em
             font-weight: 500;
@@ -132,16 +138,15 @@ useSeoMeta({
 
       // Hover effects for desktop only
       @media (hover: hover) and (pointer: fine) {
-
          &:hover,
          &:focus-visible {
             box-shadow: 0 px-to-rem(6) px-to-rem(26) rgba(232, 115, 12, 0.085),
                0 px-to-rem(2) px-to-rem(12) rgba(36, 30, 7, 0.08);
-            border-color: #e8730c;
+            border-color: #E8730C;
             transform: translateY(px-to-rem(-4)) scale(1.018);
 
             .blog-title {
-               color: #c26009;
+               color: #C26009;
             }
          }
       }

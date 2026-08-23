@@ -75,6 +75,7 @@ const slicedListOfLords = computed(() => {
    &__lords-list {
       display: flex;
       flex-wrap: wrap;
+
       // justify-content: space-between;
       gap: px-to-rem(8);
    }

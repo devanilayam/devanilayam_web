@@ -11,7 +11,7 @@
    background: #EB730C;
    color: #FAF8F3;
    text-align: center;
-   font-family: "Noto Sans";
+   font-family: "Noto Sans", "Noto Sans Telugu", "Noto Sans Devanagari", sans-serif;
    font-size: px-to-rem(14);
    font-style: normal;
    font-weight: 700;
@@ -22,10 +22,9 @@
    }
 
    @include web-screen {
-
       &:hover {
          cursor: pointer;
-         background: #d25f07;
+         background: #D25F07;
          transition: background 0.15s, color 0.15s;
       }
    }

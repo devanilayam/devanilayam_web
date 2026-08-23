@@ -1,0 +1,62 @@
+name: Bug report
+description: Something on the site is broken or behaves unexpectedly.
+title: "fix: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to report this. A precise report is fixed far faster than a vague one.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened
+      description: What did you see, and what did you expect instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to /te/slokas/ganesh
+        2. Change the font size
+        3. Reload the page
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      placeholder: https://devanilayam.com/te/slokas/ganesh
+    validations:
+      required: false
+
+  - type: dropdown
+    id: locale
+    attributes:
+      label: Language
+      options:
+        - English
+        - Telugu
+        - Hindi
+        - Affects all languages
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and device
+      placeholder: Chrome 130 on Android 14 / Safari 18 on iPhone 15
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or console output
+    validations:
+      required: false

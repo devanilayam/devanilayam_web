@@ -1,0 +1,33 @@
+name: Chore
+description: Maintenance, tooling, dependencies, refactoring or documentation.
+title: "chore: "
+labels: [chore]
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: What needs doing
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - Dependency upgrade
+        - Build or CI
+        - Refactoring
+        - Documentation
+        - Test coverage
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why it is worth doing
+      description: What does this unblock, simplify or de-risk?
+    validations:
+      required: false

@@ -68,4 +68,10 @@ useSeoMeta({
    ogType: "website",
 });
 
+defineOgImageComponent("Default", {
+   eyebrow: "Collection",
+   title: "Slokas",
+   description: "Devotional verses by deity, with meanings in English, Telugu and Hindi.",
+});
+
 </script>

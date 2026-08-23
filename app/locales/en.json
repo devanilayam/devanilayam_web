@@ -81,7 +81,6 @@
             "title": "About",
             "links": {
                "mission": "Our Mission",
-               "team": "Team",
                "contribute": "Contribute"
             }
          },
@@ -104,5 +103,52 @@
    },
    "sloka-page": {
       "fontSize": "Font Size"
+   },
+   "search": {
+      "pageTitle": "Search",
+      "titleWithQuery": "Search: {query}",
+      "description": "Search slokas, ashtotaras and blogs on Devanilayam.",
+      "label": "Search slokas, ashtotaras and blogs",
+      "placeholder": "Try “Hanuman”, “Ganesh” or “chalisa”",
+      "submit": "Search",
+      "hint": "Enter a word above to search the collection.",
+      "results": "{count} result(s) for “{query}”",
+      "empty": "Nothing matched. Try a different spelling or a deity’s name."
+   },
+   "about": {
+      "pageTitle": "About Devanilayam",
+      "description": "Devanilayam is a free, ad-free devotional library of Hindu slokas, ashtotaras and stotras in English, Telugu and Hindi.",
+      "mission": {
+         "title": "Our mission",
+         "body": "Devanilayam exists to make devotional texts easy to read, understand and practice — without advertising, tracking or paywalls standing between you and the verse. The sacred texts themselves are in the public domain, and they should be freely available to everyone who wants to read them."
+      },
+      "whatsHere": {
+         "title": "What you will find here",
+         "slokas": "Slokas and stotras, presented with the verse and its meaning side by side.",
+         "ashtotaras": "Ashtottara Shatanamavali — the 108 sacred names of each deity, in an uninterrupted flow.",
+         "blogs": "Readings and reflections on the stories behind the verses."
+      },
+      "languages": {
+         "title": "Languages and scripts",
+         "body": "Every section is available in English, Telugu and Hindi. Devotional text is presented in the script it is chanted in, not merely transliterated, because the reading matters as much as the meaning."
+      },
+      "free": {
+         "title": "Free and ad-free",
+         "body": "There are no advertisements, no accounts and no trackers selling your reading habits. The site works offline once opened, and can be installed to your home screen like an app."
+      },
+      "contribute": {
+         "title": "Contribute",
+         "body": "Devanilayam is open source. Corrections to a verse, a translation or a transliteration are the most valuable contributions of all — if you spot an error, please report it.",
+         "cta": "View the project on GitHub"
+      },
+      "contact": {
+         "title": "Contact",
+         "body": "Questions, corrections and suggestions are welcome. The fastest way to reach the maintainers is to open an issue on the project.",
+         "cta": "Open an issue"
+      },
+      "maintainers": {
+         "title": "Who maintains this",
+         "body": "Devanilayam is built and maintained by Mouli Bheemaneti, with contributions from the community."
+      }
    }
 }

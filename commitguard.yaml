@@ -1,0 +1,31 @@
+# Git hooks for devanilayam_web, installed by `commitguard install`
+# (run automatically from the `postinstall` script).
+#
+# That call is guarded with `|| true`: hooks are a convenience for people with
+# a working tree, and `commitguard install` exits non-zero when there is no
+# .git/hooks directory. Without the guard it would take the whole `bun install`
+# down in any environment that has the source but not the repository — a
+# container build that only COPYs the sources, for instance.
+commitguard:
+  verbose: true
+  staged_only: false
+
+pre-commit:
+  # Sequential so a failing gate stops the slower ones from running.
+  parallel: false
+  commands:
+    eslint:
+      run: bunx eslint .
+      glob: "**/*.{ts,tsx,js,mjs,vue}"
+    stylelint:
+      run: bunx stylelint "app/**/*.{scss,vue}"
+      glob: "**/*.{scss,vue}"
+    typecheck:
+      run: bunx vue-tsc --noEmit
+
+commit-msg:
+  commands:
+    conventional:
+      preset: conventional
+      types:
+        append: [chore, ci, build, revert]

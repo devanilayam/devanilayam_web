@@ -15,8 +15,11 @@
             </div>
          </div>
          <div>
-            <LocalImage file="guruji.webp" alt="Guruji Illustration in Devanilayam website" width="400px"
-               height="400px" />
+            <!-- The page's largest above-the-fold element, so it is loaded
+                 eagerly with a high fetch priority rather than lazily. -->
+            <LocalImage
+               file="guruji.webp" alt="Guruji Illustration in Devanilayam website"
+               :width="400" :height="400" priority />
          </div>
       </section>
 
@@ -49,6 +52,11 @@ useSeoMeta({
    twitterDescription: () => t("home.hero.description"),
 });
 
+defineOgImageComponent("Default", {
+   title: t("home.hero.title"),
+   description: t("home.hero.description"),
+});
+
 // CollectionPage describes the home page as the entry into the sloka collection
 // (Organization + WebSite are injected site-wide in the default layout).
 useJsonLd(() => ({
@@ -70,7 +78,7 @@ useJsonLd(() => ({
    align-items: center;
    gap: px-to-rem(24);
    color: #6B6760;
-   font-family: "Noto Sans";
+   font-family: "Noto Sans", "Noto Sans Telugu", "Noto Sans Devanagari", sans-serif;
 
    &__left {
       display: flex;
@@ -81,7 +89,7 @@ useJsonLd(() => ({
 
    &__title {
       color: #EB730C;
-      font-family: Merriweather;
+      font-family: Merriweather, "Noto Sans Telugu", "Noto Sans Devanagari", serif;
       font-size: px-to-rem(48);
       line-height: px-to-rem(48);
    }

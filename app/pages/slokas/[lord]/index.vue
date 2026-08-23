@@ -13,6 +13,8 @@
 </template>
 
 <script lang="ts" setup>
+const { t } = useI18n();
+
 const { getListOfSlokasByLordId } = useSlokas();
 
 const localePath = useLocalePath();
@@ -39,6 +41,11 @@ useSeoMeta({
    description: computed(() => `Explore devotional slokas dedicated to ${lordName.value} with meanings and multiple scripts at Devanilayam.`),
    ogTitle: title,
    ogType: "website",
+});
+
+defineOgImageComponent("Default", {
+   eyebrow: t("header.links.slokas"),
+   title: title.value,
 });
 
 // Breadcrumb + ItemList help search + AI crawlers map the collection and its

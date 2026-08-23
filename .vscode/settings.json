@@ -14,6 +14,7 @@
    "editor.bracketPairColorization.enabled": true,
    "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "explicit",
+      "source.fixAll.stylelint": "explicit",
       "source.organizeImports": "explicit",
    },
    "editor.quickSuggestions": {
@@ -22,6 +23,10 @@
       "strings": true
    },
    "eslint.useFlatConfig": true,
+   // Stylelint Specific
+   "stylelint.validate": ["css", "scss", "vue"],
+   "css.validate": false,
+   "scss.validate": false,
    "files.insertFinalNewline": true,
    "files.trimFinalNewlines": true,
    "files.exclude": {
@@ -33,7 +38,13 @@
    "search.exclude": {
       "**/node_modules": true,
       "**/dist": true,
-      "**/.git": true
+      "**/.git": true,
+      "**/.nuxt": true,
+      "**/.output": true,
+      "**/.play": true,
+      "**/.lighthouseci": true,
+      "**/coverage": true,
+      "bun.lock": true
    },
    // HTML Specific
    "html.format.enable": true,

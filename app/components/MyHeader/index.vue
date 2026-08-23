@@ -5,10 +5,11 @@
       </nuxt-link>
 
       <nav class="nav-links" aria-label="Primary">
-         <nuxt-link :to="localePath('/')">{{ $t('header.links.about') }}</nuxt-link>
+         <nuxt-link :to="localePath('/about')">{{ $t('header.links.about') }}</nuxt-link>
          <nuxt-link :to="localePath('/slokas')">{{ $t('header.links.slokas') }}</nuxt-link>
          <nuxt-link :to="localePath('/ashtotaras')"> {{ $t('header.links.ashtotaras') }}</nuxt-link>
          <nuxt-link :to="localePath('/blogs')"> {{ $t('header.links.blogs') }}</nuxt-link>
+         <nuxt-link :to="localePath('/search')">{{ $t('search.pageTitle') }}</nuxt-link>
          <my-dropdown ref="languageDropdownRef" placement="bottom-end">
             <template #trigger>
                <p>

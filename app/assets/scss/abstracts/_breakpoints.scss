@@ -25,7 +25,7 @@
 ///     }
 /// }
 @mixin small-mobile {
-   @media (max-width: 480px) {
+   @media (width <= 480px) {
       @content;
    }
 }
@@ -41,7 +41,7 @@
 ///     }
 /// }
 @mixin mobile {
-   @media (max-width: '768px') {
+   @media (max-width: "768px") {
       @content;
    }
 }
@@ -56,7 +56,7 @@
 ///     }
 /// }
 @mixin tab-screen {
-   @media (min-width: 768px) and (max-width: 1024px) {
+   @media (width >= 768px) and (width <= 1024px) {
       @content;
    }
 }
@@ -71,7 +71,7 @@
 ///     }
 /// }
 @mixin web-screen {
-   @media (min-width: 1025px) {
+   @media (width >= 1025px) {
       @content;
    }
 }
@@ -86,7 +86,7 @@
 ///     }
 /// }
 @mixin large-screen {
-   @media (min-width: '1440px') {
+   @media (min-width: "1440px") {
       @content;
    }
 }
@@ -101,7 +101,7 @@
 ///     }
 /// }
 @mixin extra-large-screen {
-   @media (min-width: '2560') {
+   @media (min-width: "2560") {
       @content;
    }
 }

@@ -1,0 +1,27 @@
+{
+   // The toolchain this repository actually uses. VS Code offers these when
+   // the project is opened; nothing here changes how CI behaves.
+   "recommendations": [
+      // Vue + Nuxt
+      "Vue.volar",
+      "nuxt.mdc",
+      // Linting and formatting
+      "dbaeumer.vscode-eslint",
+      "stylelint.vscode-stylelint",
+      "editorconfig.editorconfig",
+      // Styles
+      "syler.sass-indented",
+      // Testing
+      "vitest.explorer",
+      // Repo hygiene
+      "streetsidesoftware.code-spell-checker",
+      "github.vscode-github-actions",
+      "redhat.vscode-yaml"
+   ],
+   "unwantedRecommendations": [
+      // Superseded by Volar; running both breaks Vue language features.
+      "octref.vetur",
+      // ESLint and Stylelint own formatting here.
+      "esbenp.prettier-vscode"
+   ]
+}

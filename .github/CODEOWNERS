@@ -1,0 +1,16 @@
+# Default owner for everything in the repository.
+*                       @moulibheemaneti
+
+# Tooling, CI and release plumbing: changes here affect every contributor.
+/.github/               @moulibheemaneti
+/scripts/               @moulibheemaneti
+/eslint.config.mjs      @moulibheemaneti
+/stylelint.config.mjs   @moulibheemaneti
+/release.config.mjs     @moulibheemaneti
+/commitguard.yaml       @moulibheemaneti
+/vitest.config.ts       @moulibheemaneti
+/nuxt.config.ts         @moulibheemaneti
+
+# Devotional content is reviewed for accuracy, not just for code style.
+/content/               @moulibheemaneti
+/app/locales/           @moulibheemaneti

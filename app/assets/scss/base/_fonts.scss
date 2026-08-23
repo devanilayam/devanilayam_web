@@ -1,0 +1,35 @@
+/// --------------------------------------------------
+/// base/_fonts.scss
+/// --------------------------------------------------
+/// @font-face declarations for the Indic scripts.
+///
+/// The Latin faces (Merriweather, Noto Sans) are injected by @nuxt/fonts from
+/// the `fonts.families` config, complete with metric-override fallbacks. That
+/// module only resolves the FIRST family in a `font-family` stack and treats
+/// the rest as fallbacks, so the Telugu and Devanagari faces — which sit after
+/// the Latin one by design — never get a @font-face of their own and the files
+/// would ship unreferenced.
+///
+/// Declaring them here is the fix. Nothing is downloaded until a character
+/// actually needs one of these faces, so English pages pay nothing for them.
+/// --------------------------------------------------
+
+@font-face {
+   font-family: "Noto Sans Telugu";
+   src: url("/fonts/noto-sans-telugu-variable.woff2") format("woff2");
+   font-weight: 400 700;
+   font-style: normal;
+   font-display: swap;
+
+   // Telugu block, plus the danda punctuation shared with other Indic scripts.
+   unicode-range: U+0C00-0C7F, U+0964-0965, U+200C-200D, U+25CC;
+}
+
+@font-face {
+   font-family: "Noto Sans Devanagari";
+   src: url("/fonts/noto-sans-devanagari-variable.woff2") format("woff2");
+   font-weight: 400 700;
+   font-style: normal;
+   font-display: swap;
+   unicode-range: U+0900-097F, U+0964-0965, U+200C-200D, U+25CC, U+A830-A839;
+}

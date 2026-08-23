@@ -20,6 +20,8 @@
 import { useStorage } from "@vueuse/core";
 import { useBlogs } from "~/composables/useBlogs";
 
+const { t } = useI18n();
+
 const { getBlogById } = useBlogs();
 
 const route = useRoute();
@@ -88,6 +90,12 @@ useSeoMeta({
    twitterCard: "summary_large_image",
 });
 
+defineOgImageComponent("Default", {
+   eyebrow: t("header.links.blogs"),
+   title: title.value,
+   description: description.value,
+});
+
 useJsonLd(() => ({
    "@type": "BlogPosting",
    headline: title.value,
@@ -96,7 +104,10 @@ useJsonLd(() => ({
    author: blog.value?.author ? { "@type": "Person", name: blog.value.author } : undefined,
    keywords: blog.value?.tags,
    datePublished: blog.value?.date,
-   image: `${SITE_URL}/og-image.png`,
+   // nuxt-og-image renders a per-page card and advertises it via og:image;
+   // its URL is content-hashed and not derivable here, so the schema image
+   // is the stable site mark rather than a URL that could go stale.
+   image: `${SITE_URL}/icons/icon-512.png`,
    isPartOf: { "@id": `${SITE_URL}/#website` },
    publisher: { "@id": `${SITE_URL}/#organization` },
 }));
@@ -132,7 +143,7 @@ useJsonLd(() => ({
    border: none;
 
    &:hover:not(:disabled) {
-      background: #d25f07;
+      background: #D25F07;
    }
 
    &:disabled {

@@ -1,5 +1,17 @@
 <template>
-   <NuxtLink :to="computedLink" class="category-card" :style="{ backgroundImage: `url(${computedImgUrl})` }">
+   <NuxtLink :to="computedLink" class="category-card">
+      <!-- A real <img> rather than a CSS background: backgrounds cannot be
+           lazy-loaded and are invisible to crawlers. The deity name is already
+           in the overlay text, so the image is decorative and takes an empty
+           alt rather than repeating it to screen readers. -->
+      <img
+         class="category-card__image"
+         :src="computedImgUrl"
+         alt=""
+         width="480"
+         height="600"
+         loading="lazy"
+         decoding="async">
       <div class="category-card__overlay">
          <p class="category-card__title">{{ props.lord.name }}</p>
       </div>
@@ -15,9 +27,7 @@ const props = withDefaults(defineProps<LordCardProps>(), {
    isAshtotara: false,
 });
 
-const images = import.meta.glob("@/assets/images/**", { eager: true, import: "default" });
-
-const computedImgUrl = computed(() => images[`/assets/images/lord/${props.lord.lord_id.toLowerCase()}.webp`]);
+const computedImgUrl = computed(() => `/images/lord/${props.lord.lord_id.toLowerCase()}.webp`);
 
 const computedRoutePrefix = computed(() => {
 
@@ -48,9 +58,14 @@ const computedLink = computed(() => localePath(`/${computedRoutePrefix.value}/${
    min-width: px-to-rem(240);
    min-height: px-to-rem(300);
 
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
+   &__image {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+   }
 
    &__overlay {
       position: absolute;
@@ -68,7 +83,7 @@ const computedLink = computed(() => localePath(`/${computedRoutePrefix.value}/${
    &__title {
       margin-bottom: px-to-rem(24);
       color: #FFF;
-      font-family: 'Merriweather', serif;
+      font-family: Merriweather, serif;
       font-size: px-to-rem(24);
       line-height: px-to-rem(32);
       text-align: center;

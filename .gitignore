@@ -13,6 +13,10 @@ node_modules
 logs
 *.log
 
+# Test and audit output
+coverage
+.lighthouseci
+
 # Misc
 .DS_Store
 .fleet
@@ -22,6 +26,3 @@ logs
 .env
 .env.*
 !.env.example
-
-# Generated at build from app/assets/og-image.base64.ts
-public/og-image.png

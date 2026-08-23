@@ -41,7 +41,7 @@ const props = defineProps<FeatureCardProps>();
 
    &__title {
       color: #854D0E;
-      font-family: 'Merriweather', serif;
+      font-family: Merriweather, serif;
       font-size: 18px;
       line-height: 28px;
    }

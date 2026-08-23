@@ -3,10 +3,18 @@ root = true
 [*]
 charset = utf-8
 end_of_line = lf
-indent_size = 2
+# Three spaces matches what ESLint and Stylelint enforce for the source tree.
+indent_size = 3
 indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
+# YAML has no three-space convention, and GitHub's own schemas assume two.
+[*.{yml,yaml}]
+indent_size = 2
+
 [*.md]
 trim_trailing_whitespace = false
+
+[{package.json,bun.lock}]
+indent_style = tab

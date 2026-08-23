@@ -1,0 +1,75 @@
+version: 2
+
+updates:
+  # Weekly on Saturday morning IST (03:30 UTC), so a broken bump is found on a
+  # day when nothing is shipping.
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: saturday
+      time: "03:30"
+      timezone: Asia/Kolkata
+    open-pull-requests-limit: 5
+    versioning-strategy: increase
+    labels:
+      - dependencies
+    reviewers:
+      - moulibheemaneti
+    commit-message:
+      prefix: "build(deps)"
+      prefix-development: "build(deps-dev)"
+    groups:
+      # Nuxt and its first-party modules move together; splitting them into
+      # separate PRs just produces peer-dependency conflicts.
+      nuxt-ecosystem:
+        patterns:
+          - "nuxt"
+          - "@nuxt/*"
+          - "@nuxtjs/*"
+          - "nuxt-*"
+          - "vue"
+          - "vue-router"
+          - "@vue/*"
+      linting-tools:
+        patterns:
+          - "eslint"
+          - "eslint-*"
+          - "@eslint/*"
+          - "stylelint"
+          - "stylelint-*"
+          - "@stylistic/*"
+          - "typescript"
+          - "vue-tsc"
+      testing-tools:
+        patterns:
+          - "vitest"
+          - "@vitest/*"
+          - "happy-dom"
+          - "sass-true"
+          - "sass"
+          - "sass-embedded"
+      release-tools:
+        patterns:
+          - "semantic-release"
+          - "@semantic-release/*"
+          - "conventional-changelog-*"
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: saturday
+      time: "03:30"
+      timezone: Asia/Kolkata
+    labels:
+      - dependencies
+      - ci
+    reviewers:
+      - moulibheemaneti
+    commit-message:
+      prefix: "ci(deps)"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
