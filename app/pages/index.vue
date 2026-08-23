@@ -15,8 +15,11 @@
             </div>
          </div>
          <div>
-            <LocalImage file="guruji.webp" alt="Guruji Illustration in Devanilayam website" width="400px"
-               height="400px" />
+            <!-- The page's largest above-the-fold element, so it is loaded
+                 eagerly with a high fetch priority rather than lazily. -->
+            <LocalImage
+               file="guruji.webp" alt="Guruji Illustration in Devanilayam website"
+               :width="400" :height="400" priority />
          </div>
       </section>
 
