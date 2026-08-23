@@ -20,6 +20,14 @@ useHead(() => ({
    meta: head.value.meta,
 }));
 
+// Site-wide fallback Open Graph card. Pages that call defineOgImageComponent()
+// with their own title override this; everything else still gets a branded card
+// rather than sharing one static image.
+defineOgImageComponent("Default", {
+   title: "Devanilayam",
+   description: "Slokas, ashtotaras and stotras — ad-free, with meanings and audio.",
+});
+
 // Site-wide identity: Organization + WebSite, present in the SSR HTML of every
 // page so search engines and AI assistants understand the entity behind it.
 useJsonLd(() => [
@@ -32,6 +40,17 @@ useJsonLd(() => [
       description: "Ad-free devotional platform for Hindu slokas, ashtotaras and stotras with meanings in English, Telugu and Hindi.",
       publisher: { "@id": `${SITE_URL}/#organization` },
       inLanguage: ["en", "te", "hi"],
+      // Declares the site's own search endpoint, which is what lets Google
+      // show a sitelinks search box for the brand. The URL template must be a
+      // real, crawlable GET route — see app/pages/search.vue.
+      potentialAction: {
+         "@type": "SearchAction",
+         target: {
+            "@type": "EntryPoint",
+            urlTemplate: `${SITE_URL}/en/search?q={search_term_string}`,
+         },
+         "query-input": "required name=search_term_string",
+      },
    },
 ]);
 </script>

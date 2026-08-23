@@ -20,6 +20,16 @@ Asserts every SEO surface renders in the server HTML, with a pass/fail summary:
   OG PNG
 - missing content returns a hard `404` (not a soft-200) and its error page is
   `noindex`, and policy pages are `noindex`
+- each route's OG card is **unique to that route** — if every page reports the
+  same image URL, per-page generation has silently fallen back to one static
+  file, which is how this used to be broken
+- the security headers are present, and the CSP forbids framing and plugins and
+  pins `base-uri`
+- the `WebSite` schema declares a `SearchAction`, and the endpoint it names
+  actually answers: `/search?q=` returns server-rendered results, is `noindex`,
+  is kept out of the sitemap, and returns nothing for an empty query (a
+  prerendered `/search` would serve the same page for every query)
+- no `href="#"` placeholder links survive in the nav or footer
 
 ```bash
 scripts/seo/verify.sh                 # build if needed, boot, check

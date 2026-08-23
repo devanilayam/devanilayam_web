@@ -33,6 +33,12 @@ so Latin resolves to Noto Sans and Telugu or Devanagari text falls through to
 the face that has those glyphs. Without them, those scripts render in whatever
 the device happens to have, which is often nothing at all (tofu boxes).
 
+## The `og/` subdirectory
+
+`public/fonts/og/` holds a **separate** set of static TTFs used only to render
+Open Graph cards — Satori reads neither WOFF2 nor variable fonts, so it cannot
+use the files described above. See the README there.
+
 ## Licence
 
 All four families are released by Google under the

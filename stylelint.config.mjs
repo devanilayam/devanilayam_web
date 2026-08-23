@@ -16,6 +16,16 @@ export default {
          files: ["**/*.vue"],
          customSyntax: "postcss-html",
       },
+      {
+         // Open Graph card templates are rendered by Satori, not a browser.
+         // Satori resolves only the fonts registered in nuxt.config and has no
+         // notion of the generic families (`sans-serif`, `serif`, ...), so
+         // requiring one here would be cargo-culted browser advice.
+         files: ["**/*.satori.vue"],
+         rules: {
+            "font-family-no-missing-generic-family-keyword": null,
+         },
+      },
    ],
 
    ignoreFiles: [

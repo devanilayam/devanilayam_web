@@ -6,6 +6,7 @@
 </template>
 
 <script lang="ts" setup>
+const { t } = useI18n();
 
 const { getSloka } = useSlokas();
 
@@ -47,6 +48,12 @@ useSeoMeta({
    twitterCard: "summary_large_image",
 });
 
+defineOgImageComponent("Default", {
+   eyebrow: t("header.links.slokas"),
+   title: title.value,
+   description: description.value,
+});
+
 // Structured data helps Google + AI assistants understand the devotional text.
 useJsonLd(() => ({
    "@type": "Article",
@@ -56,7 +63,10 @@ useJsonLd(() => ({
    about: { "@type": "Thing", name: sloka.value?.lord },
    keywords: sloka.value?.tags,
    datePublished: sloka.value?.date,
-   image: `${SITE_URL}/og-image.png`,
+   // nuxt-og-image renders a per-page card and advertises it via og:image;
+   // its URL is content-hashed and not derivable here, so the schema image
+   // is the stable site mark rather than a URL that could go stale.
+   image: `${SITE_URL}/icons/icon-512.png`,
    isPartOf: { "@id": `${SITE_URL}/#website` },
    publisher: { "@id": `${SITE_URL}/#organization` },
 }));

@@ -17,6 +17,7 @@ Live at **[devanilayam.com](https://devanilayam.com)**.
 - `@nuxt/content` for the devotional corpus, `@nuxtjs/i18n` for the three
   scripts, `@nuxtjs/seo` for metadata and structured data
 - `@vite-pwa/nuxt` for installability and offline support
+- Per-page Open Graph cards rendered by Satori, in all three scripts
 - Deployed on Vercel
 
 ## Setup
@@ -47,7 +48,7 @@ bun run dev   # http://localhost:3000
 | `bun run typecheck` | `vue-tsc --noEmit` |
 | `bun run test` / `test:watch` | Vitest — Vue/TS units and sass-true SCSS specs |
 | `bun run pwa:verify` | Manifest, icons, service worker and offline fallback |
-| `bun run seo:verify` | robots, sitemap, per-route meta/OG/hreflang/JSON-LD, OG image, soft-404s |
+| `bun run seo:verify` | robots, sitemap, per-route meta/OG/hreflang/JSON-LD, per-route OG cards, security headers, site search, soft-404s |
 | `bun run seo:lighthouse` / `seo:lighthouse:mobile` | Lighthouse CI against the running SSR server |
 
 The first four run on every commit through the `pre-commit` hook, and all of

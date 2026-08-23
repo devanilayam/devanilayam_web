@@ -45,6 +45,12 @@ useSeoMeta({
    ogTitle: "Blogs",
    ogType: "website",
 });
+
+defineOgImageComponent("Default", {
+   eyebrow: "Collection",
+   title: "Blogs",
+   description: "Readings and reflections on the stories behind the slokas.",
+});
 </script>
 
 <style lang="scss">

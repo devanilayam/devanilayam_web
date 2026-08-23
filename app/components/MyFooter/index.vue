@@ -10,9 +10,15 @@
          <div class="my-footer__column">
             <div class="my-footer__heading">{{ $t('footer.sections.about.title') }}</div>
             <div class="my-footer__list">
-               <a href="#" class="my-footer__link">{{ $t('footer.sections.about.links.mission') }}</a>
-               <a href="#" class="my-footer__link">{{ $t('footer.sections.about.links.team') }}</a>
-               <a href="#" class="my-footer__link">{{ $t('footer.sections.about.links.contribute') }}</a>
+               <nuxt-link :to="localePath('/about')" class="my-footer__link">
+                  {{ $t('footer.sections.about.links.mission') }}
+               </nuxt-link>
+               <nuxt-link :to="localePath('/about#contribute')" class="my-footer__link">
+                  {{ $t('footer.sections.about.links.contribute') }}
+               </nuxt-link>
+               <nuxt-link :to="localePath('/search')" class="my-footer__link">
+                  {{ $t('search.pageTitle') }}
+               </nuxt-link>
             </div>
          </div>
 
@@ -26,7 +32,9 @@
                <nuxt-link :to="localePath('/policies/terms-of-service')" class="my-footer__link">
                   {{ $t('footer.sections.legal.links.terms') }}
                </nuxt-link>
-               <a href="#" class="my-footer__link">{{ $t('footer.sections.legal.links.contact') }}</a>
+               <nuxt-link :to="localePath('/about#contact')" class="my-footer__link">
+                  {{ $t('footer.sections.legal.links.contact') }}
+               </nuxt-link>
             </div>
          </div>
 

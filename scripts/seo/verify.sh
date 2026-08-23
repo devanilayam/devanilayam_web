@@ -141,6 +141,7 @@ else
    done
    ALL_PATHS="$(grep -oE "<loc>[^<]*</loc>" <<<"$SITEMAP" \
       | sed -E 's#</?loc>##g' | sed -E "s#^https?://[^/]+##" | sort -u)"
+   CHECK_ROUTES+=" /en/about"
    for pattern in "/en/slokas$" "/en/slokas/[^/]*$" "/en/slokas/[^/]*/[^/]*$" \
       "/en/ashtotaras$" "/en/ashtotaras/[^/]*$" "/en/blogs$" "/en/blogs/[^/]*$" \
       "/te/slokas/[^/]*/[^/]*$" "/hi/blogs/[^/]*$"; do
@@ -203,6 +204,15 @@ for route in $CHECK_ROUTES; do
       else
          fail "OG card renders PNG" "code=$OG_CODE type=$OG_TYPE size=${OG_SIZE:-0}"
       fi
+
+      # Cards are rendered per route; if every page reports the same URL, the
+      # per-page generation has silently fallen back to one static image.
+      if [[ -n "${SEEN_OG_PATHS:-}" ]] && grep -qxF "$OG_PATH" <<<"${SEEN_OG_PATHS}"; then
+         fail "the OG card is unique to this route" "same image as an earlier route ($OG_PATH)"
+      else
+         pass "the OG card is unique to this route"
+         SEEN_OG_PATHS="${SEEN_OG_PATHS:-}${OG_PATH}"$'"'"'\n'"'"'
+      fi
    fi
 done
 
@@ -222,6 +232,54 @@ assert_contains "error page is noindex" "$MISSING_HTML" "name=\"robots\"[^>]*noi
 # Policy pages are legal boilerplate and should not compete for rankings.
 POLICY_HTML="$(fetch_html "$BASE/en/policies/privacy-policy")"
 assert_contains "policy pages are noindex" "$POLICY_HTML" "name=\"robots\"[^>]*noindex"
+
+# ── security headers ─────────────────────────────────────────────────────────
+# Hardening rather than ranking, but a missing CSP or HSTS is the kind of
+# regression nobody notices until it matters.
+section "security headers"
+HEADERS="$(curl -sI -H "Accept: $ACCEPT_HTML" "$BASE/en" | tr "A-Z" "a-z")"
+
+for header in strict-transport-security x-content-type-options referrer-policy \
+   content-security-policy permissions-policy x-frame-options; do
+   assert_contains "$header is set" "$HEADERS" "^$header:"
+done
+
+assert_contains "CSP forbids framing"  "$HEADERS" "frame-ancestors 'none'"
+assert_contains "CSP forbids plugins"  "$HEADERS" "object-src 'none'"
+assert_contains "CSP pins base-uri"    "$HEADERS" "base-uri 'self'"
+
+# ── sitelinks search box ─────────────────────────────────────────────────────
+# The SearchAction is only worth declaring if the endpoint it names actually
+# answers — a template pointing at a dead route is worse than none.
+section "site search"
+HOME_HTML="$(fetch_html "$BASE/en")"
+assert_contains "WebSite declares a SearchAction" "$HOME_HTML" "SearchAction"
+assert_contains "SearchAction names a query template" "$HOME_HTML" "search_term_string"
+
+SEARCH_HTML="$(fetch_html "$BASE/en/search?q=hanuman")"
+if grep -q 'class="search-result__title"' <<<"$SEARCH_HTML"; then
+   pass "the search endpoint returns server-rendered results"
+else
+   fail "the search endpoint returns server-rendered results" "no results in the HTML for ?q=hanuman"
+fi
+
+assert_contains "search results are noindex" "$SEARCH_HTML" "name=\"robots\"[^>]*noindex"
+assert_absent   "search is kept out of the sitemap" "$SITEMAP" "<loc>[^<]*/search</loc>"
+
+# A prerendered /search would serve the same empty page for every query.
+EMPTY_SEARCH="$(fetch_html "$BASE/en/search")"
+if grep -q 'class="search-result__title"' <<<"$EMPTY_SEARCH"; then
+   fail "an empty query returns no results" "results leaked from a prerendered page"
+else
+   pass "an empty query returns no results"
+fi
+
+# ── dead links ───────────────────────────────────────────────────────────────
+section "navigation"
+for route in /en /en/about; do
+   PAGE="$(fetch_html "$BASE$route")"
+   assert_absent "$route has no placeholder href=\"#\" links" "$PAGE" "href=\"#\""
+done
 
 # ── summary ──────────────────────────────────────────────────────────────────
 printf "\n${B}Summary${X}  ${G}%d passed${X}  ${R}%d failed${X}\n" "$PASS" "$FAIL"

@@ -11,6 +11,8 @@
 <script lang="ts" setup>
 import { useAshtotaras } from "~/composables/useAshtotaras";
 
+const { t } = useI18n();
+
 const { getAshtotara } = useAshtotaras();
 
 const route = useRoute();
@@ -50,6 +52,12 @@ useSeoMeta({
    twitterCard: "summary_large_image",
 });
 
+defineOgImageComponent("Default", {
+   eyebrow: t("header.links.ashtotaras"),
+   title: title.value,
+   description: description.value,
+});
+
 useJsonLd(() => ({
    "@type": "Article",
    headline: title.value,
@@ -58,7 +66,10 @@ useJsonLd(() => ({
    about: { "@type": "Thing", name: ashtotara.value?.lord },
    keywords: ashtotara.value?.tags,
    datePublished: ashtotara.value?.date,
-   image: `${SITE_URL}/og-image.png`,
+   // nuxt-og-image renders a per-page card and advertises it via og:image;
+   // its URL is content-hashed and not derivable here, so the schema image
+   // is the stable site mark rather than a URL that could go stale.
+   image: `${SITE_URL}/icons/icon-512.png`,
    isPartOf: { "@id": `${SITE_URL}/#website` },
    publisher: { "@id": `${SITE_URL}/#organization` },
 }));

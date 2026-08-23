@@ -33,6 +33,3 @@ android/*
 .env
 .env.*
 !.env.example
-
-# Generated at build from app/assets/og-image.base64.ts
-public/og-image.png

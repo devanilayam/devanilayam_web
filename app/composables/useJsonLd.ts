@@ -42,7 +42,7 @@ export const organizationNode = (): JsonLdNode => ({
    "@id": `${SITE_URL}/#organization`,
    name: "Devanilayam",
    url: SITE_URL,
-   logo: `${SITE_URL}/og-image.png`,
+   logo: `${SITE_URL}/icons/icon-512.png`,
    sameAs: [
       "https://www.facebook.com/devanilayam",
       "https://www.instagram.com/devanilayam",

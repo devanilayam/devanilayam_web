@@ -1,27 +1,4 @@
-import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { Locale } from "./app/types/locale";
-import { OG_IMAGE_BASE64 } from "./app/assets/og-image.base64";
-
-// Materialise the branded Open Graph image into /public at config-load time so
-// the binary asset is generated from a committed base64 string (keeps the repo
-// free of a checked-in binary while guaranteeing /og-image.png exists at build).
-const writeOgImage = (): void => {
-
-   const ogImagePath = new URL("./public/og-image.png", import.meta.url);
-
-   if (existsSync(ogImagePath)) {
-
-      return;
-
-   }
-
-   mkdirSync(new URL("./public/", import.meta.url), { recursive: true });
-
-   writeFileSync(ogImagePath, Buffer.from(OG_IMAGE_BASE64, "base64"));
-
-};
-
-writeOgImage();
 
 // Pass plain, fully-serializable locale objects to @nuxtjs/i18n so downstream
 // modules (sitemap, robots) reliably read `code`/`language` for hreflang and
@@ -107,6 +84,9 @@ export default defineNuxtConfig({
 
    sitemap: {
       autoLastmod: true,
+      // /search is noindex (a result listing is thin and infinite in
+      // cardinality), so it has no business in the sitemap either.
+      exclude: ["/search", "/*/search"],
       // Enumerate content-driven pages (slokas, ashtotaras, blogs) so they
       // are all discoverable in the XML sitemap.
       sources: ["/api/__sitemap__/urls"],
@@ -159,6 +139,44 @@ export default defineNuxtConfig({
             src: "/fonts/noto-sans-devanagari-variable.woff2",
             weight: "400 700",
             fallbacks: ["Mangal", "Nirmala UI", "sans-serif"],
+         },
+
+         // Render-time faces for the Open Graph cards, under distinct names.
+         //
+         // Satori reads neither WOFF2 nor variable fonts, so it cannot use the
+         // four faces above; nuxt-og-image v6 discovers fonts through the
+         // @font-face rules @nuxt/fonts emits globally, which is why these are
+         // `global` and the browser faces are not.
+         //
+         // Declaring them costs a visitor nothing: an @font-face is inert
+         // until some rendered text asks for that family, and nothing in the
+         // site's styles ever names an "… OG" family — only
+         // components/OgImage/Default.satori.vue does.
+         //
+         // The files are static, subsetted TTFs; see public/fonts/og/README.md.
+         {
+            name: "Merriweather OG",
+            src: "/fonts/og/merriweather-700.ttf",
+            weight: "700",
+            global: true,
+         },
+         {
+            name: "Noto Sans OG",
+            src: "/fonts/og/noto-sans-400.ttf",
+            weight: "400",
+            global: true,
+         },
+         {
+            name: "Noto Sans Telugu OG",
+            src: "/fonts/og/noto-sans-telugu-400.ttf",
+            weight: "400",
+            global: true,
+         },
+         {
+            name: "Noto Sans Devanagari OG",
+            src: "/fonts/og/noto-sans-devanagari-400.ttf",
+            weight: "400",
+            global: true,
          },
       ],
    },
@@ -237,9 +255,25 @@ export default defineNuxtConfig({
       },
    },
 
-   // Auto-generated OG images require satori/resvg at build time; we ship a
-   // static branded OG image instead (see app.head below), so keep this off.
-   ogImage: { enabled: false },
+   // Per-page Open Graph cards, rendered by Satori at build/request time.
+   //
+   // The renderer is Satori rather than Chromium because it is the only one
+   // that runs on a serverless/edge target, and the deps it needs (`satori`,
+   // `@resvg/resvg-js`) are already installed for the Play Store generators.
+   //
+   // Fonts are named by `path`, pointing at the same self-hosted files the
+   // site uses — nuxt-og-image otherwise fetches them from Google at render
+   // time, which would reintroduce exactly the build-time network dependency
+   // that public/fonts exists to remove. The Indic faces are listed because
+   // sloka and blog titles on /te and /hi are Telugu and Devanagari: without
+   // them those cards render as tofu boxes.
+   ogImage: {
+      defaults: {
+         width: 1200,
+         height: 630,
+         component: "Default",
+      },
+   },
 
    linkChecker: {
       report: {
@@ -267,13 +301,61 @@ export default defineNuxtConfig({
       prerender: {
          crawlLinks: true,
          routes: ["/", "/en", "/te", "/hi", "/sitemap.xml", "/robots.txt"],
+         // /search reads ?q= at request time; a prerendered file would pin it
+         // to the empty query and shadow every real search.
+         ignore: ["/search", "/en/search", "/te/search", "/hi/search"],
          failOnError: false,
       },
    },
 
+   // Security headers, applied to every response.
+   //
+   // None of these affect indexing — they are hardening. The CSP is
+   // deliberately not maximally strict: Nuxt inlines the hydration payload as
+   // a <script>, and the theme/font handling emits inline styles, so
+   // 'unsafe-inline' is required until the app is switched to nonces. What it
+   // does buy is a closed default-src, no plugins, no framing, and a locked
+   // base-uri and form-action — the vectors that actually matter for a static
+   // content site with no forms and no user accounts.
+   //
+   // `connect-src` and `script-src` allow Vercel's analytics endpoints because
+   // app/plugins/vercel.client.ts loads them on the deployed site; off Vercel
+   // the plugin never runs and nothing requests them.
    routeRules: {
       // Static, content-driven sections are safe to fully pre-render.
       "/": { prerender: true },
+
+      // Search results depend on ?q=, which a prerendered file cannot carry:
+      // Nitro would serve the static HTML and silently ignore the query. This
+      // route has to be rendered per request.
+      "/search": { prerender: false },
+      "/*/search": { prerender: false },
+
+      "/**": {
+         headers: {
+            "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+            "X-Content-Type-Options": "nosniff",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "X-Frame-Options": "DENY",
+            "Cross-Origin-Opener-Policy": "same-origin",
+            "Permissions-Policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+            "Content-Security-Policy": [
+               "default-src 'self'",
+               "base-uri 'self'",
+               "form-action 'self'",
+               "frame-ancestors 'none'",
+               "object-src 'none'",
+               "img-src 'self' data: blob: https:",
+               "font-src 'self' data:",
+               "style-src 'self' 'unsafe-inline'",
+               "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com",
+               "connect-src 'self' https://va.vercel-scripts.com https://vitals.vercel-insights.com",
+               "manifest-src 'self'",
+               "worker-src 'self'",
+               "upgrade-insecure-requests",
+            ].join("; "),
+         },
+      },
    },
 
    i18n: {
@@ -332,11 +414,14 @@ export default defineNuxtConfig({
             // Social defaults (overridden per-page via useSeoMeta)
             { property: "og:site_name", content: SITE_NAME },
             { property: "og:type", content: "website" },
-            { property: "og:image", content: `${SITE_URL}/og-image.png` },
+            // og:image / twitter:image are NOT set here. nuxt-og-image renders a
+            // per-page card and emits both tags itself; a static one declared
+            // at this level wins over the generated tag and every page would
+            // share the same image. The site-wide fallback card is set by
+            // defineOgImage() in layouts/default.vue instead.
             { name: "twitter:card", content: "summary_large_image" },
             { name: "twitter:site", content: "@devanilayam" },
             { name: "twitter:creator", content: "@devanilayam" },
-            { name: "twitter:image", content: `${SITE_URL}/og-image.png` },
          ],
          link: [
             { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },

@@ -49,6 +49,11 @@ useSeoMeta({
    twitterDescription: () => t("home.hero.description"),
 });
 
+defineOgImageComponent("Default", {
+   title: t("home.hero.title"),
+   description: t("home.hero.description"),
+});
+
 // CollectionPage describes the home page as the entry into the sloka collection
 // (Organization + WebSite are injected site-wide in the default layout).
 useJsonLd(() => ({
