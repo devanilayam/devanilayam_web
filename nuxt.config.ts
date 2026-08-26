@@ -53,6 +53,41 @@ export default defineNuxtConfig({
 
    devtools: { enabled: true },
 
+   // @nuxt/content stores the parsed corpus in SQLite. Which SQLite it talks to
+   // is this setting.
+   //
+   // The default is `better-sqlite3`: a native addon, compiled against one
+   // specific Node ABI. That made the toolchain fragile in both directions —
+   // it has to be rebuilt whenever the local Node major changes (a stale binary
+   // failed the build outright with NODE_MODULE_VERSION 137 vs 147), and it
+   // ships a compiled .node file into .output/server for production to load.
+   //
+   // `native` uses the SQLite built into the runtime via `node:sqlite`. Nothing
+   // to compile, no ABI to match, and no native module in the server bundle.
+   //
+   // It is also the only option that works for BOTH runtimes this repo touches.
+   // Bun implements `node:sqlite` with the same surface Node does (verified:
+   // DatabaseSync, StatementSync, Session, constants, backup on both), so
+   // `bun --bun nuxt build` and `nuxt dev` under Bun get a database, and so
+   // does `node .output/server/index.mjs` in production.
+   //
+   // `sqliteConnector: "bun"` would NOT work: it binds to `bun:sqlite`, which
+   // only exists in Bun, and the deployed server runs on Node.
+   //
+   // Note the split — the BUILD runs under Bun, the BUILT SERVER runs under
+   // Node. Bun cannot execute the node-server output at all (it fails
+   // resolving `srvx` out of the bundled node_modules), which is why the
+   // `preview` script is the one that deliberately stays on Node.
+   //
+   // REQUIRES Node >= 24 wherever the built server runs — `node:sqlite` is
+   // unflagged from 24 on. See `engines` in package.json and the Node pin in
+   // .github/workflows/ci.yml.
+   content: {
+      experimental: {
+         sqliteConnector: "native",
+      },
+   },
+
    // SEO
 
    site: {
@@ -86,10 +121,35 @@ export default defineNuxtConfig({
       autoLastmod: true,
       // /search is noindex (a result listing is thin and infinite in
       // cardinality), so it has no business in the sitemap either.
-      exclude: ["/search", "/*/search"],
-      // Enumerate content-driven pages (slokas, ashtotaras, blogs) so they
-      // are all discoverable in the XML sitemap.
+      //
+      // The bare "/" goes too: under the i18n `prefix` strategy it is not a
+      // page, only a redirect to /en. Listing it put two URLs in one hreflang
+      // cluster both claiming `en-US` AND both claiming `x-default`, which
+      // Search Console reports as a conflict.
+      //
+      // It has to be the REGEX, not the string "/". String patterns are run
+      // through the i18n integration, which expands "/" to also match /en, /te
+      // and /hi — silently deleting all three home pages from the sitemap.
+      // The regex is matched literally, so it hits only the root.
+      exclude: [/^\/$/, "/search", "/*/search"],
+      // Content-driven pages (slokas, ashtotaras, blogs) enumerated by
+      // server/api/__sitemap__/urls.ts.
+      //
+      // NOT for URL discovery — the prerender crawl already finds every one of
+      // these, and dropping this source leaves the URL set byte-identical (66
+      // URLs either way, verified). It is here for `lastmod`: the handler reads
+      // each document's frontmatter `date`, so a sloka written in 2025 says so.
+      //
+      // Without it only 5 of 22 URLs carry a lastmod at all, and those come
+      // from `autoLastmod` — the build timestamp. That tells search engines the
+      // entire site changed on every deploy, which is exactly the pattern that
+      // teaches them to stop trusting the field.
+      //
+      // It also supplies the priority/changefreq values the xslColumns below
+      // render. Google ignores both, but they are what the styled sitemap view
+      // shows a human.
       sources: ["/api/__sitemap__/urls"],
+
       xslColumns: [
          { label: "URL", width: "50%" },
          { label: "Last Modified", select: "sitemap:lastmod", width: "25%" },
@@ -226,6 +286,19 @@ export default defineNuxtConfig({
          // them in would add ~50 KB to every install for nothing.
          globPatterns: ["**/*.{js,css,html,svg,ico,woff2}"],
 
+         // @nuxt/content's browser database. `queryCollection` in a composable
+         // pulls a WASM SQLite engine into the client graph — sqlite3.wasm plus
+         // a worker and an OPFS proxy, ~1.1 MB — even though every content route
+         // here is prerendered and answered from its payload, so nothing ever
+         // executes it. (Verified: switching locale across en/te/hi, on index
+         // and nested routes, fetches none of these.)
+         //
+         // The `js` pattern above would otherwise sweep the worker and proxy
+         // into the precache — ~240 KB downloaded by every single PWA install,
+         // for code that is never run. The .wasm is already excluded by the
+         // pattern's extension list; these two need naming.
+         globIgnores: ["**/sqlite3-worker1-*.js", "**/sqlite3-opfs-async-proxy*.js"],
+
          // Backstop for a URL that was never prerendered — serve the default
          // locale rather than the browser's offline error. Precached routes
          // still win, because precache routes are registered first.
@@ -330,6 +403,29 @@ export default defineNuxtConfig({
       // route has to be rendered per request.
       "/search": { prerender: false },
       "/*/search": { prerender: false },
+
+      // The content and search endpoints behind app/utils/content.ts.
+      //
+      // Kept out of the index with a header rather than a robots.txt
+      // `Disallow`. Two reasons: the generated robots.txt gives Googlebot,
+      // Bingbot and each AI crawler their own group, and a crawler obeys only
+      // its single most-specific match — so a rule added to `User-agent: *`
+      // would not reach any of them. And `Disallow` only stops crawling; it is
+      // `noindex` that keeps a URL out of results. The header does both jobs
+      // for every crawler, with no group bookkeeping.
+      //
+      // Cached at the CDN because the corpus is baked into the build and can
+      // only change on the next deploy — which serves from a new immutable
+      // deployment anyway. Vercel keys its cache on the full URL, so the
+      // ?q= and ?locale= variants of /api/search cache separately, as they
+      // must. `max-age=0` keeps browsers revalidating while the shared cache
+      // absorbs the traffic.
+      "/api/**": {
+         headers: {
+            "X-Robots-Tag": "noindex, nofollow",
+            "Cache-Control": "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400",
+         },
+      },
 
       "/**": {
          headers: {

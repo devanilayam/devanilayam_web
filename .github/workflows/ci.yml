@@ -155,6 +155,15 @@ jobs:
         with:
           bun-version: latest
 
+      # The build itself runs under Bun, but the verify gates below boot the
+      # built server with `node .output/server/index.mjs` (see
+      # scripts/lib/serve.sh), and @nuxt/content reads its database through
+      # `node:sqlite` — unflagged only from Node 24. Without this pin the job
+      # inherits whatever Node the runner image happens to ship.
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
       - uses: actions/cache@v6
         with:
           path: |
