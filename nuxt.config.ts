@@ -379,6 +379,64 @@ export default defineNuxtConfig({
          ignore: ["/search", "/en/search", "/te/search", "/hi/search"],
          failOnError: false,
       },
+
+      // The prerendered "/" is nuxt-i18n's redirect stub under the `prefix`
+      // strategy: a bare <meta http-equiv="refresh"> document carrying no head
+      // metadata at all. Googlebot treats that as a redirect and indexes /en,
+      // but the social crawlers (WhatsApp, Facebook, X) do not reliably follow
+      // meta-refresh — they scrape this file and render the bare domain as an
+      // imageless link. That is the single URL people are most likely to
+      // paste, and the site's own home CTA points at a WhatsApp channel.
+      //
+      // nuxt-og-image cannot cover it: it renders cards for pages, and "/" is
+      // not a page. So the stub is the one and only consumer of the static
+      // public/og-image.png — keep that file 1200x630 if it is ever redrawn.
+      //
+      // Title and description mirror defineOgImageComponent() in
+      // app/pages/index.vue: the brand as the headline, because a share card
+      // is recognised rather than searched, with the descriptive text below.
+      // The refresh tag is left untouched and stays first, so what a browser
+      // does with "/" is entirely unchanged.
+      hooks: {
+         "prerender:generate"(route: { route: string, contents?: string }) {
+
+            if (route.route !== "/" || !route.contents) {
+
+               return;
+
+            }
+
+            const attr = (value: string): string =>
+               value.replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+
+            const card = `${SITE_URL}/og-image.png`;
+
+            // [attribute, name, content] — built as data so no tag literal
+            // has to carry escaped quotes.
+            const meta: Array<[string, string, string]> = [
+               ["property", "og:site_name", SITE_NAME],
+               ["property", "og:type", "website"],
+               ["property", "og:url", `${SITE_URL}/`],
+               ["property", "og:title", SITE_NAME],
+               ["property", "og:description", SITE_DESCRIPTION],
+               ["property", "og:image", card],
+               ["property", "og:image:width", "1200"],
+               ["property", "og:image:height", "630"],
+               ["name", "twitter:card", "summary_large_image"],
+               ["name", "twitter:image", card],
+            ];
+
+            const tags = [
+               `<title>${attr(SITE_NAME)}</title>`,
+               `<link rel="canonical" href="${SITE_URL}/en">`,
+               ...meta.map(([kind, name, content]) =>
+                  `<meta ${kind}="${name}" content="${attr(content)}">`),
+            ].join("");
+
+            route.contents = route.contents.replace("</head>", `${tags}</head>`);
+
+         },
+      },
    },
 
    // Security headers, applied to every response.
