@@ -53,7 +53,12 @@
       padding: px-to-rem(8) px-to-rem(16) px-to-rem(20) px-to-rem(16);
       max-height: fit-content;
       transition: font-size 0.2s ease;
-      font-size: var(--sloka-font-size);
+
+      // The custom property is only set once `useFontSize()` runs on the
+      // client, so the fallback is what server-rendered HTML paints with. It
+      // must match the composable's `defaultFontSize` (16px / 16 = 1rem),
+      // otherwise the text resizes the moment hydration finishes.
+      font-size: var(--sloka-font-size, 1rem);
 
       @include web-screen {
          // margin: px-to-rem(32);
