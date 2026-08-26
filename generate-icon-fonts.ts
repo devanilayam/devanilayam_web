@@ -16,6 +16,50 @@ const GENERATED_FONTS_FOLDER = "./app/assets/generated/fonts";
 
 const ICONS_FOLDER = "./app/assets/icons";
 
+/** Handlebars override that adds `font-display` to the @font-face rule. */
+const CSS_TEMPLATE = "./scripts/icons/css.hbs";
+
+/** Staging directory the subset is copied into before Fantasticon runs. */
+const SUBSET_FOLDER = "./node_modules/.cache/icon-font-subset";
+
+/**
+ * The icons this site actually renders.
+ *
+ * `app/assets/icons` is a ~1,200-glyph library, and Fantasticon has no include
+ * filter — it bakes in every SVG under `inputDir`. Building the whole set
+ * produced a 143 KB font to draw twelve icons, loaded on every page.
+ *
+ * So the build stages just these files and generates from that. Keeping the
+ * full library on disk is deliberate: it is the palette to pick from, and
+ * adding an icon should be a one-line change here.
+ *
+ * ADDING AN ICON: add its name below (matching the SVG filename, without the
+ * extension) and re-run `bun run build:icons`.
+ *
+ * You cannot silently forget: `IconProps.name` is typed as the generated
+ * `IconsId` union, so referencing an icon that is not in this list is a
+ * compile error under `bun run typecheck`. The build below also fails loudly
+ * if a name here has no matching SVG.
+ */
+const USED_ICONS = [
+   // Header / navigation
+   "globe-01",
+   "menu-04",
+   "x",
+   // Home feature cards (see app/configs/index.ts)
+   "book-open-01",
+   "music-note-01",
+   "star-01",
+   // Footer
+   "hearts",
+   // Social tiles (see app/configs/index.ts)
+   "facebook",
+   "instagram",
+   "linkedin",
+   "x-twitter",
+   "youtube",
+];
+
 const AUTO_GENERATED_COMMENT_LINES = [
    "=================================================================",
    "   AUTO-GENERATED FILE. DO NOT EDIT.",
@@ -31,7 +75,8 @@ const COMMENT_TEMPLATES: Record<string, string> = {
 };
 
 const fantasticonConfig: RunnerOptions = {
-   inputDir: path.resolve(ICONS_FOLDER),
+   // NOT the full icon library — the staged subset built by stageUsedIcons().
+   inputDir: path.resolve(SUBSET_FOLDER),
    outputDir: path.resolve(GENERATED_FONTS_FOLDER),
 
    // --- FONT NAMING ---
@@ -41,11 +86,19 @@ const fantasticonConfig: RunnerOptions = {
 
    // --- OUTPUT FORMATS ---
 
-   // Font file formats to generate - WOFF2 for modern browsers
-   fontTypes: [FontAssetType.WOFF],
+   // WOFF2 only. Every browser that can run this site supports it, and it is
+   // ~30% smaller than the WOFF this used to emit.
+   fontTypes: [FontAssetType.WOFF2],
 
    // Additional files to generate - CSS classes and TypeScript enum
    assetTypes: [OtherAssetType.CSS, OtherAssetType.TS],
+
+   // Overrides the stock CSS template purely to add `font-display` — without
+   // it the @font-face defaults to `auto`, which browsers treat as a block
+   // period of up to 3s with no fallback ever swapping in.
+   templates: {
+      [OtherAssetType.CSS]: path.resolve(CSS_TEMPLATE),
+   },
 
    // --- CSS CONFIGURATION ---
 
@@ -93,6 +146,50 @@ const createOutputDirectory = async (dirPath: string): Promise<void> => {
 };
 
 /**
+ * Copies the icons named in USED_ICONS into a clean staging directory, which is
+ * what Fantasticon reads. Fantasticon takes a directory, not a file list, so
+ * subsetting has to happen on the filesystem.
+ *
+ * Fails loudly on a name with no matching SVG — a typo here would otherwise
+ * silently drop an icon from the font and leave the UI rendering the component's
+ * uppercase-text fallback.
+ *
+ * @returns A promise that resolves once the staging directory holds the subset.
+ */
+const stageUsedIcons = async (): Promise<void> => {
+
+   const source = path.resolve(ICONS_FOLDER);
+
+   const target = path.resolve(SUBSET_FOLDER);
+
+   const missing = USED_ICONS.filter(
+      icon => !fs.existsSync(path.join(source, `${icon}.svg`)),
+   );
+
+   if (missing.length > 0) {
+
+      console.error("❌ USED_ICONS names with no matching SVG:");
+      missing.forEach(icon => console.error(`   • ${icon}.svg not found in ${ICONS_FOLDER}`));
+      process.exit(1);
+
+   }
+
+   // Rebuilt from scratch each run, so a removed name really leaves the font.
+   await fs.promises.rm(target, { recursive: true, force: true });
+   await fs.promises.mkdir(target, { recursive: true });
+
+   await Promise.all(USED_ICONS.map(icon => fs.promises.copyFile(
+      path.join(source, `${icon}.svg`),
+      path.join(target, `${icon}.svg`),
+   )));
+
+   const available = (await fs.promises.readdir(source)).filter(f => f.endsWith(".svg")).length;
+
+   console.log(`🎯 Subset: ${USED_ICONS.length} of ${available} available icons`);
+
+};
+
+/**
  * Generates icon font files from SVGs using the Fantasticon API.
  * Ensures the output directory exists, then runs the font generation process.
  * Logs progress and handles errors.
@@ -107,6 +204,9 @@ const buildIconFontFiles = async (): Promise<void> => {
 
    // Ensure output directory exists
    await createOutputDirectory(fantasticonConfig.outputDir);
+
+   // Populate inputDir with just the icons the site renders.
+   await stageUsedIcons();
 
    try {
 
@@ -137,6 +237,41 @@ const buildIconFontFiles = async (): Promise<void> => {
       process.exit(1);
 
    }
+
+};
+
+/**
+ * Deletes font files in the output folder whose format is no longer produced.
+ *
+ * Fantasticon writes the formats it is asked for but never removes ones it
+ * isn't. When this build switched from WOFF to WOFF2 the old 143 KB icons.woff
+ * stayed on disk — unreferenced by the generated CSS, but still committed and
+ * still copied into the bundle. Pruning keeps the folder honest.
+ *
+ * @returns A promise that resolves once stale font files are removed.
+ */
+const removeStaleFontFiles = async (): Promise<void> => {
+
+   const keep = new Set((fantasticonConfig.fontTypes || []).map(type => `.${type}`));
+
+   const fontExtensions = Object.values(FontAssetType).map(type => `.${type}`);
+
+   const files = await fs.promises.readdir(GENERATED_FONTS_FOLDER);
+
+   await Promise.all(files.map(async (file) => {
+
+      const ext = path.extname(file);
+
+      if (!fontExtensions.includes(ext) || keep.has(ext)) {
+
+         return;
+
+      }
+
+      await fs.promises.unlink(path.join(GENERATED_FONTS_FOLDER, file));
+      console.log(`🗑️  Removed stale font file: ${file}`);
+
+   }));
 
 };
 
@@ -191,6 +326,7 @@ const addCommentsToAutoGeneratedFolderFiles = async (): Promise<void> => {
 // Run the build
 buildIconFontFiles().then(async () => {
 
+   await removeStaleFontFiles();
    await addCommentsToAutoGeneratedFolderFiles();
 
 });

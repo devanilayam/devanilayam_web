@@ -1,21 +1,31 @@
+import { queryCollection } from "@nuxt/content/nitro";
+
 /**
  * Site search over the devotional corpus.
  *
- * Runs on the server during SSR so results are present in the HTML. The corpus
- * is small enough that a scored substring match over titles, descriptions and
- * tags beats shipping an index: nothing to build, nothing to keep in sync, and
- * no client-side bundle.
+ * This runs on the server — deliberately, and not just for SSR. /search is the
+ * only route that is not prerendered (its results depend on ?q= at request
+ * time), so it is also the only place that would otherwise call @nuxt/content's
+ * *client* `queryCollection`. That implementation lazily boots a WASM SQLite
+ * engine in the browser: ~1.3 MB across sqlite3.wasm, the worker and the OPFS
+ * proxy, downloaded the first time a visitor searches. Querying through this
+ * endpoint keeps the database on the server, where the data already lives.
+ *
+ * The corpus is small enough that a scored substring match over titles,
+ * descriptions and tags beats shipping an index: nothing to build, nothing to
+ * keep in sync.
  */
 
 export interface SearchResult {
    path: string;
    title: string;
    description?: string;
-   /** Localised label for the section this result came from. */
-   kind: string;
+   /**
+    * i18n key for the section this result came from. The label is translated
+    * on the client — the server has no access to the active i18n messages.
+    */
+   kindKey: string;
 }
-
-type Translate = (key: string) => string;
 
 const MAX_RESULTS = 40;
 
@@ -66,18 +76,14 @@ const score = (needle: string, title: string, description: string, tags: string[
 
 };
 
-/**
- * @param query  Raw user input.
- * @param locale Active locale code — results never cross languages.
- * @param t      Translator, used for the section labels.
- */
-export const searchContent = async (
-   query: string,
-   locale: string,
-   t: Translate,
-): Promise<SearchResult[]> => {
+export default defineEventHandler(async (event): Promise<SearchResult[]> => {
 
-   const needle = query.trim().toLowerCase();
+   const { q, locale } = getQuery(event);
+
+   const needle = String(q ?? "").trim().toLowerCase();
+
+   // Results never cross languages.
+   const lang = String(locale ?? "en");
 
    if (!needle) {
 
@@ -86,9 +92,9 @@ export const searchContent = async (
    }
 
    const [slokas, ashtotaras, blogs] = await Promise.all([
-      queryCollection("slokas").where("lang", "=", locale).all(),
-      queryCollection("ashtotaras").where("lang", "=", locale).all(),
-      queryCollection("blogs").where("lang", "=", locale).all(),
+      queryCollection(event, "slokas").where("lang", "=", lang).all(),
+      queryCollection(event, "ashtotaras").where("lang", "=", lang).all(),
+      queryCollection(event, "blogs").where("lang", "=", lang).all(),
    ]);
 
    const scored: Array<{ result: SearchResult, rank: number }> = [];
@@ -108,10 +114,10 @@ export const searchContent = async (
       add(
          score(needle, sloka.title ?? "", sloka.description ?? "", sloka.tags ?? []),
          {
-            path: `/${locale}/slokas/${sloka.lord_id}/${sloka.sloka_id}`,
+            path: `/${lang}/slokas/${sloka.lord_id}/${sloka.sloka_id}`,
             title: sloka.title ?? sloka.sloka_id,
             description: sloka.description,
-            kind: t("header.links.slokas"),
+            kindKey: "header.links.slokas",
          },
       );
 
@@ -123,10 +129,10 @@ export const searchContent = async (
       add(
          score(needle, ashtotara.title ?? ashtotara.lord ?? "", ashtotara.description ?? "", ashtotara.tags ?? []),
          {
-            path: `/${locale}/ashtotaras/${ashtotara.lord_id}`,
+            path: `/${lang}/ashtotaras/${ashtotara.lord_id}`,
             title: ashtotara.title ?? ashtotara.lord ?? ashtotara.lord_id,
             description: ashtotara.description,
-            kind: t("header.links.ashtotaras"),
+            kindKey: "header.links.ashtotaras",
          },
       );
 
@@ -137,10 +143,10 @@ export const searchContent = async (
       add(
          score(needle, blog.title ?? "", blog.description ?? "", blog.tags ?? []),
          {
-            path: `/${locale}/blogs/${blog.blog_id}`,
+            path: `/${lang}/blogs/${blog.blog_id}`,
             title: blog.title ?? blog.blog_id,
             description: blog.description,
-            kind: t("header.links.blogs"),
+            kindKey: "header.links.blogs",
          },
       );
 
@@ -151,4 +157,4 @@ export const searchContent = async (
       .slice(0, MAX_RESULTS)
       .map(entry => entry.result);
 
-};
+});

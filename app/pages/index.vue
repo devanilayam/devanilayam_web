@@ -42,27 +42,33 @@ const { t } = useI18n();
 
 const localePath = useLocalePath();
 
+// Deliberately NOT `home.hero.title`: the on-page <h1> is the brand name, so
+// reusing it made every SERP entry read "Devanilayam | Devanilayam" — the
+// site's highest-value page spending its whole title on a word it already
+// ranks for. `home.seo.*` carries the descriptive, keyword-bearing variant.
 useSeoMeta({
-   title: () => t("home.hero.title"),
-   description: () => t("home.hero.description"),
-   ogTitle: () => t("home.hero.title"),
-   ogDescription: () => t("home.hero.description"),
+   title: () => t("home.seo.title"),
+   description: () => t("home.seo.description"),
+   ogTitle: () => t("home.seo.title"),
+   ogDescription: () => t("home.seo.description"),
    ogType: "website",
-   twitterTitle: () => t("home.hero.title"),
-   twitterDescription: () => t("home.hero.description"),
+   twitterTitle: () => t("home.seo.title"),
+   twitterDescription: () => t("home.seo.description"),
 });
 
+// The share card keeps the brand as its headline — a card is recognised, not
+// searched — but takes the accurate description.
 defineOgImageComponent("Default", {
    title: t("home.hero.title"),
-   description: t("home.hero.description"),
+   description: t("home.seo.description"),
 });
 
 // CollectionPage describes the home page as the entry into the sloka collection
 // (Organization + WebSite are injected site-wide in the default layout).
 useJsonLd(() => ({
    "@type": "CollectionPage",
-   name: t("home.hero.title"),
-   description: t("home.hero.description"),
+   name: t("home.seo.title"),
+   description: t("home.seo.description"),
    url: SITE_URL,
    isPartOf: { "@id": `${SITE_URL}/#website` },
    about: { "@id": `${SITE_URL}/#organization` },

@@ -30,7 +30,7 @@
             <ul v-if="results.length" class="search-results">
                <li v-for="result in results" :key="result.path" class="search-result">
                   <nuxt-link class="search-result__link" :to="result.path">
-                     <span class="search-result__kind">{{ result.kind }}</span>
+                     <span class="search-result__kind">{{ $t(result.kindKey) }}</span>
                      <span class="search-result__title">{{ result.title }}</span>
                      <span v-if="result.description" class="search-result__description">
                         {{ result.description }}
@@ -74,24 +74,17 @@ const submit = (): void => {
 
 };
 
-// Searched on the server so the results are in the HTML. Content search on a
-// corpus this size is a substring match over titles, descriptions and tags —
-// there is no index to build and no client-side bundle to ship.
-const { data: results } = await useAsyncData(
-   () => `search-${locale.value}-${query.value}`,
-   async () => {
-
-      if (!query.value) {
-
-         return [];
-
-      }
-
-      return searchContent(query.value, locale.value, t);
-
-   },
-   { default: () => [], watch: [query, locale] },
-);
+// Searched on the server so the results are in the HTML.
+//
+// This goes through /api/search rather than calling queryCollection() here:
+// /search is the only route that is not prerendered, so a query in this
+// component would run against @nuxt/content's *client* database and pull down
+// ~1.3 MB of WASM SQLite the first time anyone searched. See server/api/search.get.ts.
+const { data: results } = await useFetch("/api/search", {
+   key: () => `search-${locale.value}-${query.value}`,
+   query: { q: query, locale },
+   default: () => [],
+});
 
 useSeoMeta({
    title: () => (query.value ? t("search.titleWithQuery", { query: query.value }) : t("search.pageTitle")),
