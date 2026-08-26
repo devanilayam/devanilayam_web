@@ -50,7 +50,7 @@ crawlers were not explicitly allowed.
 |------|-----|------|
 | Dynamic content pages absent from sitemap | Added a server sitemap source enumerating every sloka, per-deity list, ashtotara and blog across all locales | `server/api/__sitemap__/urls.ts`, `nuxt.config.ts` |
 | `twitter:card` set to a description string | Set to `summary_large_image` globally + per page | `nuxt.config.ts`, all pages |
-| No `og:image` | Added a branded 1200×630 `og-image.png` + global `og:image`/`twitter:image` | `public/og-image.png`, `nuxt.config.ts` |
+| No `og:image` | Per-page cards rendered by `nuxt-og-image` (Satori), with a site-wide default from `defineOgImageComponent()` in the layout. A global static `og:image` is deliberately *not* set — it would override every generated card. The branded 1200×630 `og-image.png` survives for one case the renderer cannot reach: the bare `/` i18n redirect stub, which is not a page. | `nuxt.config.ts`, `app/layouts/default.vue`, `public/og-image.png` |
 | No JSON-LD structured data | Injected server-rendered JSON-LD: Organization, WebSite, Article, BlogPosting, BreadcrumbList, ItemList, CollectionPage, Person | `app/composables/useJsonLd.ts`, layout + pages |
 | No hreflang / multilingual signals | `useLocaleHead()` in the layout injects `<html lang>`, `dir`, and hreflang alternates (en, te, hi + x-default) | `app/layouts/default.vue` |
 | Internal links hit 302 redirects (`/slokas` → `/en/slokas`) | All internal links use `useLocalePath()` | header, footer, side menu, cards, pages |
