@@ -1,6 +1,6 @@
 ---
 lord_id: rama
-lord: Ramachandraya
+lord: Rama
 sloka_id: rama-keerthana
 title: Ramachandraya Keerthana
 description: Ramachandraya is a famous keerthana that sings of Lord Rama’s valor and humility.
