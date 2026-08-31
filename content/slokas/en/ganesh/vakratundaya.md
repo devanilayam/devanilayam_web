@@ -5,7 +5,7 @@ sloka_id: vakratundaya
 title: Vakratundaya Mantra
 description: Vakratundaya Mantra is a powerful prayer dedicated to Lord Ganesh, seeking his blessings to remove all obstacles and ensure success in all endeavors.
 lang: en
-tags: [Vakratundaya, Ganesh, Ganesha Mantra, Obstacle Remover]
+tags: [Vakratundaya, Ganesh, Ganesha Mantra, Obstacle Remover, Vinayaka Chavithi, Ganesh Chaturthi]
 date: 2025-12-01
 ---
 
