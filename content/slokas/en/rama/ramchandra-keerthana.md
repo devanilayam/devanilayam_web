@@ -12,40 +12,40 @@ date: 2025-12-01
 # Ramachandraya Keerthana
 
 Ramachandraya Janakarajaja Manoharaya  
-Mamakabheeshtadaya Mahita Mangalam ||
+Mamakabheeshtadaya Mahita Mangalam ॥
 
 <!--more-->
 <br>
 
 Kosaleshaya Mandahaasa Dasaposhanaaya  
-Vasavaadi Vinuta Sadvarada Mangalam || 1 ||
+Vasavaadi Vinuta Sadvarada Mangalam ॥ 1 ॥
 
 <br>
 
 Charu Kunkumopeta Chandanaadi Charchitaaya  
-Haara Kataka Shobhitaya Bhuri Mangalam || 2 ||
+Haara Kataka Shobhitaya Bhuri Mangalam ॥ 2 ॥
 
 <br>
 
 Lalita Ratnakundalaaya Tulasi Vanamaalikaya  
-Jalada Sadrusha Dehaaya Charu Mangalam || 3 ||
+Jalada Sadrusha Dehaaya Charu Mangalam ॥ 3 ॥
 
 <br>
 
 Devakeeputraaya Deva Devottamaaya  
-Chapa Jaata Guru Varaaya Bhavya Mangalam || 4 ||
+Chapa Jaata Guru Varaaya Bhavya Mangalam ॥ 4 ॥
 
 <br>
 
 Pundareekakshaaya Poorna Chandrananaaya  
-Andajata Vaahanaaya Atula Mangalam || 5 ||
+Andajata Vaahanaaya Atula Mangalam ॥ 5 ॥
 
 <br>
 
 Vimala Roopaaya Vivida Vedanta Vedyaya  
-Sujana Chitta Kaamitaaya Shubhanga Mangalam || 6 ||
+Sujana Chitta Kaamitaaya Shubhanga Mangalam ॥ 6 ॥
 
 <br>
 
 Ramadasa Mridula Hrudaya Taamarasa Nivaasaaya  
-Swami Bhadragirivaraaya Sarva Mangalam || 7 ||
+Swami Bhadragirivaraaya Sarva Mangalam ॥ 7 ॥
