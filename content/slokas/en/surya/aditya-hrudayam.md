@@ -175,3 +175,7 @@ Sarvayatnena Mahata Vadhe Tasy Dhritobhavat ॥ 32 ॥
 
 Adha Raviravadannirikshya Ramam Muditamanah Param Prahrishyamana  
 Nishicharapati Samkshayam Viditva Suragana Madhyagato Vachastvareti ॥ 33 ॥
+
+<br>
+
+॥ Iti Shrimadramayane Valmikiye Adikavye Yuddhakande Saptottarashatatamah Sargah ॥

@@ -44,3 +44,7 @@ Ishtakamam Tu Kamarthi Dharmarthi Mokshamakshayam ॥ 6 ॥
 
 Vidyarambhe Vivahe Cha Praveshe Nirgame Tatha  
 Sangrame Sankate Chaiva Vighnastasya Na Jayate ॥ 7 ॥
+
+<br>
+
+॥ Iti Mudgalapuranoktam Shri Ganesha Dvadashanama Stotram Sampurnam ॥

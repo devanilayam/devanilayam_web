@@ -49,3 +49,7 @@ Samvatsarena Siddhim Cha Labhate Natra Samshayah ॥ 7 ॥
 
 Ashtebhyo Brahmanebhyashcha Likhitva Yah Samarpayet  
 Tasya Vidya Bhavetsarva Ganeshasya Prasadatah ॥ 8 ॥
+
+<br>
+
+॥ Iti Shri Naradapurane Sankatanashanam Ganesha Stotram Sampurnam ॥
