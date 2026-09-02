@@ -12,6 +12,6 @@ date: 2025-12-01
 # Vakratundaya Mantra
 
 Vakratunda Mahakaya Suryakoti Samaprabha  
-Nirvighnam Kurume Deva Sarva Karyeshu Sarvada ॥
+Nirvighnam Kuru Me Deva Sarvakaryeshu Sarvada ॥
 
 <!--more-->
