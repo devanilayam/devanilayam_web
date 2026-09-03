@@ -140,3 +140,7 @@ Suryagrahe Mahanadyam Pratimasannidhau Va Japtva Siddhamantro Bhavati ।
 Mahavighnatpramuchyate । Mahadoshatpramuchyate ।  
 Mahapapatpramuchyate । Sa Sarvavidbhavati Sa Sarvavidbhavati ।  
 Ya Evam Veda Ityupanishat ॥ 15 ॥
+
+<br>
+
+॥ Iti Shri Ganapatyatharvashirshopanishat Samapta ॥

@@ -12,23 +12,23 @@ date: 2025-12-01
 # Aditya Hrudayam
 
 Tato Yuddha Parishrantam Samare Chintaya Sthitam  
-Ravanam Chagrato Drushtva Yuddhaya Samupasthitam ॥ 1 ॥
+Ravanam Chagrato Drishtva Yuddhaya Samupasthitam ॥ 1 ॥
 
 <br>
 
-Daivataishcha Samaagamya Drashtumabhyagato Ranam  
-Upagamyabraveedramam Agastyo Bhagavan Rishih ॥ 2 ॥
+Daivataishcha Samagamya Drashtumabhyagato Ranam  
+Upagamyabravidramam Agastyo Bhagavan Rishih ॥ 2 ॥
 
 <!--more-->
 
 <br>
 
 Rama Rama Mahabaho Shrinu Guhyam Sanatanam  
-Yena Sarvanarin Vatsa Samarayajayishyasi ॥ 3 ॥
+Yena Sarvanarin Vatsa Samare Vijayishyasi ॥ 3 ॥
 
 <br>
 
-Aditya Hrudayam Punyam Sarva Shatru Vinaashanam  
+Aditya Hridayam Punyam Sarvashatru Vinashanam  
 Jayavaham Japennityam Akshayyam Paramam Shivam ॥ 4 ॥
 
 <br>
@@ -43,135 +43,129 @@ Pujayasva Vivasvantam Bhaskaram Bhuvaneshvaram ॥ 6 ॥
 
 <br>
 
-Sarvadevamayo Devah Sarvadevamayo Harih  
-Sarva Devatmayo Hyesha Tejorasmi Samanvitah ॥ 7 ॥
+Sarvadevatmako Hyesha Tejasvi Rashmibhavanah  
+Esha Devasura Ganan Lokan Pati Gabhastibhih ॥ 7 ॥
 
 <br>
 
-Esha Devasuraganan Lokan Pati Gabhastibhih  
-Esha Brahma Cha Vishnushcha Shivah Skandah Prajapatih ॥ 8 ॥
+Esha Brahma Cha Vishnushcha Shivah Skandah Prajapatih  
+Mahendro Dhanadah Kalo Yamah Somo Hyapam Patih ॥ 8 ॥
 
 <br>
 
-Mahendro Dhanadah Kalo Yama Somo Hyapam Patih  
-Pitaro Vasavah Sadhya Hyashvinau Maruto Manuh ॥ 9 ॥
-
-<br>
-
-Vayurvanhih Prajaprana Rituksha Dhipatirdivah  
-Tapati Vishvatomukham Shashvatah Shashvato Dhruvah ॥ 10 ॥
-
-<br>
-
-Agni Varnah Shatabanhuh Sahasraksho Jitavratah  
-Tapati Tapati Lokam Trishcha Lokam Cha Sahasrashah ॥ 11 ॥
+Pitaro Vasavah Sadhya Hyashvinau Maruto Manuh  
+Vayurvahnih Prajapranah Ritukarta Prabhakarah ॥ 9 ॥
 
 <br>
 
 Adityah Savita Suryah Khagah Pusha Gabhastiman  
-Suvarnasadrisho Bhanuh Hiranyaretah Divakarah ॥ 12 ॥
+Suvarnasadrisho Bhanuh Hiranyareta Divakarah ॥ 10 ॥
 
 <br>
 
-Haridashvah Sahasrarchih Saptasaptirmarichiman  
-Timiromathanah Shambhuh Twashta Martandakoamshuman ॥ 13 ॥
+Haridashvah Sahasrarchih Saptasapti Marichiman  
+Timironmathanah Shambhuh Twashta Martandakoamshuman ॥ 11 ॥
 
 <br>
 
 Hiranyagarbhah Shishirah Tapano Bhaskaro Ravih  
-Agnigarbhoaditeh Putrah Shankhah Shishiranashanah ॥ 14 ॥
+Agnigarbhoditeh Putrah Shankhah Shishiranashanah ॥ 12 ॥
 
 <br>
 
-Vyomanathastamobhedi Rgyajuhsamaparagah  
-Ghanavrishtiraparam Mitrah Vindhyavithi Plavangamah ॥ 15 ॥
+Vyomanatha Stamobhedi Rigyajuhsama Paragah  
+Ghanavrishtirapam Mitrah Vindhyavithi Plavangamah ॥ 13 ॥
 
 <br>
 
 Atapi Mandali Mrityuh Pingalah Sarvatapanah  
-Kavirvishvo Mahateja Raktah Sarvabhavodbhavah ॥ 16 ॥
+Kavirvishvo Mahateja Raktah Sarvabhavodbhavah ॥ 14 ॥
 
 <br>
 
-Nakshatra Grahataranam Adhipo Vishvabhavanah  
-Tejasamapi Tejasvi Dvadashatmannamoastu Te ॥ 17 ॥
+Nakshatra Graha Taranam Adhipo Vishvabhavanah  
+Tejasamapi Tejasvi Dvadashatman Namostu Te ॥ 15 ॥
 
 <br>
 
 Namah Purvaya Giraye Pashchimayadraye Namah  
-Jyotirgananam Pataye Dinadhipataye Namah ॥ 18 ॥
+Jyotirgananam Pataye Dinadhipataye Namah ॥ 16 ॥
 
 <br>
 
 Jayaya Jayabhadraya Haryashvaya Namo Namah  
-Namo Namah Sahasramsho Adityaya Namo Namah ॥ 19 ॥
+Namo Namah Sahasramsho Adityaya Namo Namah ॥ 17 ॥
 
 <br>
 
-Nam Ugraya Viraya Sarangaya Namo Namah  
-Namah Padmaprabodhaya Martandaya Namo Namah ॥ 20 ॥
+Nama Ugraya Viraya Sarangaya Namo Namah  
+Namah Padmaprabodhaya Martandaya Namo Namah ॥ 18 ॥
 
 <br>
 
 Brahmeshanachyuteshaya Suryayaditya Varchase  
-Bhasvate Sarvabhakshaya Raudraya Vapushe Namah ॥ 21 ॥
+Bhasvate Sarvabhakshaya Raudraya Vapushe Namah ॥ 19 ॥
 
 <br>
 
-Tamoghnya Himaghnya Shatrughnyamit Atmane  
-Kritaghnaghnya Devaya Jyotisham Pataye Namah ॥ 22 ॥
+Tamoghnaya Himaghnaya Shatrughnaya Mitatmane  
+Kritaghnaghnaya Devaya Jyotisham Pataye Namah ॥ 20 ॥
 
 <br>
 
-Tapta Chamikarabha Vahnaye Vishvakarmane  
-Namastamobhinighnaya Ravaye Lokasakshine ॥ 23 ॥
+Tapta Chamikarabhaya Vahnaye Vishvakarmane  
+Namastamobhi Nighnaya Ravaye Lokasakshine ॥ 21 ॥
 
 <br>
 
 Nashayatyesha Vai Bhutam Tadeva Srijati Prabhuh  
-Payatyesha Tapatyesha Varshatyesha Gabhastibhih ॥ 24 ॥
+Payatyesha Tapatyesha Varshatyesha Gabhastibhih ॥ 22 ॥
 
 <br>
 
 Esha Supteshu Jagarti Bhuteshu Parinishthitah  
-Esha Evagnihotram Cha Phalam Chaivagni Hotrinam ॥ 25 ॥
+Esha Evagnihotram Cha Phalam Chaivagni Hotrinam ॥ 23 ॥
 
 <br>
 
 Vedashcha Kratavashchaiva Kratunam Phalameva Cha  
-Yani Krityani Lokeshu Sarva Esha Ravih Prabhuh ॥ 26 ॥
+Yani Krityani Lokeshu Sarva Esha Ravih Prabhuh ॥ 24 ॥
 
 <br>
 
 Ena Mapatsu Kricchreshu Kantareshu Bhayeshu Cha  
-Kirtayan Purushah Kashchinnavashidati Raghava ॥ 27 ॥
+Kirtayan Purushah Kashchinnavasidati Raghava ॥ 25 ॥
 
 <br>
 
-Pujayasvainamekagro Devadevam Jagatpatim  
-Etat Trigunitam Japtva Yuddheshu Vijayishyasi ॥ 28 ॥
+Pujayasvaina Mekagrah Devadevam Jagatpatim  
+Etat Trigunitam Japtva Yuddheshu Vijayishyasi ॥ 26 ॥
 
 <br>
 
 Asmin Kshane Mahabaho Ravanam Twam Vadhishyasi  
-Evamuktv Tadaagastyah Jagama Cha Yathagatam ॥ 29 ॥
+Evamuktva Tadagastyo Jagama Cha Yathagatam ॥ 27 ॥
 
 <br>
 
 Etachchhrutva Mahatejah Nashtashokobhavattada  
-Dharayamas Supriteh Raghava Prayatatmavan ॥ 30 ॥
+Dharayamasa Supritah Raghavah Prayatatmavan ॥ 28 ॥
 
 <br>
 
 Adityam Prekshya Japtva Tu Param Harshamavaptavan  
-Trirachamya Shuchirbhutva Dhanuradaya Viryavan ॥ 31 ॥
+Trirachamya Shuchirbhutva Dhanuradaya Viryavan ॥ 29 ॥
 
 <br>
 
 Ravanam Prekshya Hrishtatma Yuddhaya Samupagamat  
-Sarvayatnena Mahata Vadhe Tasy Dhritobhavat ॥ 32 ॥
+Sarvayatnena Mahata Vadhe Tasya Dhritobhavat ॥ 30 ॥
 
 <br>
 
-Adha Raviravadannirikshya Ramam Muditamanah Param Prahrishyamana  
-Nishicharapati Samkshayam Viditva Suragana Madhyagato Vachastvareti ॥ 33 ॥
+Adha Raviravadannirikshya Ramam Muditamanah Paramam Prahrishyamanah  
+Nishicharapati Sankshayam Viditva Suragana Madhyagato Vachastvareti ॥ 31 ॥
+
+<br>
+
+॥ Iti Shrimadramayane Valmikiye Adikavye Yuddhakande Saptottarashatatamah Sargah ॥

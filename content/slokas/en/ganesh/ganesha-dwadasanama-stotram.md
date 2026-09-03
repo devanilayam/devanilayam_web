@@ -11,16 +11,40 @@ date: 2026-08-31
 
 # Ganesha Dwadasanama Stotram
 
-Sumukhashchaikadantashcha Kapilo Gajakarnakah  
-Lambodarashcha Vikato Vighnarajo Ganadhipah ॥ 1 ॥
+Shuklambaradharam Vishnum Shashivarnam Chaturbhujam  
+Prasannavadanam Dhyayetsarvavighnopashantaye ॥ 1 ॥
 
 <!--more-->
 <br>
 
-Dhumraketurganadhyaksho Bhalachandro Gajananah  
-Dvadashaitani Namani Yah Pathechchhrinuyadapi ॥ 2 ॥
+Abhipsitarthasiddhyartham Pujito Yah Surasuraih  
+Sarvavighnaharastasmai Ganadhipataye Namah ॥ 2 ॥
+
+<br>
+
+Gananamadhipashchando Gajavaktrastrilochanah  
+Prasanno Bhava Me Nityam Varadatarvinayaka ॥ 3 ॥
+
+<br>
+
+Sumukhashchaikadantashcha Kapilo Gajakarnakah  
+Lambodarashcha Vikato Vighnanasho Vinayakah ॥ 4 ॥
+
+<br>
+
+Dhumraketurganadhyaksho Phalachandro Gajananah  
+Dvadashaitani Namani Ganeshasya Tu Yah Pathet ॥ 5 ॥
+
+<br>
+
+Vidyarthi Labhate Vidyam Dhanarthi Vipulam Dhanam  
+Ishtakamam Tu Kamarthi Dharmarthi Mokshamakshayam ॥ 6 ॥
 
 <br>
 
 Vidyarambhe Vivahe Cha Praveshe Nirgame Tatha  
-Sangrame Sankate Chaiva Vighnastasya Na Jayate ॥ 3 ॥
+Sangrame Sankate Chaiva Vighnastasya Na Jayate ॥ 7 ॥
+
+<br>
+
+॥ Iti Mudgalapuranoktam Shri Ganesha Dvadashanama Stotram Sampurnam ॥

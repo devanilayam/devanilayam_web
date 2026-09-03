@@ -64,5 +64,16 @@
          // margin: px-to-rem(32);
          padding: px-to-rem(32);
       }
+
+      // Long-form entries (a vratha kalpam, a pooja vidhi) break into `##`
+      // sections. The global h2 sets only a bottom margin, which leaves a
+      // heading sitting flush against the section above it.
+      h2 {
+         margin-top: px-to-rem(24);
+
+         @include web-screen {
+            margin-top: px-to-rem(32);
+         }
+      }
    }
 }

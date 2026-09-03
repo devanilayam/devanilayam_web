@@ -214,9 +214,14 @@ Chhutahi Bandi Maha Sukh Hoi ॥ 38 ॥
 <br>
 
 Jo Yah Padhe Hanuman Chalisa  
-Hoye Siddhi Sakhi Gaurisa ॥ 40 ॥
+Hoye Siddhi Sakhi Gaurisa ॥ 39 ॥
 
 <br>
 
 Tulsidas Sada Hari Chera  
-Keejai Nath Hriday Mah Dera ॥
+Keejai Nath Hriday Mah Dera ॥ 40 ॥
+
+<br>
+
+Pavantanay Sankat Harana, Mangal Murati Roop  
+Ram Lakhan Sita Sahit, Hriday Basahu Sur Bhoop ॥

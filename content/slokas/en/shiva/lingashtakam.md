@@ -70,3 +70,7 @@ Tatpranamami Sada Shiva Lingam ॥ 8 ॥
 
 Lingashtakamidam Punyam Yah Pathet Shiva Sannidhau  
 Shivalokamavapnoti Shivena Saha Modate ॥
+
+<br>
+
+॥ Iti Shri Lingashtakam Sampurnam ॥

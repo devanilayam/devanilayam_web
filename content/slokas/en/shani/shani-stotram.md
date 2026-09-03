@@ -3,15 +3,15 @@ lord_id: shani
 lord: Shani
 sloka_id: shani-stotram
 title: Shani Stotram
-description: Shani Stotram is a powerful hymn dedicated to Lord Shani (Shaneeswara), the deity representing the planet Saturn. It is chanted to seek his blessings, mitigate adverse effects, and receive justice and protection.
+description: Shani Stotram is a powerful hymn dedicated to Lord Shani (Shaneeshwara), the deity representing the planet Saturn. It is chanted to seek his blessings, mitigate adverse effects, and receive justice and protection.
 lang: en
-tags: [Shani Stotram, Shani, Shaneeswara, Saturn, Shaneshchara]
+tags: [Shani Stotram, Shani, Shaneeshwara, Saturn, Shaneshchara]
 date: 2025-12-01
 ---
 
 # Shani Stotram
 
-Konastha Pingalo Babhruh Krishno Roudrontako Yamah  
+Konastha Pingalo Babhruh Krishno Raudrantako Yamah  
 Sauri Shaneshcharo Mandah Pippaladennamostute ॥
 
 <!--more-->
@@ -19,7 +19,7 @@ Sauri Shaneshcharo Mandah Pippaladennamostute ॥
 <br>
 
 Nilanjana Samabhasam Raviputram Yamagrajam  
-Chaya Martanda Sambhutam Tam Namami Shaishcharam ॥
+Chaya Martanda Sambhutam Tam Namami Shanaishcharam ॥
 
 <br>
 

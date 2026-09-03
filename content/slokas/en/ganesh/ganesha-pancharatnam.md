@@ -51,3 +51,7 @@ Mahaganesha Pancharatnamadarena Yo Anvaham
 Prajalpati Prabhatake Hridi Smaran Ganeshvaram  
 Arogatamadoshatam Susahitim Suputratam  
 Samahitayurashtabhutimabhyupaiti So Achirat ॥
+
+<br>
+
+॥ Iti Shrimachchhankaracharyavirachitam Shri Mahaganesha Pancharatna Stotram Sampurnam ॥
