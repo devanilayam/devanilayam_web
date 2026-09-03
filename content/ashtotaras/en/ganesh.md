@@ -4,7 +4,7 @@ lord: Ganesh
 title: Sri Vinayaka Ashtottara Shatanamavali
 description: The 108 names of Lord Vinayaka.
 lang: en
-tags: [Vakratundaya, Ganesh, Ganesha Mantra, Vighnaharta, Ashtottaram]
+tags: [Vinayaka, Ganesh, Ganesha Mantra, Vighnaharta, Ashtottaram]
 date: 2025-12-29
 ---
 
