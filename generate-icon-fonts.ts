@@ -50,6 +50,10 @@ const USED_ICONS = [
    "book-open-01",
    "music-note-01",
    "star-01",
+   // Festival calendar (app/components/FestivalCalendar)
+   "calendar-heart-01",
+   "chevron-left",
+   "chevron-right",
    // Footer
    "hearts",
    // Social tiles (see app/configs/index.ts)

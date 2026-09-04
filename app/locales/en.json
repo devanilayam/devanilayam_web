@@ -75,7 +75,8 @@
          "about": "About",
          "slokas": "Slokas",
          "ashtotaras": "Ashtotaras",
-         "blogs": "Blogs"
+         "blogs": "Blogs",
+         "festivals": "Festivals"
       }
    },
    "footer": {
@@ -153,6 +154,295 @@
       "maintainers": {
          "title": "Who maintains this",
          "body": "Devanilayam is built and maintained by Mouli Bheemaneti, with contributions from the community."
+      }
+   },
+   "festivals": {
+      "pageTitle": "Festival Calendar",
+      "subtitle": "Every major Hindu festival of the year on one calendar. Tap any day to read what it means and how it is kept.",
+      "seo": {
+         "title": "Hindu Festival Calendar 2026 & 2027",
+         "description": "A simple Hindu festival calendar for 2026 and 2027 with the meaning of each day in English, Telugu and Hindi. Sankranti, Ugadi, Deepavali, Onam, Navratri and more."
+      },
+      "today": "Today",
+      "goToToday": "Go to today",
+      "previousMonth": "Previous month",
+      "nextMonth": "Next month",
+      "monthFestivals": "Festivals this month",
+      "noFestivals": "No festivals fall in this month.",
+      "openFestival": "Read about {name}",
+      "festivalCount": "{count} festival | {count} festivals",
+      "coverage": "Dates are curated for {start} and {end}.",
+      "regions": {
+         "pan": "Observed across India",
+         "south": "South India",
+         "north": "North India",
+         "rest": "Rest of India"
+      },
+      "dialog": {
+         "close": "Close",
+         "significance": "Why this day matters",
+         "observance": "How it is kept",
+         "readSlokas": "Read {deity} slokas"
+      },
+      "deities": {
+         "ganesh": "Ganesh",
+         "hanuman": "Hanuman",
+         "rama": "Rama",
+         "shani": "Shani",
+         "shiva": "Shiva",
+         "surya": "Surya"
+      },
+      "entries": {
+         "makar-sankranti": {
+            "name": "Makar Sankranti · Pongal · Sankranti",
+            "significance": "The sun turns north into Capricorn, ending the long nights and beginning the half of the year the tradition calls Uttarayana. It is a thanksgiving for the harvest that has just come in.",
+            "observance": "The first rice of the season is boiled with jaggery until it spills over, sesame and jaggery sweets are shared, and kites go up across the north."
+         },
+         "maha-shivaratri": {
+            "name": "Maha Shivaratri",
+            "significance": "The great night of Shiva, kept as the night he appeared as the endless pillar of light and as the night he drank the world's poison to save it.",
+            "observance": "Devotees fast through the day and stay awake through the night, bathing the Shiva linga in milk, water and bilva leaves in four watches until dawn."
+         },
+         "holi": {
+            "name": "Holi",
+            "significance": "The festival of colour and of spring, marking the burning away of the old year's ill will and the play of Krishna with the cowherds of Vrindavan.",
+            "observance": "Coloured powder and water are thrown freely in the streets, old quarrels are declared over, and gujiya and thandai are shared."
+         },
+         "sri-rama-navami": {
+            "name": "Sri Rama Navami",
+            "significance": "The birth of Rama at Ayodhya, at noon on the ninth day of Chaitra. He is remembered as the one who kept his word at every cost.",
+            "observance": "The Ramayana is read, the wedding of Rama and Sita is enacted in temples, and panakam and vada pappu are offered and shared."
+         },
+         "akshaya-tritiya": {
+            "name": "Akshaya Tritiya",
+            "significance": "A day said to be imperishable — whatever is begun or given on it is believed never to diminish. It needs no auspicious hour of its own.",
+            "observance": "New ventures are started, gold and grain are bought, and food and water are given away in the belief that such giving never runs out."
+         },
+         "buddha-purnima": {
+            "name": "Buddha Purnima",
+            "significance": "The full moon on which the Buddha was born, reached awakening and passed away — three turning points on one day.",
+            "observance": "Temples are lit and decorated, the sutras are recited, and the day is kept with vegetarian food, charity and acts of kindness to animals."
+         },
+         "guru-purnima": {
+            "name": "Guru Purnima",
+            "significance": "The full moon set aside for the teacher, honouring Veda Vyasa, who arranged the Vedas and gave the tradition its shape.",
+            "observance": "Students visit their teachers, offer flowers and a token gift, and take up the year's study or practice afresh."
+         },
+         "raksha-bandhan": {
+            "name": "Raksha Bandhan",
+            "significance": "A thread tied on the wrist stands for protection asked for and promised — most often between a sister and a brother, but given to anyone taken into that trust.",
+            "observance": "The rakhi is tied after aarti and a sweet, and the one who receives it gives a gift and a promise to stand by the giver."
+         },
+         "krishna-janmashtami": {
+            "name": "Krishna Janmashtami",
+            "significance": "The midnight birth of Krishna in the prison at Mathura, and the beginning of the life that gave the world the Bhagavad Gita.",
+            "observance": "The fast is kept until midnight, when the infant is bathed and cradled; butter and curd are offered, and pots of curd are broken in the streets."
+         },
+         "ganesh-chaturthi": {
+            "name": "Ganesh Chaturthi · Vinayaka Chavithi",
+            "significance": "The birthday of Ganesha, who is asked first at every beginning because he is the one who clears what stands in the way.",
+            "observance": "A clay image is brought home and worshipped for a day to eleven, with modak, twenty-one blades of durva grass, and immersion at the end."
+         },
+         "sharad-navratri": {
+            "name": "Sharad Navratri",
+            "significance": "Nine nights given to the Goddess in her three aspects — Durga for strength, Lakshmi for plenty, Saraswati for learning.",
+            "observance": "A pot is installed on the first morning and lit for nine days; there is fasting, garba and dandiya in the west, and Bommala Koluvu in the south."
+         },
+         "vijayadashami": {
+            "name": "Vijayadashami · Dasara",
+            "significance": "The tenth day, when Rama defeated Ravana and Durga defeated Mahishasura — in both stories, the day a long fight was finally won.",
+            "observance": "Effigies of Ravana are burnt in the north; in the south children are started on their letters, and tools and instruments are blessed."
+         },
+         "dhanteras": {
+            "name": "Dhanteras",
+            "significance": "The day Dhanvantari rose from the churning of the ocean bearing the pot of amrita, and the opening of the Deepavali days.",
+            "observance": "Something metal is bought for the house, the first lamp of the season is lit at the door, and the threshold is drawn with rangoli."
+         },
+         "naraka-chaturdashi": {
+            "name": "Naraka Chaturdashi · Choti Diwali",
+            "significance": "Krishna's defeat of Narakasura at dawn. In much of the south this, and not the following night, is Deepavali itself.",
+            "observance": "The family rises before sunrise for an oil bath, new clothes are worn, and the first crackers of the festival are lit at first light."
+         },
+         "deepavali": {
+            "name": "Deepavali · Diwali",
+            "significance": "The festival of lights, kept for Rama's return to Ayodhya after fourteen years and for Lakshmi, who is said to enter a house that is clean and lit.",
+            "observance": "The house is cleaned and every doorway lamp lit, Lakshmi puja is done in the evening, and sweets are carried to neighbours."
+         },
+         "bhai-dooj": {
+            "name": "Bhai Dooj · Bhai Phota",
+            "significance": "Yama visited his sister Yamuna on this day and she marked his forehead; the day closes the Deepavali week on that note of family.",
+            "observance": "A sister applies tilak to her brother's forehead, prays for his long life, and feeds him a meal she has made herself."
+         },
+         "bhogi": {
+            "name": "Bhogi",
+            "significance": "The first day of the Sankranti days, when what is worn out is given to the fire so the new year begins with nothing old carried into it.",
+            "observance": "A bonfire is lit before dawn with things no longer needed, and children have Bhogi Pallu — berries and coins — poured over their heads."
+         },
+         "kanuma": {
+            "name": "Kanuma",
+            "significance": "The third of the Sankranti days, kept for the cattle that pull the plough and carry the harvest — the year's thanks paid to the animals.",
+            "observance": "Cattle are washed, their horns painted and garlanded, and led in procession; in villages there are bull races and cock fights."
+         },
+         "ratha-saptami": {
+            "name": "Ratha Saptami",
+            "significance": "The sun's chariot turns north on this seventh day, treated as Surya's own birthday and the true start of the warm season.",
+            "observance": "A bath is taken at sunrise with arka leaves on the head and shoulders, and rice cooked in milk is offered to the rising sun."
+         },
+         "thaipusam": {
+            "name": "Thaipusam",
+            "significance": "The day Parvati gave Murugan the vel, the spear with which he defeated Surapadman — kept as the victory of clear resolve over pride.",
+            "observance": "Devotees fast, shave their heads and carry the kavadi in procession to Murugan's hill temples, often on foot through the night."
+         },
+         "ugadi": {
+            "name": "Ugadi",
+            "significance": "The Telugu and Kannada new year, the first day of Chaitra. The year's panchangam is read out, setting what lies ahead.",
+            "observance": "Ugadi pachadi is made with six tastes together — sweet, sour, salt, bitter, pungent, tart — because the year will hold all six."
+         },
+         "tamil-puthandu": {
+            "name": "Tamil Puthandu",
+            "significance": "The Tamil new year, on the sun's entry into Aries. It opens the month of Chithirai and the solar year.",
+            "observance": "The kanni is arranged the night before so it is the first thing seen on waking, and mangai pachadi of six tastes is served."
+         },
+         "vishu": {
+            "name": "Vishu",
+            "significance": "The Malayali new year and the day of equal light. What the eyes fall on first is believed to set the tone of the year.",
+            "observance": "The Vishukkani — rice, gold, a mirror, konna flowers, a lamp before Krishna — is arranged at night and looked at first thing at dawn."
+         },
+         "narasimha-jayanti": {
+            "name": "Narasimha Jayanti",
+            "significance": "Vishnu came as Narasimha at dusk on this day, neither man nor beast, to keep a boon intact and still protect the child Prahlada.",
+            "observance": "The fast is kept through the day and broken at sunset, the hour of the appearance, with the Narasimha stotras recited."
+         },
+         "varalakshmi-vratam": {
+            "name": "Varalakshmi Vratam",
+            "significance": "The Friday before the Shravana full moon, kept for Lakshmi in her boon-giving form, for the health and wellbeing of the household.",
+            "observance": "A kalasham is decorated as the Goddess, the sacred thread is tied on the wrist, and married women invite each other for tamboolam."
+         },
+         "onam": {
+            "name": "Onam · Thiruvonam",
+            "significance": "Kerala's harvest festival and the day the good king Mahabali is allowed back to see that his people are still well.",
+            "observance": "Pookalam flower carpets are laid for ten days, the Onasadya is served on a banana leaf, and there are vallam kali boat races."
+         },
+         "bathukamma": {
+            "name": "Saddula Bathukamma",
+            "significance": "The last and largest night of Telangana's flower festival, honouring Gauri in the seasonal blooms of the countryside.",
+            "observance": "Flowers are stacked into a conical bathukamma, women circle it singing through the evening, and it is set afloat on water at night."
+         },
+         "ayudha-puja": {
+            "name": "Ayudha Puja · Saraswati Puja",
+            "significance": "The ninth day of Navratri, when the tools of a trade are honoured as the means by which the household is kept.",
+            "observance": "Books, instruments, machines and vehicles are cleaned, decorated with turmeric and flowers, and left unused for the day."
+         },
+         "karthika-deepam": {
+            "name": "Karthika Deepam · Kartika Purnima",
+            "significance": "The full moon of Karthika, when Shiva stood as the pillar of fire whose top and bottom could not be found.",
+            "observance": "Lamps are lit in every doorway and floated on tanks and rivers; the great beacon is lit on the hill at Tiruvannamalai."
+         },
+         "vaikunta-ekadashi": {
+            "name": "Vaikunta Ekadashi · Mukkoti Ekadashi",
+            "significance": "The one day the northern gate of Vaikuntha is said to stand open. Passing through it is held to be the release of a lifetime.",
+            "observance": "A full fast and a night awake; before dawn devotees queue to pass through the Vaikuntha Dwaram at Tirumala, Srirangam and elsewhere."
+         },
+         "lohri": {
+            "name": "Lohri",
+            "significance": "Punjab's midwinter fire, marking the end of the coldest days and the sugarcane harvest that comes in with them.",
+            "observance": "A bonfire is lit at dusk and circled while sesame, jaggery, popcorn and rewri are thrown into it; the year's newborns are welcomed by name."
+         },
+         "vasant-panchami": {
+            "name": "Vasant Panchami",
+            "significance": "The first day of spring, given to Saraswati, from whom learning, speech and music are asked.",
+            "observance": "Yellow is worn, books and instruments are placed before the Goddess, and small children are helped to write their first letters."
+         },
+         "holika-dahan": {
+            "name": "Holika Dahan",
+            "significance": "The night before Holi, when Holika burned and the child Prahlada walked out of the fire unhurt — trust outlasting the harm meant for it.",
+            "observance": "A pyre is built at the crossroads and lit after moonrise; families circle it, and new grain is roasted in the embers."
+         },
+         "chaitra-navratri": {
+            "name": "Chaitra Navratri",
+            "significance": "Nine nights of the Goddess opening the lunar new year, ending on the day Rama was born.",
+            "observance": "The pot is installed and barley sown on the first day; the fast is kept for nine days and broken with the kanya puja on the eighth or ninth."
+         },
+         "hanuman-jayanti": {
+            "name": "Hanuman Jayanti",
+            "significance": "The birth of Hanuman, whose strength was never his own point — it was always placed at the service of Rama.",
+            "observance": "The Hanuman Chalisa is read forty times or more, sindoor and oil are offered, and boondi and bananas are distributed."
+         },
+         "baisakhi": {
+            "name": "Baisakhi · Vaisakhi",
+            "significance": "Punjab's harvest day, and the day in 1699 that Guru Gobind Singh founded the Khalsa at Anandpur Sahib.",
+            "observance": "The Guru Granth Sahib is read through, nagar kirtan processions go out, and bhangra and gidda are danced on the cut fields."
+         },
+         "shani-jayanti": {
+            "name": "Shani Jayanti",
+            "significance": "The appearance of Shani, the son of Surya, who is the slow and exact keeper of the account of one's own actions.",
+            "observance": "Sesame oil is offered at his shrine, black sesame and iron are given in charity, and the Shani stotram is recited on the Saturday."
+         },
+         "vat-savitri": {
+            "name": "Vat Savitri Vrat",
+            "significance": "Savitri argued Yama into returning her husband's life on this day; the banyan she waited under stands for a life that keeps going.",
+            "observance": "Married women fast, circle a banyan tree winding thread around it, and hear the story of Savitri and Satyavan."
+         },
+         "nag-panchami": {
+            "name": "Nag Panchami",
+            "significance": "The serpents are honoured on this day — as guardians of the fields and the water, and as the ornament Shiva wears without fear.",
+            "observance": "Milk and puffed rice are offered at anthills and serpent stones, and no digging or ploughing of the earth is done."
+         },
+         "hartalika-teej": {
+            "name": "Hartalika Teej",
+            "significance": "Parvati's fast to win Shiva, kept the day before Ganesh Chaturthi. It stands for a choice held to when everything argued against it.",
+            "observance": "Women fast without food or water through the day and night, make sand images of Shiva and Parvati, and stay awake singing until dawn."
+         },
+         "karva-chauth": {
+            "name": "Karva Chauth",
+            "significance": "A fast kept from sunrise to moonrise for the long life of a husband, on the fourth day after the Sharad full moon.",
+            "observance": "The sargi is eaten before dawn; at night the moon is seen through a sieve, then the husband's face, and he gives the first sip of water."
+         },
+         "govardhan-puja": {
+            "name": "Govardhan Puja · Annakut",
+            "significance": "Krishna lifted the Govardhan hill on his finger for seven days to shelter Vraj from the rain — the day the ordinary hill was honoured over the storm.",
+            "observance": "A hill of food is built before the deity and offered as annakut, and cattle are washed, garlanded and fed first."
+         },
+         "chhath-puja": {
+            "name": "Chhath Puja",
+            "significance": "Four days of thanks to the setting and rising sun and to Chhathi Maiya, kept without a priest and without an image.",
+            "observance": "A fast without water is held for over thirty hours; the family stands in the river at sunset and again at sunrise to offer arghya."
+         },
+         "gudi-padwa": {
+            "name": "Gudi Padwa",
+            "significance": "The Marathi new year and the first day of Chaitra, remembered as the day Rama returned to Ayodhya and the day the world was made.",
+            "observance": "A gudi — a bright cloth, neem leaves and a garland over an upturned pot on a pole — is raised at the window, and shrikhand puri is eaten."
+         },
+         "poila-boishakh": {
+            "name": "Poila Boishakh",
+            "significance": "The Bengali new year, opening the month of Boishakh and, traditionally, the year's accounts.",
+            "observance": "Traders open the new ledger with the haal khata, homes are drawn with alpona, and the day is spent in new clothes and visiting."
+         },
+         "bohag-bihu": {
+            "name": "Bohag Bihu · Rongali Bihu",
+            "significance": "Assam's spring new year and the start of the sowing, the most joyful of the three Bihus.",
+            "observance": "Cattle are bathed in turmeric on the first day and people greet each other on the second; the Bihu dance and husori songs go on for days."
+         },
+         "jagannath-rath-yatra": {
+            "name": "Jagannath Rath Yatra",
+            "significance": "Jagannath, Balabhadra and Subhadra leave the temple at Puri for their aunt's shrine — the one time the deities come out to the street.",
+            "observance": "Three tall wooden chariots are built afresh each year and pulled along the Grand Road by the crowd itself, over some three kilometres."
+         },
+         "anant-chaturdashi": {
+            "name": "Anant Chaturdashi · Ganesh Visarjan",
+            "significance": "The fourteenth day, kept for Vishnu as Ananta, the endless. It is also the day the Ganesh festival closes.",
+            "observance": "A fourteen-knotted thread is tied on the wrist, and the Ganesh images are carried in procession and immersed in water."
+         },
+         "mahalaya-amavasya": {
+            "name": "Mahalaya Amavasya",
+            "significance": "The last day of the fortnight of the ancestors and the eve of Durga Puja — the day the Goddess is invited to begin her journey home.",
+            "observance": "Tarpan is offered to the ancestors at the river before dawn, and the Mahishasura Mardini recital is heard at daybreak."
+         },
+         "durga-puja": {
+            "name": "Durga Puja",
+            "significance": "Bengal's great autumn festival, keeping the days Durga spends at her parents' home before returning to Kailash.",
+            "observance": "Pandals open from Shashthi, dhak drums play through the days, and the image is taken for immersion on Vijaya Dashami."
+         }
       }
    }
 }

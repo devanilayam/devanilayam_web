@@ -6,7 +6,7 @@
 */
 @font-face {
     font-family: "icons";
-    src: url("./icons.woff2?3241eb2057d2ba9cba2164e2fc6b7641") format("woff2");
+    src: url("./icons.woff2?4d0ee0ef4f202bb5b4cbd49a2b207d63") format("woff2");
     /* `block` rather than `swap`: these glyphs live in the Private Use Area, so
        a fallback face renders them as tofu boxes. Better a brief blank than a
        flash of boxes — and the subsetted font is ~2 KB, so the block period is
@@ -25,39 +25,48 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon.icon--book-open-01:before {
+.icon.icon--hearts:before {
     content: "\f101";
 }
-.icon.icon--hearts:before {
+.icon.icon--globe-01:before {
     content: "\f102";
 }
-.icon.icon--linkedin:before {
+.icon.icon--facebook:before {
     content: "\f103";
 }
-.icon.icon--youtube:before {
+.icon.icon--star-01:before {
     content: "\f104";
 }
-.icon.icon--facebook:before {
+.icon.icon--book-open-01:before {
     content: "\f105";
 }
-.icon.icon--star-01:before {
+.icon.icon--youtube:before {
     content: "\f106";
 }
-.icon.icon--music-note-01:before {
+.icon.icon--linkedin:before {
     content: "\f107";
 }
-.icon.icon--globe-01:before {
+.icon.icon--x:before {
     content: "\f108";
 }
 .icon.icon--instagram:before {
     content: "\f109";
 }
-.icon.icon--x:before {
+.icon.icon--music-note-01:before {
     content: "\f10a";
 }
-.icon.icon--menu-04:before {
+.icon.icon--chevron-left:before {
     content: "\f10b";
 }
-.icon.icon--x-twitter:before {
+.icon.icon--chevron-right:before {
     content: "\f10c";
+}
+.icon.icon--x-twitter:before {
+    content: "\f10d";
+}
+.icon.icon--calendar-heart-01:before {
+    content: "\f10e";
+}
+.icon.icon--menu-04:before {
+    content: "\f10f";
 }

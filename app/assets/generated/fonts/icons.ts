@@ -5,59 +5,71 @@
 =================================================================
 */
 export type IconsId =
-  | "book-open-01"
   | "hearts"
-  | "linkedin"
-  | "youtube"
+  | "globe-01"
   | "facebook"
   | "star-01"
-  | "music-note-01"
-  | "globe-01"
-  | "instagram"
+  | "book-open-01"
+  | "youtube"
+  | "linkedin"
   | "x"
-  | "menu-04"
-  | "x-twitter";
+  | "instagram"
+  | "music-note-01"
+  | "chevron-left"
+  | "chevron-right"
+  | "x-twitter"
+  | "calendar-heart-01"
+  | "menu-04";
 
 export type IconsKey =
-  | "BookOpen01"
   | "Hearts"
-  | "Linkedin"
-  | "Youtube"
+  | "Globe01"
   | "Facebook"
   | "Star01"
-  | "MusicNote01"
-  | "Globe01"
-  | "Instagram"
+  | "BookOpen01"
+  | "Youtube"
+  | "Linkedin"
   | "X"
-  | "Menu04"
-  | "XTwitter";
+  | "Instagram"
+  | "MusicNote01"
+  | "ChevronLeft"
+  | "ChevronRight"
+  | "XTwitter"
+  | "CalendarHeart01"
+  | "Menu04";
 
 export enum Icons {
-  BookOpen01 = "book-open-01",
   Hearts = "hearts",
-  Linkedin = "linkedin",
-  Youtube = "youtube",
+  Globe01 = "globe-01",
   Facebook = "facebook",
   Star01 = "star-01",
-  MusicNote01 = "music-note-01",
-  Globe01 = "globe-01",
-  Instagram = "instagram",
+  BookOpen01 = "book-open-01",
+  Youtube = "youtube",
+  Linkedin = "linkedin",
   X = "x",
-  Menu04 = "menu-04",
+  Instagram = "instagram",
+  MusicNote01 = "music-note-01",
+  ChevronLeft = "chevron-left",
+  ChevronRight = "chevron-right",
   XTwitter = "x-twitter",
+  CalendarHeart01 = "calendar-heart-01",
+  Menu04 = "menu-04",
 }
 
 export const ICONS_CODEPOINTS: { [key in Icons]: string } = {
-  [Icons.BookOpen01]: "61697",
-  [Icons.Hearts]: "61698",
-  [Icons.Linkedin]: "61699",
-  [Icons.Youtube]: "61700",
-  [Icons.Facebook]: "61701",
-  [Icons.Star01]: "61702",
-  [Icons.MusicNote01]: "61703",
-  [Icons.Globe01]: "61704",
+  [Icons.Hearts]: "61697",
+  [Icons.Globe01]: "61698",
+  [Icons.Facebook]: "61699",
+  [Icons.Star01]: "61700",
+  [Icons.BookOpen01]: "61701",
+  [Icons.Youtube]: "61702",
+  [Icons.Linkedin]: "61703",
+  [Icons.X]: "61704",
   [Icons.Instagram]: "61705",
-  [Icons.X]: "61706",
-  [Icons.Menu04]: "61707",
-  [Icons.XTwitter]: "61708",
+  [Icons.MusicNote01]: "61706",
+  [Icons.ChevronLeft]: "61707",
+  [Icons.ChevronRight]: "61708",
+  [Icons.XTwitter]: "61709",
+  [Icons.CalendarHeart01]: "61710",
+  [Icons.Menu04]: "61711",
 };
