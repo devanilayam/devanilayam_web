@@ -1,6 +1,7 @@
 <template>
    <main class="page page-festivals">
-      <home-section :title="$t('festivals.pageTitle')" :subtitle="$t('festivals.subtitle')">
+      <home-section :title="$t('festivals.pageTitle')" :subtitle="$t('festivals.subtitle')"
+         content-class="page-index-section__content--calendar">
          <festival-calendar />
       </home-section>
 
