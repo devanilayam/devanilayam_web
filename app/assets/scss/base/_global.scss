@@ -24,6 +24,16 @@
    font-weight: 500;
 }
 
+// An open dialog freezes the page by hiding the document's overflow (see
+// composables/useScrollLock.ts). Without a reserved gutter that also takes the
+// scrollbar away, widening the viewport and sliding every centred element —
+// the fixed header included — sideways the moment the dialog opens. Reserving
+// the space once, for every page, keeps the layout still. Browsers that draw
+// overlay scrollbars (phones, macOS) reserve nothing and are unaffected.
+html {
+   scrollbar-gutter: stable;
+}
+
 body {
    background: #FAF8F3;
 }

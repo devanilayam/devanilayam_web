@@ -8,7 +8,7 @@
       dialog MODAL, and the attribute alone would render it inline and
       focusable-through.
    -->
-   <dialog ref="dialogRef" class="my-dialog" @close="emit('close')" @click="onDialogClick">
+   <dialog ref="dialogRef" class="my-dialog" @close="onNativeClose" @click="onDialogClick">
       <div class="my-dialog__panel">
          <header class="my-dialog__header">
             <h2 class="my-dialog__title">
@@ -34,6 +34,8 @@ const props = defineProps<MyDialogProps>();
 const emit = defineEmits<{ close: [] }>();
 
 const dialogRef = ref<HTMLDialogElement | null>(null);
+
+const { lock, unlock } = useScrollLock();
 
 /**
  * The backdrop is painted by the dialog element itself, so a click on it lands
@@ -66,6 +68,8 @@ watch(() => props.open, (open) => {
 
       dialog.showModal();
 
+      lock();
+
    } else if (!open && dialog.open) {
 
       dialog.close();
@@ -73,6 +77,17 @@ watch(() => props.open, (open) => {
    }
 
 });
+
+// Esc and the browser's own close both fire `close` without going through the
+// watcher above, so the page is released here rather than beside `dialog.close()`
+// — this is the one path every way of closing the dialog passes through.
+const onNativeClose = (): void => {
+
+   unlock();
+
+   emit("close");
+
+};
 
 // Nothing opens during SSR — the element is rendered closed and the watcher
 // above only ever runs in the browser, so the markup hydrates cleanly.
