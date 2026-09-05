@@ -16,6 +16,9 @@
                <nuxt-link :to="localePath('/blogs')" class="side-menu__link" @click="close">
                   {{ $t('header.links.blogs') }}
                </nuxt-link>
+               <nuxt-link :to="localePath('/festivals')" class="side-menu__link" @click="close">
+                  {{ $t('header.links.festivals') }}
+               </nuxt-link>
             </div>
          </aside>
       </Transition>

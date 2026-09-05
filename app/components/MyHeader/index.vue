@@ -9,6 +9,7 @@
          <nuxt-link :to="localePath('/slokas')">{{ $t('header.links.slokas') }}</nuxt-link>
          <nuxt-link :to="localePath('/ashtotaras')"> {{ $t('header.links.ashtotaras') }}</nuxt-link>
          <nuxt-link :to="localePath('/blogs')"> {{ $t('header.links.blogs') }}</nuxt-link>
+         <nuxt-link :to="localePath('/festivals')">{{ $t('header.links.festivals') }}</nuxt-link>
          <nuxt-link :to="localePath('/search')">{{ $t('search.pageTitle') }}</nuxt-link>
          <my-dropdown ref="languageDropdownRef" placement="bottom-end">
             <template #trigger>

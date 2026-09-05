@@ -1,0 +1,370 @@
+@use "../abstracts" as *;
+
+// The page's slice of the site palette, named once so the calendar cannot
+// drift from the header, buttons and cards it sits between.
+$brand: #854D0E;
+$accent: #EB730C;
+$accent-soft: #FBE8D0;
+$line: #EADFCB;
+$surface: #FFFFFF;
+$ink: #1F2937;
+$muted: #6B6760;
+
+// The smallest target that stays comfortable for a child, an older reader, or
+// anyone using the site one-handed. Everything tappable here meets it.
+$tap-target: 44;
+
+.page-festivals {
+   // HomeSection centres its content as a wrapping flex row, which is right for
+   // a grid of deity cards and wrong for one full-width calendar.
+   .page-index-section__content {
+      display: block;
+      max-width: px-to-rem(760);
+   }
+}
+
+.festival-calendar {
+   display: flex;
+   flex-direction: column;
+   gap: px-to-rem(16);
+   width: 100%;
+
+   &__bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: px-to-rem(8);
+   }
+
+   &__nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: px-to-rem($tap-target);
+      height: px-to-rem($tap-target);
+      border: 1px solid $line;
+      border-radius: px-to-rem(12);
+      background: $surface;
+      cursor: pointer;
+      transition: background-color 0.15s ease;
+
+      &:hover:not(:disabled) {
+         background: $accent-soft;
+      }
+
+      &:disabled {
+         cursor: not-allowed;
+         opacity: 0.35;
+      }
+   }
+
+   &__month {
+      flex: 1;
+      text-align: center;
+      color: $brand;
+      font-family: Merriweather, serif;
+      font-size: px-to-rem(22);
+      font-weight: 600;
+
+      @include mobile {
+         font-size: px-to-rem(18);
+      }
+   }
+
+   &__actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: px-to-rem(8) px-to-rem(12);
+      min-height: px-to-rem(32);
+   }
+
+   // The label is a phrase, not a word, and it is longer in Telugu and Hindi
+   // than in English. Left to wrap it breaks mid-phrase inside a button of
+   // fixed height and spills out of it; the row wraps instead.
+   &__today {
+      white-space: nowrap;
+   }
+
+   &__coverage {
+      margin-left: auto;
+      color: $muted;
+      font-size: px-to-rem(12);
+      text-align: right;
+
+      @include mobile {
+         margin-left: 0;
+         text-align: left;
+      }
+   }
+
+   &__grid {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: px-to-rem(4);
+      table-layout: fixed;
+   }
+
+   // The month name is already a heading above the table; the caption repeats
+   // it only for a screen reader arriving at the table on its own.
+   &__caption {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+   }
+
+   th {
+      padding-bottom: px-to-rem(4);
+      color: $muted;
+      font-size: px-to-rem(12);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+
+      abbr {
+         text-decoration: none;
+      }
+   }
+
+   &__cell {
+      padding: 0;
+      vertical-align: top;
+   }
+
+   &__day {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: px-to-rem(2);
+      width: 100%;
+      min-height: px-to-rem($tap-target);
+      padding: px-to-rem(6);
+      border: 1px solid transparent;
+      border-radius: px-to-rem(10);
+      background: none;
+      color: $ink;
+      font-size: px-to-rem(14);
+      text-align: left;
+
+      @include web-screen {
+         min-height: px-to-rem(76);
+      }
+   }
+
+   &__day--has-festival {
+      border-color: $line;
+      background: $accent-soft;
+      cursor: pointer;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+      &:hover {
+         border-color: $accent;
+      }
+
+      .festival-calendar__number {
+         color: $brand;
+         font-weight: 700;
+      }
+   }
+
+   &__number {
+      line-height: 1.2;
+   }
+
+   // The names only fit at desktop widths. On a phone the dot marks the day and
+   // the agenda list below carries the names in full — nothing is hover-only.
+   &__names {
+      display: none;
+
+      @include web-screen {
+         display: -webkit-box;
+         overflow: hidden;
+         color: $brand;
+         font-size: px-to-rem(11);
+         line-height: 1.3;
+         -webkit-line-clamp: 3;
+         -webkit-box-orient: vertical;
+      }
+   }
+
+   // A second, non-colour signal that the day has something on it.
+   &__dot {
+      width: px-to-rem(6);
+      height: px-to-rem(6);
+      margin-top: auto;
+      border-radius: 50%;
+      background: $accent;
+
+      @include web-screen {
+         display: none;
+      }
+   }
+
+   &__cell.is-outside &__day {
+      color: rgba(31, 41, 55, 0.3);
+   }
+
+   &__cell.is-today &__day {
+      box-shadow: inset 0 0 0 2px $accent;
+   }
+
+   &__agenda {
+      display: flex;
+      flex-direction: column;
+      gap: px-to-rem(8);
+      margin-top: px-to-rem(8);
+   }
+
+   &__agenda-title {
+      margin: 0;
+      color: $brand;
+      font-size: px-to-rem(18);
+      font-weight: 700;
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: px-to-rem(8);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      // base/_global.scss gives every <li> a disc and a left margin, which is
+      // right for prose in the corpus and wrong for a list of cards. Undone
+      // here rather than there, so markdown content keeps its bullets.
+      li {
+         margin-left: 0;
+         list-style: none;
+      }
+   }
+
+   &__row {
+      display: flex;
+      align-items: center;
+      gap: px-to-rem(12);
+      width: 100%;
+      min-height: px-to-rem($tap-target);
+      padding: px-to-rem(8) px-to-rem(12);
+      border: 1px solid $line;
+      border-radius: px-to-rem(12);
+      background: $surface;
+      cursor: pointer;
+      text-align: left;
+      transition: border-color 0.15s ease, background-color 0.15s ease;
+
+      &:hover {
+         border-color: $accent;
+         background: $accent-soft;
+      }
+   }
+
+   &__date {
+      display: flex;
+      flex: 0 0 auto;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: px-to-rem(44);
+      color: $brand;
+   }
+
+   &__date-day {
+      font-size: px-to-rem(20);
+      font-weight: 700;
+      line-height: 1.1;
+   }
+
+   &__date-weekday {
+      font-size: px-to-rem(11);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+   }
+
+   &__meta {
+      display: flex;
+      flex-direction: column;
+      gap: px-to-rem(2);
+      min-width: 0;
+   }
+
+   &__name {
+      color: $ink;
+      font-size: px-to-rem(15);
+      font-weight: 600;
+      line-height: 1.3;
+   }
+
+   &__region {
+      color: $muted;
+      font-size: px-to-rem(12);
+   }
+
+   &__empty {
+      color: $muted;
+      font-size: px-to-rem(14);
+   }
+
+   // A visible focus ring on every interactive element, since the whole grid is
+   // meant to be usable from the keyboard alone.
+   button:focus-visible {
+      outline: 2px solid $accent;
+      outline-offset: 2px;
+   }
+}
+
+.festival-detail {
+   display: flex;
+   flex-direction: column;
+   gap: px-to-rem(6);
+
+   & + & {
+      margin-top: px-to-rem(24);
+      padding-top: px-to-rem(24);
+      border-top: 1px solid $line;
+   }
+
+   &__name {
+      margin: 0;
+      color: $brand;
+      font-size: px-to-rem(18);
+      font-weight: 700;
+   }
+
+   &__region {
+      align-self: flex-start;
+      padding: px-to-rem(2) px-to-rem(10);
+      border-radius: px-to-rem(999);
+      background: $accent-soft;
+      color: $brand;
+      font-size: px-to-rem(12);
+      font-weight: 600;
+   }
+
+   &__heading {
+      margin: px-to-rem(10) 0 0;
+      color: $muted;
+      font-size: px-to-rem(12);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+   }
+
+   &__text {
+      margin: 0;
+      color: $ink;
+      font-size: px-to-rem(15);
+      line-height: 1.6;
+   }
+
+   &__link {
+      align-self: flex-start;
+      margin-top: px-to-rem(14);
+      text-decoration: none;
+   }
+}
