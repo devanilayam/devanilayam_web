@@ -16,8 +16,12 @@ $tap-target: 44;
 
 .page-festivals {
    // HomeSection centres its content as a wrapping flex row, which is right for
-   // a grid of deity cards and wrong for one full-width calendar.
-   .page-index-section__content {
+   // a grid of deity cards and wrong for one full-width calendar. Pinned to the
+   // calendar's own section rather than to every HomeSection on the page: the
+   // Socials block below the calendar is a HomeSection too, and its round tiles
+   // are laid out by that flex row. Left in block flow they stretch to the full
+   // page width and the 50% radius draws them as long ellipses.
+   .page-index-section__content--calendar {
       display: block;
       max-width: px-to-rem(760);
    }

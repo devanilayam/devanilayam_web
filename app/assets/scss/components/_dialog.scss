@@ -73,9 +73,15 @@
       }
    }
 
+   // The dialog is capped at the viewport height and the panel is a column, so
+   // anything taller than the screen scrolls here, inside the card. `contain`
+   // stops that scroll from chaining on to the page once it reaches the end —
+   // the page is frozen while the dialog is open, and a gesture that carried
+   // past the last line would otherwise unfreeze nothing but still feel stuck.
    &__body {
       padding: px-to-rem(20);
       overflow-y: auto;
+      overscroll-behavior: contain;
    }
 }
 
