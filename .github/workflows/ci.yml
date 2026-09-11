@@ -160,7 +160,7 @@ jobs:
       # scripts/lib/serve.sh), and @nuxt/content reads its database through
       # `node:sqlite` — unflagged only from Node 24. Without this pin the job
       # inherits whatever Node the runner image happens to ship.
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
 
