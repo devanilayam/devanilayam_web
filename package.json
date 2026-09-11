@@ -60,7 +60,7 @@
 		"@vitest/coverage-v8": "^4.1.11",
 		"@vue/test-utils": "^2.4.11",
 		"@vueuse/core": "^14.4.0",
-		"conventional-changelog-conventionalcommits": "^8.0.0",
+		"conventional-changelog-conventionalcommits": "^10.4.0",
 		"eslint": "^9.39.1",
 		"fantasticon": "^4.1.0",
 		"happy-dom": "^20.11.6",
