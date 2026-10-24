@@ -23,6 +23,13 @@ updates:
     commit-message:
       prefix: "build(deps)"
       prefix-development: "build(deps-dev)"
+    ignore:
+      # The preset's 10.x line needs conventional-changelog-writer@9, but the
+      # semantic-release plugins still load writer@8, so Release dies with
+      # "Missing helper". CI never runs Release, so a bump passes the PR checks
+      # and only breaks main. Lift this once release-notes-generator moves on.
+      - dependency-name: "conventional-changelog-conventionalcommits"
+        update-types: ["version-update:semver-major"]
     groups:
       # Nuxt and its first-party modules move together; splitting them into
       # separate PRs just produces peer-dependency conflicts.
