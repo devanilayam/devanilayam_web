@@ -3,7 +3,11 @@ version: 2
 updates:
   # Weekly on Saturday morning IST (03:30 UTC), so a broken bump is found on a
   # day when nothing is shipping.
-  - package-ecosystem: npm
+  #
+  # `bun`, not `npm`: the npm updater only knows package-lock/yarn/pnpm
+  # lockfiles, so it bumped package.json and left bun.lock behind, and every
+  # PR then died on CI's `bun install --frozen-lockfile`.
+  - package-ecosystem: bun
     directory: "/"
     schedule:
       interval: weekly
